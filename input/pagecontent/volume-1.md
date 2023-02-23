@@ -1,575 +1,534 @@
 
-# 1:XX Profile name
+# 47 Non-Patient File Sharing (NPFS) Profile
 
-**TODO: Provide an end-user friendly overview of what the profile does for them. Keep it brief (a paragraph or two, up to a page). If extensive detail is needed, it should be included in Section XX.4- Use Cases.**
+The Non-Patient File Sharing Profile defines how to enable sharing of
+non-patient files such as clinical workflow definitions, domain
+policies, and stylesheets. Those files can be created and consumed by
+many different systems involved in a wide variety of data sharing
+workflows.
 
-**TODO: Explicitly state whether this is a Workflow, Transport, or Content Module (or combination) profile. See the IHE Technical Frameworks General Introduction for definitions of these profile types. The IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). **
+The NPFS Profile describes a mechanism for sharing non-patient files; it
+does not require that the actors be able to process the contents of the
+files being shared.
 
-## 1:X.1 ToDo Actors, Transactions, and Content Modules
+The NPFS Profile specifies transactions for the sharing of files. Any
+file type can be shared using this profile; however, specific guidance
+is given for three types of files:
 
-<a name="actors-and-transactions"> </a>
+- Workflow Definitions: files which define the processing rules for a
+  specific clinical/administrative workflow (see ITI TF-1: 30.4.1.1 “XDW
+  Workflow Architecture”)
 
-* Actors
+- Privacy Domain Policies: files which describe a specific privacy
+  policy that applies to, or may be agreed to, by a patient (see ITI
+  TF-1: 19.2 “Creating Patient Privacy Policies”)
 
-  - [Client](#client)
+- Stylesheets: structured documents that can be used by user-agents
+  (e.g., Web Browsers) to render the content of an XML document.
 
-  - [Server](#server)
+Local policies may extend the types of files that are being shared using
+NPFS and that can be classified using the metadata model described in
+this profile.
 
-* Transactions
+## 47.1 NPFS Actors, Transactions, and Content Modules
 
-  - [do domain-Y](domain-YY.html)
+This section defines the actors, transactions, and/or content modules in
+this profile. General definitions of actors are given in the Technical
+Frameworks General Introduction Appendix A at
+<https://www.ihe.net/resources/technical_frameworks/#GenIntro>.
 
-Actors and transactions are used to achieve this use-case...
+Figure 47.1-1 shows the actors directly involved in NPFS Profile and the
+relevant transactions between them. If needed for context, other actors
+that may be indirectly involved due to their participation in other
+related profiles are shown in dotted lines. Actors which have a
+mandatory grouping are shown in conjoined boxes.
 
-<div>
-{%include usecase1-processflow.svg%}
-</div>
-<br clear="all">
+![](./media/image2.emf)
 
-**Figure: Use Case 1 Process Flow**
+Figure 47.1-1: NPFS Actor Diagram
 
-This section defines the actors and transactions in this implementation guide.
+Table 47.1-1 lists the transactions for each actor directly involved in
+the NPFS Profile. To claim compliance with this profile, an actor shall
+support all required transactions (labeled “R”) and may support the
+optional transactions (labeled “O”).
 
-Figure below shows the actors directly
-involved in the ToDo 
-Profile and the relevant transactions between them.
+Table 47.1-1: NPFS Profile - Actors and transactions
 
-<div>
-{%include ActorsAndTransactions.svg%}
-</div>
-<br clear="all">
+| Actors        | Transactions                        | Optionality | Reference              |
+|---------------|-------------------------------------|-------------|------------------------|
+| File Manager  | Submit File \[ITI-87\]              | R           | ITI TF-2c: 3.87        |
+|               | Search File \[ITI-88\]              | R           | ITI TF-2c: 3.88        |
+|               | Retrieve Document \[ITI-68\]        | R           | ITI TF-2c: 3.68 (Note) |
+|               | Update DocumentReference \[ITI-89\] | R           | ITI TF-2c: 3.89        |
+| File Consumer | Search File \[ITI-88\]              | R           | ITI TF-2c: 3.88        |
+|               | Retrieve Document \[ITI-68\]        | O           | ITI TF-2c: 3.68 (Note) |
+| File Source   | Submit File \[ITI-87\]              | R           | ITI TF-2c: 3.87        |
+|               | Update DocumentReference \[ITI-89\] | O           | ITI TF-2c: 3.89        |
 
-**Figure: ToDo Actor Diagram**
+Note: This transaction is currently specified in the MHD Trial
+Implementation Supplement.
 
-Table XX.1-1: Profile Acronym Profile - Actors and Transactions
+### 47.1.1 Actor Descriptions and Actor Profile Requirements
 
-|         |               |                        |                 |                                   |
-|---------|---------------|------------------------|-----------------|-----------------------------------|
-| Actors  | Transactions  | Initiator or Responder | Optionality     | Reference                         |
-| Actor A | Transaction 1 |                        | R               | Domain Acronym TF-2: 3.Y1 |
-|         | Transaction 2 |                        | R               | Domain Acronym TF-2: 3.Y2 |
-| Actor F | Transaction 1 |                        | R               | Domain Acronym TF-2: 3.Y1 |
-|         | Transaction 2 |                        | R               | Domain Acronym TF-2: 3.Y2 |
-| Actor D | Transaction 1 |                        | R               | Domain Acronym TF-2: 3.Y1 |
-| Actor E | Transaction 2 |                        | R               | Domain Acronym TF-2: 3.Y2 |
-|         | Transaction 3 |                        | O ( See Note 1) | Domain Acronym TF-2: 3.Y3 |
-|         | Transaction 4 |                        | O ( See Note 1) | Domain Acronym TF-2: 3.Y4 |
-| Actor B | Transaction 3 |                        | R               | Domain Acronym TF-2: 3.Y3 |
-|         | Transaction 4 |                        | O ( See Note 2) | Domain Acronym TF-2: 3.Y4 |
-{: .grid}
+Most requirements are documented in transactions (Volume 2) and Content
+Modules (Volume 3). This section documents any additional requirements
+on profile’s actors.
 
-Note 1: *For example, a note could specify that at least one of the
-transactions shall be supported by an actor or other variations. For
-example: Note: Either Transaction Y3 or Transaction Y4 shall be
-implemented for Actor E. *
+#### 47.1.1.1 File Manager
 
-Note 2: *For example, could specify that Transaction Y4 is required
-if Actor B supports XYZ Option, see Section XX.3.X.*
+The File Manager stores files provided by the File Source and maintains
+related metadata. The File Manager responds to search and retrieve
+requests initiated by the File Consumer. The File Manager responds to
+metadata update requests initiated by the File Source.
 
-### XX.1.1 Actors
-The actors in this profile are described in more detail in the sections below.
+#### 47.1.1.2 File Consumer 
 
-#### XX.1.1.1 Client
+The File Consumer queries for file metadata meeting certain criteria,
+and may retrieve selected files.
 
-<a name="client"> </a>
+#### 47.1.1.3 File Source 
 
-The Client queries for blah meeting certain criteria and may retrieve selected blah.
+The File Source publishes and updates files produced by either the File
+Source or by other systems. It is responsible for sending files and
+related metadata to a File Manager. The File Source can send metadata
+update requests to the File Manager.
 
-FHIR Capability Statement for [Client]{CapabilityStatement-IHE.ToDo.client.html}
+## 47.2 NPFS Actor Options
 
-#### XX.1.1.2 Server
+Options that may be selected for each actor in this profile, if any, are
+listed in Table 47.2-1. Dependencies between options when applicable are
+specified in notes.
 
-<a name="server"> </a>
+Table 47.2-1: Not-patient File Sharing - Actors and Options
 
-The Sever processes query request from the Client actor.
+| Actor         | Option Name          | Reference      |
+|---------------|----------------------|----------------|
+| File Manager  | No options defined   | --             |
+| File Consumer | File Retrieve        | Section 47.2.1 |
+| File Source   | Update File Metadata | Section 47.2.2 |
 
-FHIR Capability Statement for [Server](CapabilityStatement-IHE.ToDo.server.html)
+### 47.2.1 File Retrieve Option
 
-### Transaction Descriptions
-The transactions in this profile are summarized in the sections below.
+The File Retrieve Option enables a File Consumer to retrieve a file
+stored/managed by the File Manager.
 
-#### ToDo do transaction
+A File Consumer that supports the File Retrieve Option shall support the
+Retrieve Document \[ITI-68\] transaction.
 
-This transaction is used to **do things**
+### 47.2.2 Update File Metadata Option
 
-For more details see the detailed [transaction description](domain-YY.html)
+The Update File Metadata Option enables a File Source to update the
+metadata of a file stored/managed by the File Manager.
 
-## XX.2 ToDo Actor Options
+A File Source that supports the Update File Metadata Option shall
+support the Update DocumentReference \[ITI-89\] transaction.
 
-<a name="actor-options"> </a>
+## 47.3 NPFS Required Actor Groupings 
 
-Options that may be selected for each actor in this implementation guide, are listed in Table 3.2-1 below. Dependencies 
-between options when applicable are specified in notes.
+This profile does not mandate the grouping with other actors.
 
-|         |             |
-|---------|-------------|
-| Actor   | Option Name |
-| Actor A | Option AB  |
-| Actor B | none |
-{: .grid}
+## 47.4 NPFS Overview
 
-#### XX.2.1 AB Option
+### 47.4.1 Concepts – distinguishing files from documents
 
-**TODO: describe this option and the Volume 1 requirements for this option
+The NPFS Profile uses the term “**file**” to mark a clear distinction
+from the IHE Document Sharing profiles.
 
-## XX.3 ToDo Required Actor Groupings
+A “**file**” represents a collection of information stored on a computer
+as one unit. For the purposes of this profile, a file is not
+patient-related, as it does not contain patient health identifying
+information. It may contain other sensitive information.
 
-<a name="required-groupings"> </a>
+Other IHE profiles are used to share (using different sharing paradigms)
+information related to patients. In IHE terminology, such
+patient-specific content is a “**document**.”
 
-*Describe any requirements for actors in this profile to be grouped
-with other actors.*
+### 47.4.2 Use Cases
 
-*This section specifies all REQUIRED Actor Groupings (although
-“required” sometimes allows for a selection of one of several). To
-SUGGEST other profile groupings or helpful references for other profiles
-to consider, use Section XX.6 Cross Profile Considerations. Use Section
-X.5 for security profile recommendations.*
+#### 47.4.2.1 Use Case \#1: Manage Stylesheets
 
-An actor from this profile (Column 1) shall implement all of the
-required transactions and/or content modules in this profile ***in
-addition to*** ***<u>all</u>*** of the requirements for the grouped
-actor (Column 2) (Column 3 in alternative 2).
+A technician creates a stylesheet to render the XML of
+CDA<sup>®</sup>[^1] Laboratory Reports produced in all the Laboratory
+Information System (LIS) involved in the Healthcare Information Exchange
+(HIE). The technician wants to make the stylesheet available to all the
+LISs involved in the HIE so that they can search for the stylesheet and
+reference it as an XSL transformation of the Laboratory Report.
 
-If this is a content profile, and actors from this profile are grouped
-with actors from a workflow or transport profile, the Reference column
-references any specifications for mapping data from the content module
-into data elements from the workflow or transport transactions.
+##### 47.4.2.1.1 Manage Stylesheets - Use Case Description
 
-In some cases, required groupings are defined as at least one of an
-enumerated set of possible actors; this is designated by merging column
-one into a single cell spanning multiple potential grouped actors. Notes
-are used to highlight this situation.
+A Healthcare Organization desires to use a stylesheet for uniform
+rendering of XML Laboratory Reports produced within the organization.
+Mr. Black, a technician of the Healthcare Organization, creates the
+stylesheet. Then Mr. Black uses his File Source to publish the
+stylesheet file into a system that manages non-patient files (File
+Manager) using the Submit File \[ITI-87\] transaction. Now the
+stylesheet will be available to all the LISs involved in the
+organization.
 
-Section XX.5 describes some optional groupings that may be of interest
-for security considerations and Section XX.6 describes some optional
-groupings in other related profiles.
+A Laboratory Information System, according to the HIE policy, should be
+able to identify the stylesheet that can be used to render the CDA
+document.
 
-Two alternatives for Table XX.3-1 are presented below.
+Mrs. White uses the LIS to retrieve a patient’s CDA R2 Lab Report
+document from the HIE. The LIS also issues a query using the Search File
+\[ITI-88\] transaction, to search for a stylesheet file published by the
+HIE Organization, in order to discover the resource URL of the
+stylesheet applicable to the Laboratory Reports. This URL is used to
+reference it as an XSL transformation of the Laboratory Report.
 
--   If there are no required groupings for any actor in this profile,
-    use alternative 1 as a template.
+##### 47.4.2.1.2 Stylesheet’s Management Process Flow
 
--   If an actor in this profile (with no option), has a required
-    grouping, use alternative 1.
+- The Health Information System acting as a File Source issues a Submit
+  File \[ITI-87\] transaction to the File Manager to submit the
+  stylesheet
 
--   If any required grouping is associated with an actor/option
-    combination in this profile, use alternative 2.
+- The LIS acting as a File Consumer issues a Search File \[ITI-88\]
+  transaction to the File Manager, using the class parameter to search
+  for stylesheets, and the author.identifier parameter to search for the
+  organization that submitted the file. The query response contains the
+  URL of the stylesheet, that will be retrieved using a Retrieve
+  Document \[ITI-68\] transaction.
 
-alternative 1 Table XX.3-1: Profile Name - Required Actor
-Groupings
+<img src="./media/image3.png"
+style="width:5.90029in;height:2.94072in" />
 
-All actors from this profile should be listed in Column 1, even if
-none of the actors has a required groupings. If no required grouping
-exists, “None” should be indicated in Column 2. If an actor in a content
-profile is required to be grouped with an actor in a transport or
-workflow profile, it will be listed **with at least one** required
-grouping. Do not use “XD\*” as an actor name.
+Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets
+management
 
-In some cases, required groupings are defined as at least one of an
-enumerated set of possible actors; to designate this, create a row for
-each potential actor grouping and merge column one to form a single cell
-containing the profile actor which should be grouped with at least one
-of the actors in the spanned rows. In addition, a note should be
-included to explain the enumerated set. See example below showing
-Document Consumer needing to be grouped with at least one of XDS.b
-Document Consumer, XDR Document Recipient or XDM Portable Media
-Importer
+The text in Figure 47.4.2.1.2-2 was used to generate the diagram in
+Figure 47.4.2.1.2-1. Readers will generally find the diagram more
+informative. The text is included here to facilitate editing.
 
-The author should pay special consideration to security profiles in
-this grouping section. Consideration should be given to Consistent Time
-(CT) Client, ATNA Secure Node or Secure Application, as well as other
-profiles. For the sake of clarity and completeness, even if this table
-begins to become long, a line should be added for each actor for each of
-the required grouping for security. Also see the ITI document titled
-‘Cookbook: Preparing the IHE Profile Security Section’ at
-<http://ihe.net/Technical_Frameworks/#IT> for a list of suggested IT and
-security groupings.
-
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>this Profile Acronym Actor</th>
-<th>Actor(s) to be grouped with</th>
-<th>Reference</th>
-<th>Content Bindings Reference</th>
+<th><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+Request message</p>
+<p>File Manager-&gt;-File Source: Submit File Response message</p>
+<p>File/Document Consumer-&gt;+Document Repository: Retrieve Document
+Set [ITI-43] (Laboratory Report)</p>
+<p>Document Repository-&gt;+File/Document Consumer: Retrieve Document
+Set response</p>
+<p>File/Document Consumer-&gt;+File Manager: Search File
+[ITI-88]\nSearch File Request message\nparameters:
+class=STYLESHEET,\nauthor.identifier=IHE-FACILITY1039,\npatient:exists=false</p>
+<p>File Manager-&gt;-File/Document Consumer:Search File Response
+message\n Bundle with DocumentReference resource</p>
+<p>File/Document Consumer-&gt;+File Manager: Retrieve Document
+[ITI-68]\nRetrieve Document Request message</p>
+<p>File Manager-&gt;-File/Document Consumer:Retrieve Document Response
+message</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>Actor A</td>
-<td><p><em>external Domain Acronym or blank</em></p>
-<p><em>profile acronym/Actor</em></p>
-<p><em>e.g., ITI CT / Time Client</em></p></td>
-<td><p><em>TF Reference; typically from Vol 1</em></p>
-<p><em>e.g., ITI-TF-1: 7.1</em></p></td>
-<td>--</td>
-</tr>
-<tr class="even">
-<td>Actor B</td>
-<td>None</td>
-<td>--</td>
-<td>--</td>
-</tr>
-<tr class="odd">
-<td><p>Actor C</p>
-<p><em>In this example, Actor C shall be grouped with all three actors listed in column 2</em></p></td>
-<td><p><em>external Domain Acronym or blank</em></p>
-<p><em>profile acronym/Actor</em></p></td>
-<td>--</td>
-<td>See Note 1</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><em>external Domain Acronym or blank profile acronym/Actor</em></td>
-<td>--</td>
-<td>See Note 1</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><p><em>external Domain Acronym or blank</em></p>
-<p><em>profile acronym/Actor</em></p></td>
-<td>--</td>
-<td>See Note 1</td>
-</tr>
-<tr class="even">
-<td><p>Actor D <em>(See note 1)</em></p>
-<p><em>In this example, the note is used to indicate that the Actor D shall be grouped with one or more of the two actors of the two actors in column 2.</em></p></td>
-<td><p><em>external Domain Acronym or blank</em></p>
-<p><em>profile acronym/Actor</em></p></td>
-<td>--</td>
-<td>See Note 1</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><p><em>external Domain Acronym or blank</em></p>
-<p><em>profile acronym/Actor</em></p></td>
-<td>--</td>
-<td>See Note 1</td>
-</tr>
-<tr class="even">
-<td><p>Actor E</p>
-<p><em>In rare cases, the actor to be grouped with must implement an option. An example is in column 2.)</em></p></td>
-<td><p><em>external Domain Acronym or blank</em></p>
-<p><em>profile acronym Actor</em></p>
-<p><em>e.g., ITI RFD Form Filler with the Archive Form Option</em></p></td>
-<td><p><em>TF Reference to the Option definition; typically from Vol 1</em></p>
-<p><em>(e.g., ITI TF-1: 17.3.11)</em></p></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><em>e.g., Content Consumer (See Note 1)</em></td>
-<td><em>ITI XDS.b / Document Consumer</em></td>
-<td><em>ITI TF-1: 10.1</em></td>
-<td><em>PCC TF-2:4.1 (See Note 2)</em></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><em>ITI XDR / Document Recipient</em></td>
-<td><em>ITI TF-1: 15.1</em></td>
-<td><em>PCC TF-2:4.1 (See Note 2)</em></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><em>ITI XDM / Portable Media Importer</em></td>
-<td><em>ITI TF-1: 16.1</em></td>
-<td><em>PCC TF-2:4.1 (See Note 2)</em></td>
-</tr>
-<tr class="even">
-<td><em>e.g., Content Consumer</em></td>
-<td><em>ITI CT / Time Client</em></td>
-<td><em>ITI TF-1: 7.1</em></td>
-<td>--</td>
-</tr>
 </tbody>
 </table>
 
-Note 1: *This is a short note. It may be used to describe situations
-where an actor from this profile may be grouped with one of several
-other profiles/actors.*
+Figure 47.4.2.1.2-2: Pseudocode for Process Flow Diagram
 
-Note 2: *A note could also be used to explain why the grouping is
-required, if that is still not clear from the text above.*
+#### 47.4.2.2 Use Case \#2: Replace Privacy Policies 
 
-alternative 2 Table XX.3-1: this Profile Acronym Profile
-- Required Actor Groupings
+In this use case, the hospital’s privacy office creates files that
+describe the Privacy Policies that the patient can agree to. When a
+patient is admitted, the admitting nurse uses a NPFS File Consumer to
+search the File Manager for the current Privacy Policy files available.
 
-All actors from this profile should be listed in Column 1. If no
-required grouping exists, “None” should be indicated in Column 3. 
+Then, when the patient selects a Privacy Policy, the nurse uses a Basic
+Patient Privacy Consent (BPPC) Content Creator Actor (see ITI TF-1: 19)
+to create the patient’s Privacy Policy Consent document for the patient.
 
-Guidance on using the “Grouping Condition” column:
+##### 47.4.2.2.1 Replace Privacy Policies - Use Case Description
 
--   If an actor has no required grouping, Column 2 should contain “--“.
-    See Actor A below.
+A hospital’s privacy office defines a set of Privacy Policies that a
+patient can agree to. Mr. Blue, a hospital privacy office employee,
+creates a Privacy Policy file using the HIS. Using a Submit File
+\[ITI-87\] transaction, the application makes the file available to all
+the systems involved in his organization.
 
--   If an actor has a required grouping that is not associated with a
-    profile option (i.e., it has no condition), column 2 should contain
-    “Required”. See Actor B below.
+Mrs. Black, a nurse of the Goodcare Hospital, wants to search for the
+current valid Privacy Policy files that the admitting patient can agree
+to. She uses a combined BPPC Content Creator and NPFS File Consumer to
+issue a query, a Search File \[ITI-88\] transaction, to search for the
+current valid Privacy Policy files and retrieve them. One of the
+retrieved Privacy Policy files is used, by the BPPC Content Creator, to
+create the Privacy Policy Consent document that the patient can read and
+agree to.
 
--   Sometimes an option requires that an actor in this profile be
-    grouped with an actor in another profile. That condition is
-    specified in Column 2. See Actor C below.
+Later, a legal health officer informs the Goodcare Hospital that one of
+the Privacy Policies has changed. Mr. Blue searches to discover the
+Privacy Policy file and its related metadata (including FHIR resource
+ids). He thus needs to replace the Privacy Policy file and uses an HIS
+to perform the Submit File \[ITI-87\] to replace the Privacy Policy by
+submitting a new one (linked to the original file via a replacement
+association, using the relatesTo parameter) and updating metadata for
+the previous Privacy Policy, changing its status to “superseded”.
 
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
+This use case is different than Use Case \#3 because here the original
+Privacy Policy file needs to be preserved (i.e., it is not overwritten).
+
+##### 47.4.2.2.2 Privacy Domain Policies Process Flow
+
+- The Health Information System, acting as a File Source, issues a
+  Submit File \[ITI-87\] (create) transaction to the File Manager to
+  submit the original Privacy Policy file and metadata.
+
+- The HIS, acting as a File Consumer, issues a Search File \[ITI-88\]
+  transaction to the File Manager. The File Consumer uses the class
+  parameter and the status parameter to search for the metadata (i.e.,
+  DocumentReference Resources) for current Privacy Policy files. Once
+  the DocumentReference Resource is found, the File Consumer issues a
+  Retrieve Document \[ITI-68\] transaction to the File Manager to
+  retrieve the file.
+
+- The HIS, acting as a File Source, issues a Submit File \[ITI-87\]
+  (replace) transaction to the File Manager to submit the new Privacy
+  Policy file and metadata, and update the metadata of the replaced file
+  to “superseded” (deprecated). (The new DocumentReference Resource is
+  linked to the previous one via a replacement relationship, using the
+  relatesTo parameter; see ITI TF-2c: 3.87.4.3.2.)
+
+<img src="./media/image4.png"
+style="width:6.41531in;height:3.50694in" />
+
+Figure 47.4.2.2.2-1: Basic Process Flow in NPFS Profile for Privacy
+Policies management
+
+The text in Figure 47.4.2.2.2-2 was used to generate the diagram in
+Figure 47.4.2.2.2-1. Readers will generally find the diagram more
+informative. The text is included here to facilitate editing.
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+Request message</p>
+<p>File Manager-&gt;-File Source: Submit File Response message</p>
+<p>File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
+Request Message\nparameters: class=PRIVACY_POLICY, status=current,\n
+patient:exists=false</p>
+<p>File Manager-&gt;-File Consumer: Search File Response Message\nBundle
+with DocumentReference resource (id=456)</p>
+<p>File Consumer-&gt;+File Manager: Retrieve Document [ITI-68]\nRetrieve
+Document Request message</p>
+<p>File Manager-&gt;-File Consumer: Retrieve Document response
+message</p>
+<p>File Source-&gt;+File Manager: Submit File [ITI-87]\nReplace File
+Request message\nnew Binary and DocumentReference with replace
+association and\nupdate of previous DocumentReference (id=456) with
+status=superseded</p>
+<p>File Manager-&gt;-File Source: Submit File Response message</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="odd">
-<td>this Profile Acronym Actor</td>
-<td>Grouping Condition</td>
-<td>Actor(s) to be grouped with</td>
-<td>Reference</td>
-</tr>
-<tr class="even">
-<td>Actor A</td>
-<td>--</td>
-<td>None</td>
-<td>--</td>
-</tr>
-<tr class="odd">
-<td>Actor B</td>
-<td>Required</td>
-<td><p><em>external Domain Acronym or blank profile acronym/Actor</em></p>
-<p><em>e.g., ITI CT / Time Client</em></p></td>
-<td><p><em>TF Reference; typically from Vol 1</em></p>
-<p><em>(e.g., ITI TF-1: 7.1)</em></p></td>
-</tr>
-<tr class="even">
-<td>Actor C</td>
-<td>With the <em>Option name in this profile</em> Option</td>
-<td><em>external Domain Acronym or blank profile acronym/Actor</em></td>
-<td><em>Where the Option is defined in this profile Section XX.3 z</em></td>
-</tr>
-<tr class="odd">
-<td><p>Actor D</p>
-<p><em>if an actor has both required and conditional groupings, list the Required grouping first</em></p></td>
-<td>Required</td>
-<td><em>external Domain Acronym or blank profile acronym/Actor</em></td>
-<td><em>TF Reference; typically from Vol 1</em></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>If the <em>Option name in this profile</em> Option is supported.</td>
-<td><em>external Domain Acronym or blank profile acronym/Actor</em></td>
-<td><em>TF Reference; typically from Vol 1</em></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>If the <em>other Option name in this profile</em> Option is supported.</td>
-<td><em>external Domain Acronym or blank profile acronym/Actor</em></td>
-<td><em>TF Reference; typically from Vol 1</em></td>
-</tr>
-<tr class="even">
-<td><p>Actor E</p>
-<p><em>(In rare cases, the actor to be grouped with must implement an option, an example is in column 3)</em></p></td>
-<td>Required</td>
-<td><p><em>external Domain Acronym or blank profile acronym/Actor</em> with the <em>option name</em></p>
-<p><em>e.g. ITI RFD Form Filler with the Archive Form Option</em></p></td>
-<td><p><em>TF Reference to the Option definition; typically from Vol 1</em></p>
-<p><em>(eg ITI TF-1:17.3.11)</em></p></td>
-</tr>
 </tbody>
 </table>
 
+Figure 47.4.2.2.2-1: Pseudocode for Process Flow Diagram
 
-## XX.4 ToDo Overview
+#### 47.4.2.3 Use Case \#3: Manage change to Workflow Definitions 
 
-<a name="overview"> </a>
+A technician at Goodcare Hospital uses the Hospital Information System
+to create and later update a BPMN (“Business Process Model and
+Notation;” see <http://www.bpmn.org/>) Workflow Definition file to
+design an eReferral Process. This file is published using a File Source.
+Later, a specialist who does not regularly work with Goodcare Hospital
+can access this Workflow Definition to review the workflow steps before
+referring a patient.
 
-This section shows how the transactions/content modules of the profile
-are combined to address the use cases.
+##### 47.4.2.3.1 Manage change to Workflow Definitions - Use Case Description
 
-Use cases are informative, not normative, and “SHALL” language is
-not allowed in use cases.
+An HIE decides to design the eReferral Process for all the participants
+involved in that workflow. Mr. Smith, a technician at Goodcare Hospital,
+records the process in a BPMN Workflow Definition file, and makes it
+available using the Submit File \[ITI-87\] transaction.
 
-### XX.4.1 Concepts
+Dr. Jones, a specialist, uses her HIS to query for the BPMN Workflow
+Definition file produced by Goodcare Hospital related to eReferral
+workflow, using a Search File \[ITI-88\] transaction. The previously
+submitted Workflow Definition file is found and retrieved, and Dr. Jones
+can identify the next steps in the eReferral process.
 
-If needed, this section provides an overview of the concepts that
-provide necessary background for understanding the profile. If not
-needed, state “Not applicable.” For an example of why/how this section
-may be needed, please see ITI Cross Enterprise Workflow (XDW).
+Later the HIE decides that the Workflow Definition file submitted is no
+longer valid and wants to use a new Workflow Definition file, so it
+updates the previous file using the Submit File \[ITI-87\] transaction.
 
-It may be useful in this section but is not necessary, to provide a
-short list of the use cases described below and explain why they are
-different.
+This use case is different than Use Case \#2 because here the original
+Workflow Definition file does not need to be preserved so it is, in
+effect, overwritten.
 
-### XX.4.2 Use Cases
+##### 47.4.2.3.2 Workflow Definitions Process Flow
 
-#### XX.4.2.1 Use Case \#1: simple name
+- The Health Information System acting as a File Source issues a Submit
+  File \[ITI-87\] (create) transaction to the File Manager to submit the
+  original Workflow Definition file.
 
-One or two sentence simple description of this particular use
-case.
+- Later, to find the Workflow Definition in order to update it, the HIS
+  acting as a File Consumer issues a Search File \[ITI-88\] transaction
+  to the File Manage. The File Consumer uses the class parameter and the
+  type parameter to search for Workflow Definitions related to eReferral
+  workflow. Once the Document Reference Resource is found, the HIS
+  issues a Retrieve Document \[ITI-68\] transaction to the File Manager
+  to retrieve it.
 
-Note that Section XX.4.2.1 repeats in its entirety for additional use
-cases (replicate as Section XX.4.2.2, XX.4.2.3, etc.).
+- The Health Information System, acting as a File Source, issues a
+  Submit File \[ITI-87\] (update) to the File Manager to make available
+  the newer Workflow Definition file and metadata (updating the previous
+  resources on the File Manager).
 
-##### XX.4.2.1.1 simple name Use Case Description
+<img src="./media/image5.png"
+style="width:5.43898in;height:3.49597in" />
 
-Describe the key use cases addressed by the profile. Limit to a
-maximum of one page of text or consider an appendix.
+Figure 47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow
+Definition Documents management
 
-##### XX.4.2.1.2 simple name Process Flow
+The text in Figure 47.4.2.3.2-2 was used to generate the diagram in
+Figure 47.4.2.3.2-1. Readers will generally find the diagram more
+informative. The text is included here to facilitate editing.
 
-Diagram and describe the process flow(s) covered by this profile in
-order to satisfy the use cases. Demonstrate how the profile transactions
-are combined/sequenced. To provide context and demonstrate how the
-profile interacts with other profiles, feel free to include transactions
-and events that are “external” to this profile (using appropriate
-notation.)
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+Request message</p>
+<p>File Manager-&gt;-File Source: Submit File Response message</p>
+<p>File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
+Request message\nparameters:
+class=WORKFLOW_DEFINITION,\ntype=1.3.6.1.4.1.19376.1.5.3.1.5.1,\npatient:exists=false</p>
+<p>File Manager-&gt;-File Consumer:Search File Response message\n Bundle
+with DocumentReference resources</p>
+<p>File Consumer-&gt;+File Manager: Retrieve Document [ITI-68]\nRetrieve
+Document Request message</p>
+<p>File Manager-&gt;-File Consumer:Retrieve Document Response
+message</p>
+<p>File Source-&gt;+File Manager: Submit File [ITI-87]\nUpdate File
+Request message\nmetadata: DocumentReference.id=456, Binary.id=789</p>
+<p>File Manager-&gt;-File Source: Submit File Response messageFile
+Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File Request
+message</p>
+<p>File Manager-&gt;-File Source: Submit File Response message</p>
+<p>File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
+Request message\nparameters:
+class=WORKFLOW_DEFINITION,\ntype=1.3.6.1.4.1.19376.1.5.3.1.5.1,\npatient:exists=false</p>
+<p>File Manager-&gt;-File Consumer:Search File Response message\n Bundle
+with DocumentReference resources</p>
+<p>File Consumer-&gt;+File Manager: Retrieve Document [ITI-68]\nRetrieve
+Document Request message</p>
+<p>File Manager-&gt;-File Consumer:Retrieve Document Response
+message</p>
+<p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+Request message</p>
+<p>File Manager-&gt;-File Source: Submit File Response message</p>
+<p>File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
+Request message\nparameters:
+class=WORKFLOW_DEFINITION,\ntype=1.3.6.1.4.1.19376.1.5.3.1.5.1,\npatient:exists=false</p>
+<p>File Manager-&gt;-File Consumer:Search File Response message\n Bundle
+with DocumentReference resource</p>
+<p>File Source-&gt;+File Manager: Update DocumentReference
+[ITI-89]\nUpdate DocumentReference Request message\nmetadata:
+DocumentReference.id=1234,\nDocumentReference.status=superseded</p>
+<p>File Manager-&gt;-File Source: Update DocumentReference Response
+message</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
 
-The set of process flows will typically be exemplary, not exhaustive
-(i.e., it will address all the use cases, but will not show all possible
-combinations of actors, or all possible sequencing of transactions).
+Figure 47.4.2.3.2-2: Pseudocode for Process Flow Diagram
 
-If there are detailed behavioral rules that apply to a specific process
-flow or multiple process flows, an appendix may be added as needed.
+#### 47.4.2.4 Use Case \#4: Update of file’s ownership 
 
-The roles at the top of the swimlane diagram should correspond to
-actor names, include the profile acronym:actor name if referencing an
-actor from a different profile.
+A technician creates a stylesheet to render the XML documents produced
+by document producers belonging to Hospital Hope. After some time, the
+same stylesheet also needs to be made accessible to Hospital Peace. In
+order to accomplish this task, the technician updates metadata that
+describe the file in order to extend the ownership also to Hospital
+Peace.
 
-Modify the following “Swimlane Diagram”.
+##### 47.4.2.4.1 Update of file’s ownership - Use Case Description
 
-<div>
-{%include usecase1-processflow.svg%}
-</div>
-<br clear="all">
+Hospital Hope desires uniform rendering of XML documents produced within
+the organization, so it creates a stylesheet file. Mr. Black, a
+technician of the Hospital Hope, creates the stylesheet. Then Mr. Black
+uses his File Source to publish the stylesheet file into a system that
+manages non-patient files (File Manager) using the Submit File
+\[ITI-87\] transaction. Now the stylesheet will be available to document
+producers belonging to Hospital Hope. According to the local policies,
+the technician needs to extend the ownership of this file also to
+Hospital Peace. In order to do that, Mr. Black executes an update of the
+DocumentReference associated with the stylesheet using the Update
+DocumentReference \[ITI-89\] transaction. Now the stylesheet’s
+DocumentReference reflects the ownership of Hospital Hope and Hospital
+Peace.
 
-Figure XX.4.2.2-1: Basic Process Flow in Profile Acronym Profile
+##### 47.4.2.4.2 Update of file’s ownership Process Flow
 
-If process flow “swimlane” diagrams require additional explanation
-to clarify conditional flows, or flow variations need to be described
-where alternate systems may be playing different actor roles, document
-those conditional flows here.
+- The Health Information System acting as a File Source issues a Submit
+  File \[ITI-87\] (create) transaction to the File Manager to submit the
+  stylesheet
 
-Delete the material below if this is a workflow or transport
-profile. Delete the material above if this profile is a content module
-only profile.
+- The Health Information System acting as a File Source issues an Update
+  DocumentReference \[ITI-89\] transaction to the File Manager to modify
+  the DocumentReference.author list.
 
-**Pre-conditions**:
+<img src="./media/image6.png" style="width:6.15833in;height:3.5in" />
 
-Very briefly (typically one sentence) describe the conditions or
-timing when this content module would be used.
+Figure 47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of
+file’s ownership
 
-**Main Flow**:
+The text in Figure 47.4.2.4.2-2 was used to generate the diagram in
+Figure 47.4.2.4.2-1. Readers will generally find the diagram more
+informative. The text is included here to facilitate editing.
 
-Typically in an enumerated list, describe the clinical workflow
-when, where, and how this content module would be used.
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>File Source-&gt;File Source: Produce stylesheet</p>
+<p>File Source-&gt;File Manager: Submit File [ITI-87]\nCreate File
+Request message</p>
+<p>File Manager-&gt;File Source: Submit File Response message</p>
+<p>File Source-&gt;File Source: update of the ownership</p>
+<p>File Source-&gt;File Manager: Update DocumentReference [ITI-89]\n
+DocumentRefernce.author=Organization/123,Organization/456</p>
+<p>File Manager-&gt;File Source: Update DocumentReference response
+message</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
 
-**Post-conditions:**
+## 47.5 NPFS Security Considerations
 
-Very briefly (typically one sentence) describe the state of the
-clinical scenario after this content module has been created including
-examples of potential next steps.
+Non-patient files do not contain Patient Health Information (PHI), but
+they may contain other sensitive information such as physician reviews,
+work schedules, etc. In addition, those files can be used in conjunction
+with patient-related documents in order to satisfy clinical data
+consuming/sharing workflows. The reader should know that mistakes will
+be made, and these files may convey private information.
 
-## XX.5 ToDo Security Considerations
+Although this profile does not require actors to audit the transactions
+that exchange non-patient files, grouping with an ATNA Secure Node or
+Secure Application is strongly encouraged in order to track file and
+metadata creation and update.
 
-<a name="security-considerations"> </a>
+User authentication/authorization represents another important factor to
+consider in order to avoid malicious creation/updating of files.
+Grouping NPFS actors with actors in the Internet User Authorization
+(IUA) Profile enables deployments to mitigate these security issues.
 
-See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations)
+## 47.6 NPFS Cross Profile Considerations
 
-The following is instructions to the editor and this text is not to be included in a publication. 
-The material initially from [RFC 3552 "Security Considerations Guidelines" July 2003](https://tools.ietf.org/html/rfc3552).
-
-This section should address downstream design considerations, specifically for: Privacy, Security, and Safety. These might need to be individual header sections if they are significant or need to be referenced.
-
-The editor needs to understand Security and Privacy fundamentals. 
-General [Security and Privacy guidance](http://hl7.org/fhir/secpriv-module.html) is provided in the FHIR Specification. 
-The FHIR core specification should be leveraged where possible to inform the reader of your specification.
-
-IHE FHIR based profiles should reference the [ITI Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) section 8 Mobile Security and Privacy Considerations base when appropriate.
-
-IHE Document Content profiles can reference the security and privacy provided by the Document Sharing infrastructure as directly grouped or possibly to be grouped.
-
-   While it is not a requirement that any given specification or system be
-   immune to all forms of attack, it is still necessary for authors of specifications to
-   consider as many forms as possible.  Part of the purpose of the
-   Security and Privacy Considerations section is to explain what attacks have been 
-   considered and what countermeasures can be applied to defend against them.
-   
-   There should be a clear description of the kinds of threats on the
-   described specification.  This should be approached as an
-   effort to perform "due diligence" in describing all known or
-   foreseeable risks and threats to potential implementers and users.
-
-Authors MUST describe:
-* which attacks have been considered and addressed in the specification
-* which attacks have been considered but not addressed in the specification
-* what could be done in system design, system deployment, or user training
-
-
-   At least the following forms of attack MUST be considered:
-   eavesdropping, replay, message insertion, deletion, modification, and
-   man-in-the-middle.  Potential denial of service attacks MUST be
-   identified as well.  If the specification incorporates cryptographic
-   protection mechanisms, it should be clearly indicated which portions
-   of the data are protected and what the protections are (i.e.,
-   integrity only, confidentiality, and/or endpoint authentication,
-   etc.).  Some indication should also be given to what sorts of attacks
-   the cryptographic protection is susceptible.  Data which should be
-   held secret (keying material, random seeds, etc.) should be clearly
-   labeled.
-
-   If the specification involves authentication, particularly user-host
-   authentication, the security of the authentication method MUST be
-   clearly specified.  That is, authors MUST document the assumptions
-   that the security of this authentication method is predicated upon.
-
-   The threat environment addressed by the Security and Privacy Considerations
-   section MUST at a minimum include deployment across the global
-   Internet across multiple administrative boundaries without assuming
-   that firewalls are in place, even if only to provide justification
-   for why such consideration is out of scope for the protocol.  It is
-   not acceptable to only discuss threats applicable to LANs and ignore
-   the broader threat environment.  In
-   some cases, there might be an Applicability Statement discouraging
-   use of a technology or protocol in a particular environment.
-   Nonetheless, the security issues of broader deployment should be
-   discussed in the document.
-
-   There should be a clear description of the residual risk to the user
-   or operator of that specification after threat mitigation has been
-   deployed.  Such risks might arise from compromise in a related
-   specification (e.g., IPsec is useless if key management has been
-   compromised), from incorrect implementation, compromise of the
-   security technology used for risk reduction (e.g., a cipher with a
-   40-bit key), or there might be risks that are not addressed by the
-   specification (e.g., denial of service attacks on an
-   underlying link protocol).  Particular care should be taken in
-   situations where the compromise of a single system would compromise
-   an entire protocol.  For instance, in general specification designers
-   assume that end-systems are inviolate and don't worry about physical
-   attack.  However, in cases (such as a certificate authority) where
-   compromise of a single system could lead to widespread compromises,
-   it is appropriate to consider systems and physical security as well.
-
-   There should also be some discussion of potential security risks
-   arising from potential misapplications of the specification or technology
-   described in the specification.  
-  
-This section also include specific considerations regarding Digital Signatures, Provenance, Audit Logging, and De-Identification.
-
-Where audit logging is specified, a StructureDefinition profile(s) should be included, and Examples of those logs might be included.
-
-## XX.6 ToDo Cross-Profile Considerations
-
-<a name="other-grouping"> </a>
-
-This section is informative, not normative. It is intended to put
-this profile in context with other profiles. Any required groupings
-should have already been described above. Brief descriptions can go
-directly into this section; lengthy descriptions should go into an
-appendix. Examples of this material include ITI Cross Community Access
-(XCA) Grouping Rules (Section 18.2.3), the Radiology associated profiles
-listed at wiki.ihe.net, or ITI Volume 1 Appendix E “Cross Profile
-Considerations”, and the “See Also” sections Radiology Profile
-descriptions on the wiki such as
-<http://wiki.ihe.net/index.php/Scheduled_Workflow#See_Also>. If this
-section is left blank, add “Not applicable.”
-
-Consider using a format such as the following:
-
-other profile acronym - other profile name
-
-A other profile actor name in other profile name might
-be grouped with a this profile actor name to describe
-benefit/what is accomplished by grouping.
-
-
+None.
