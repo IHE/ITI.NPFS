@@ -42,8 +42,9 @@ relevant transactions between them. If needed for context, other actors
 that may be indirectly involved due to their participation in other
 related profiles are shown in dotted lines. Actors which have a
 mandatory grouping are shown in conjoined boxes.
-
-![](./media/image2.emf)
+<div width="100%">
+![](NPFSactorsandtransactions.png)
+<div>
 
 Figure 47.1-1: NPFS Actor Diagram
 
@@ -54,16 +55,67 @@ optional transactions (labeled “O”).
 
 Table 47.1-1: NPFS Profile - Actors and transactions
 
-| Actors        | Transactions                        | Optionality | Reference              |
-|---------------|-------------------------------------|-------------|------------------------|
-| File Manager  | Submit File \[ITI-87\]              | R           | ITI TF-2c: 3.87        |
-|               | Search File \[ITI-88\]              | R           | ITI TF-2c: 3.88        |
-|               | Retrieve Document \[ITI-68\]        | R           | ITI TF-2c: 3.68 (Note) |
-|               | Update DocumentReference \[ITI-89\] | R           | ITI TF-2c: 3.89        |
-| File Consumer | Search File \[ITI-88\]              | R           | ITI TF-2c: 3.88        |
-|               | Retrieve Document \[ITI-68\]        | O           | ITI TF-2c: 3.68 (Note) |
-| File Source   | Submit File \[ITI-87\]              | R           | ITI TF-2c: 3.87        |
-|               | Update DocumentReference \[ITI-89\] | O           | ITI TF-2c: 3.89        |
+<table border="1" borderspacing="0"
+    style="border: 1px solid black; border-collapse: collapse">
+    <caption>
+        <b> Table 1:33.1-1: MHD Implementation Guide - Actors and Transactions </b>
+    </caption>
+    <thead>
+        <tr style="background: gray;">
+            <th>Actors</th>
+            <th>Transactions</th>
+            <th>Optionality</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4">
+                <a href="volume-1.html#47111-file-manager">File Manager</a>
+            </td>
+            <td>Submit File [ITI-87] </td>
+            <td align="center"> R </td>
+        </tr>
+        <tr>
+            <td>Search File [ITI-88] </td>
+            <td align="center"> R </td>
+        </tr>
+        <tr>
+            <td>  <a href="https://profiles.ihe.net/ITI/MHD/ITI-68.html">Retrieve Document
+                    [ITI-68]</a></td>
+            <td align="center"> R </td>
+        </tr>
+        <tr>
+            <td> Update DocumentReference File [ITI-89] </td>
+            <td align="center"> R </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <a href="volume-1.html#47111-file-consumer">File Consumer</a>
+            </td>
+            <td>Search File [ITI-88] </td>
+            <td align="center"> R </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://profiles.ihe.net/ITI/MHD/ITI-68.html">Retrieve Document
+                    [ITI-68]</a>
+            </td>
+            <td align="center"> O </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <a href="volume-1.html#47111-file-source">File Source</a>
+            </td>
+            <td>Submit File [ITI-87] </td>
+            <td align="center"> R </td>
+        </tr>
+        <tr>
+            <td> Update DocumentReference File [ITI-89] </td>
+            <td align="center"> O </td>
+        </tr>
+    </tbody>
+</table>
+
 
 Note: This transaction is currently specified in the MHD Trial
 Implementation Supplement.
@@ -106,6 +158,7 @@ Table 47.2-1: Not-patient File Sharing - Actors and Options
 | File Manager  | No options defined   | --             |
 | File Consumer | File Retrieve        | Section 47.2.1 |
 | File Source   | Update File Metadata | Section 47.2.2 |
+{: .grid }
 
 ### 47.2.1 File Retrieve Option
 
@@ -189,11 +242,10 @@ reference it as an XSL transformation of the Laboratory Report.
   URL of the stylesheet, that will be retrieved using a Retrieve
   Document \[ITI-68\] transaction.
 
-<img src="./media/image3.png"
-style="width:5.90029in;height:2.94072in" />
+![](image3.png)
 
-Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets
-management
+**Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets
+management**
 
 The text in Figure 47.4.2.1.2-2 was used to generate the diagram in
 Figure 47.4.2.1.2-1. Readers will generally find the diagram more
@@ -290,8 +342,7 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
   linked to the previous one via a replacement relationship, using the
   relatesTo parameter; see ITI TF-2c: 3.87.4.3.2.)
 
-<img src="./media/image4.png"
-style="width:6.41531in;height:3.50694in" />
+![](image4.png)
 
 Figure 47.4.2.2.2-1: Basic Process Flow in NPFS Profile for Privacy
 Policies management
@@ -381,8 +432,7 @@ effect, overwritten.
   the newer Workflow Definition file and metadata (updating the previous
   resources on the File Manager).
 
-<img src="./media/image5.png"
-style="width:5.43898in;height:3.49597in" />
+![](image5.png)
 
 Figure 47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow
 Definition Documents management
@@ -480,7 +530,7 @@ Peace.
   DocumentReference \[ITI-89\] transaction to the File Manager to modify
   the DocumentReference.author list.
 
-<img src="./media/image6.png" style="width:6.15833in;height:3.5in" />
+![](image6.png)
 
 Figure 47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of
 file’s ownership
