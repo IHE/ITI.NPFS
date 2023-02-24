@@ -42,26 +42,26 @@ relevant transactions between them. If needed for context, other actors
 that may be indirectly involved due to their participation in other
 related profiles are shown in dotted lines. Actors which have a
 mandatory grouping are shown in conjoined boxes.
-<div width="100%">
-![](NPFSactorsandtransactions.png)
-<div>
 
-Figure 47.1-1: NPFS Actor Diagram
+<div align="center">
+<img src="NPFSactorsandtransactions.png" width="70%">
+<p><b>Figure 47.1-1: NPFS Actor Diagram</b></p>
+<br>
+</div>
 
 Table 47.1-1 lists the transactions for each actor directly involved in
 the NPFS Profile. To claim compliance with this profile, an actor shall
 support all required transactions (labeled “R”) and may support the
 optional transactions (labeled “O”).
 
-Table 47.1-1: NPFS Profile - Actors and transactions
-
+<div align="center">
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
     <caption>
-        <b> Table 1:33.1-1: MHD Implementation Guide - Actors and Transactions </b>
+        <b> Table 47.1-1: NPFSm Profile - Actors and transactions </b>
     </caption>
     <thead>
-        <tr style="background: gray;">
+        <tr style="background: #c0c0c0y;">
             <th>Actors</th>
             <th>Transactions</th>
             <th>Optionality</th>
@@ -115,10 +115,10 @@ Table 47.1-1: NPFS Profile - Actors and transactions
         </tr>
     </tbody>
 </table>
-
-
-Note: This transaction is currently specified in the MHD Trial
-Implementation Supplement.
+</div>
+<p align="center">Note: This transaction is currently specified in the MHD Trial
+Implementation Supplement.</p>
+<br>
 
 ### 47.1.1 Actor Descriptions and Actor Profile Requirements
 
@@ -151,14 +151,39 @@ Options that may be selected for each actor in this profile, if any, are
 listed in Table 47.2-1. Dependencies between options when applicable are
 specified in notes.
 
-Table 47.2-1: Not-patient File Sharing - Actors and Options
-
-| Actor         | Option Name          | Reference      |
-|---------------|----------------------|----------------|
-| File Manager  | No options defined   | --             |
-| File Consumer | File Retrieve        | Section 47.2.1 |
-| File Source   | Update File Metadata | Section 47.2.2 |
-{: .grid }
+<div align="center">
+<table width="100%" border="1" borderspacing="0"
+    style="border: 1px solid black; border-collapse: collapse">
+    <caption>
+        <b> Table 47.2-1: Not-patient File Sharing - Actors and Options </b>
+    </caption>
+    <thead>
+        <tr style="background: 	#c0c0c0;">
+            <th style="text-align:center">Actors</th>
+            <th style="text-align:center">Option Name</th>
+            <th style="text-align:center">Reference</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding-left:10px">File Manager</td>
+            <td style="padding-left:10px">No options defined</td>
+            <td style="padding-left:10px">--</td>
+        </tr>
+        <tr>
+            <td style="padding-left:10px">File Consumer</td>
+            <td style="padding-left:10px">File Retrieve</td>
+            <td style="padding-left:10px">Section 47.2.1</td>
+        </tr>
+        <tr>
+            <td style="padding-left:10px">File Source</td>
+            <td style="padding-left:10px">Update File Metadata</td>
+            <td style="padding-left:10px">Section 47.2.2</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br>
 
 ### 47.2.1 File Retrieve Option
 
@@ -242,44 +267,46 @@ reference it as an XSL transformation of the Laboratory Report.
   URL of the stylesheet, that will be retrieved using a Retrieve
   Document \[ITI-68\] transaction.
 
-![](image3.png)
-
-**Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets
-management**
+<div align="center">
+<img src="image3.png" width="80%">
+<p><b>Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets
+management</b></p>
+<br>
+</div>
 
 The text in Figure 47.4.2.1.2-2 was used to generate the diagram in
 Figure 47.4.2.1.2-1. Readers will generally find the diagram more
 informative. The text is included here to facilitate editing.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
-Request message</p>
-<p>File Manager-&gt;-File Source: Submit File Response message</p>
-<p>File/Document Consumer-&gt;+Document Repository: Retrieve Document
-Set [ITI-43] (Laboratory Report)</p>
-<p>Document Repository-&gt;+File/Document Consumer: Retrieve Document
-Set response</p>
-<p>File/Document Consumer-&gt;+File Manager: Search File
-[ITI-88]\nSearch File Request message\nparameters:
-class=STYLESHEET,\nauthor.identifier=IHE-FACILITY1039,\npatient:exists=false</p>
-<p>File Manager-&gt;-File/Document Consumer:Search File Response
-message\n Bundle with DocumentReference resource</p>
-<p>File/Document Consumer-&gt;+File Manager: Retrieve Document
-[ITI-68]\nRetrieve Document Request message</p>
-<p>File Manager-&gt;-File/Document Consumer:Retrieve Document Response
-message</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+  <table style="border: 1px solid black">
+  <colgroup>
+  <col style="width: 100%" />
+  </colgroup>
+  <thead>
+  <tr class="header">
+  <th style="padding-top:10px; padding-left:10px"><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+  Request message</p>
+  <p>File Manager-&gt;-File Source: Submit File Response message</p>
+  <p>File/Document Consumer-&gt;+Document Repository: Retrieve Document
+  Set [ITI-43] (Laboratory Report)</p>
+  <p>Document Repository-&gt;+File/Document Consumer: Retrieve Document
+  Set response</p>
+  <p>File/Document Consumer-&gt;+File Manager: Search File
+  [ITI-88]\nSearch File Request message\nparameters:
+  class=STYLESHEET,\nauthor.identifier=IHE-FACILITY1039,\npatient:exists=false</p>
+  <p>File Manager-&gt;-File/Document Consumer:Search File Response
+  message\n Bundle with DocumentReference resource</p>
+  <p>File/Document Consumer-&gt;+File Manager: Retrieve Document
+  [ITI-68]\nRetrieve Document Request message</p>
+  <p>File Manager-&gt;-File/Document Consumer:Retrieve Document Response
+  message</p></th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+<p align="center"><b>Figure 47.4.2.1.2-2: Pseudocode for Process Flow Diagram</b></p>
 
-Figure 47.4.2.1.2-2: Pseudocode for Process Flow Diagram
 
 #### 47.4.2.2 Use Case \#2: Replace Privacy Policies 
 
@@ -342,7 +369,12 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
   linked to the previous one via a replacement relationship, using the
   relatesTo parameter; see ITI TF-2c: 3.87.4.3.2.)
 
-![](image4.png)
+<div align="center">
+<img src="image4.png" width="80%">
+<p><b>Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets
+management</b></p>
+<br>
+</div>
 
 Figure 47.4.2.2.2-1: Basic Process Flow in NPFS Profile for Privacy
 Policies management
@@ -351,13 +383,13 @@ The text in Figure 47.4.2.2.2-2 was used to generate the diagram in
 Figure 47.4.2.2.2-1. Readers will generally find the diagram more
 informative. The text is included here to facilitate editing.
 
-<table>
+<table style="border: 1px solid black">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+<th style="padding-top:10px; padding-left:10px"><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
 Request message</p>
 <p>File Manager-&gt;-File Source: Submit File Response message</p>
 <p>File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
@@ -379,8 +411,8 @@ status=superseded</p>
 <tbody>
 </tbody>
 </table>
+<p align="center"><b>Figure 47.4.2.2.2-1: Pseudocode for Process Flow Diagram</b></p>
 
-Figure 47.4.2.2.2-1: Pseudocode for Process Flow Diagram
 
 #### 47.4.2.3 Use Case \#3: Manage change to Workflow Definitions 
 
@@ -432,22 +464,24 @@ effect, overwritten.
   the newer Workflow Definition file and metadata (updating the previous
   resources on the File Manager).
 
-![](image5.png)
-
-Figure 47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow
-Definition Documents management
+<div align="center">
+<img src="image5.png" width="80%">
+<p><b>Figure 47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow
+Definition Documents management</b></p>
+<br>
+</div>
 
 The text in Figure 47.4.2.3.2-2 was used to generate the diagram in
 Figure 47.4.2.3.2-1. Readers will generally find the diagram more
 informative. The text is included here to facilitate editing.
 
-<table>
+<table style="border: 1px solid black">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
+<th style="padding-top:10px; padding-left:10px"><p>File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
 Request message</p>
 <p>File Manager-&gt;-File Source: Submit File Response message</p>
 <p>File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
@@ -492,8 +526,8 @@ message</p></th>
 <tbody>
 </tbody>
 </table>
+<p align="center"><b>Figure 47.4.2.3.2-2: Pseudocode for Process Flow Diagram</b></p>
 
-Figure 47.4.2.3.2-2: Pseudocode for Process Flow Diagram
 
 #### 47.4.2.4 Use Case \#4: Update of file’s ownership 
 
@@ -530,22 +564,24 @@ Peace.
   DocumentReference \[ITI-89\] transaction to the File Manager to modify
   the DocumentReference.author list.
 
-![](image6.png)
-
-Figure 47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of
-file’s ownership
+<div align="center">
+<img src="image6.png" width="80%">
+<p><b>Figure 47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of
+file’s ownership</b></p>
+<br>
+</div>
 
 The text in Figure 47.4.2.4.2-2 was used to generate the diagram in
 Figure 47.4.2.4.2-1. Readers will generally find the diagram more
 informative. The text is included here to facilitate editing.
 
-<table>
+<table style="border: 1px solid black; width:100%">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>File Source-&gt;File Source: Produce stylesheet</p>
+<th style="padding-top:10px; padding-left:10px"><p>File Source-&gt;File Source: Produce stylesheet</p>
 <p>File Source-&gt;File Manager: Submit File [ITI-87]\nCreate File
 Request message</p>
 <p>File Manager-&gt;File Source: Submit File Response message</p>
@@ -559,6 +595,7 @@ message</p></th>
 <tbody>
 </tbody>
 </table>
+<p align="center"><b>Figure 47.4.2.4.2-2: Pseudocode for Process Flow Diagram</b></p>
 
 ## 47.5 NPFS Security Considerations
 
