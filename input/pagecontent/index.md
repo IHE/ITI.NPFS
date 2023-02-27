@@ -15,12 +15,12 @@ This guide is organized into the following sections:
 
 1. Volume 1:
    1. [Introduction](volume-1.html)
-   1. [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
-   1. [Actor Options](volume-1.html#actor-options)
-   1. [Actor Required Groupings](volume-1.html#required-groupings)
-   1. [Overview](volume-1.html#overview)
-   1. [Security Considerations](volume-1.html#security-considerations)
-   1. [Cross Profile Considerations](volume-1.html#other-grouping)
+   1. [Actors, Transactions, and Content](volume-1.html#471-npfs-actors-transactions-and-content-modules)
+   1. [Actor Options](volume-1.html#472-npfs-actor-options)
+   1. [Actor Required Groupings](volume-1.html#473-npfs-required-actor-groupings)
+   1. [Overview](volume-1.html#474-npfs-overview)
+   1. [Security Considerations](volume-1.html#475-npfs-security-considerations)
+   1. [Cross Profile Considerations](volume-1.html#476-npfs-cross-profile-considerations)
    1. **TODO: point to the Volume 1 Appendix if there is one**
 2. Volume 2: Transaction Detail
    1. [ToDo do \[domain-YY\]](domain-YY.html)
