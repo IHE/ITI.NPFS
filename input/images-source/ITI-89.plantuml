@@ -1,0 +1,12 @@
+@startuml
+hide footbox
+participant "File Source" as Client
+participant "File Manager" as Server
+"Client" -> "Server" : Update DocumentReference Request
+activate "Server"
+activate "Client"
+"Server" --> "Client" : Update DocumentReference Request
+deactivate "Server"
+deactivate "Client"
+
+@enduml

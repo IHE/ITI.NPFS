@@ -61,10 +61,10 @@ optional transactions (labeled “O”).
         <b> Table 47.1-1: NPFSm Profile - Actors and transactions </b>
     </caption>
     <thead>
-        <tr style="background: #c0c0c0y;">
-            <th>Actors</th>
-            <th>Transactions</th>
-            <th>Optionality</th>
+        <tr>
+            <th style="text-align:center">Actors</th>
+            <th style="text-align:center">Transactions</th>
+            <th style="text-align:center">Optionality</th>
         </tr>
     </thead>
     <tbody>
@@ -72,11 +72,11 @@ optional transactions (labeled “O”).
             <td rowspan="4">
                 <a href="volume-1.html#47111-file-manager">File Manager</a>
             </td>
-            <td>Submit File [ITI-87] </td>
+            <td><a href="ITI-87.html">Submit File [ITI-87]</a></td>
             <td align="center"> R </td>
         </tr>
         <tr>
-            <td>Search File [ITI-88] </td>
+            <td><a href="ITI-88.html">Search File [ITI-88]</a></td>
             <td align="center"> R </td>
         </tr>
         <tr>
@@ -85,14 +85,14 @@ optional transactions (labeled “O”).
             <td align="center"> R </td>
         </tr>
         <tr>
-            <td> Update DocumentReference File [ITI-89] </td>
+            <td> <a href="ITI-89.html">Update DocumentReference File [ITI-89]</a> </td>
             <td align="center"> R </td>
         </tr>
         <tr>
             <td rowspan="2">
                 <a href="volume-1.html#47111-file-consumer">File Consumer</a>
             </td>
-            <td>Search File [ITI-88] </td>
+            <td><a href="ITI-88.html">Search File [ITI-88]</a> </td>
             <td align="center"> R </td>
         </tr>
         <tr>
@@ -106,11 +106,11 @@ optional transactions (labeled “O”).
             <td rowspan="2">
                 <a href="volume-1.html#47111-file-source">File Source</a>
             </td>
-            <td>Submit File [ITI-87] </td>
+            <td><a href="ITI-87.html">Submit File [ITI-87]</a></td>
             <td align="center"> R </td>
         </tr>
         <tr>
-            <td> Update DocumentReference File [ITI-89] </td>
+            <td> <a href="ITI-89.html">Update DocumentReference File [ITI-89]</a> </td>
             <td align="center"> O </td>
         </tr>
     </tbody>
@@ -158,7 +158,7 @@ specified in notes.
         <b> Table 47.2-1: Not-patient File Sharing - Actors and Options </b>
     </caption>
     <thead>
-        <tr style="background: 	#c0c0c0;">
+        <tr>
             <th style="text-align:center">Actors</th>
             <th style="text-align:center">Option Name</th>
             <th style="text-align:center">Reference</th>

@@ -61,7 +61,13 @@ pages:
     title: Volume 1
     generation: markdown
   ITI-87.md:
-    title: 2:3.Submit File [ITI-87]
+    title: 3.87.Submit File [ITI-87]
+    generation: markdown
+  ITI-88.md:
+    title: 3.88.Search File [ITI-88]
+    generation: markdown
+  ITI-89.md:
+    title: 3.89.Update DocumentReference [ITI-89]
     generation: markdown
   domain-ZZ.md:
     title: 3:?.ZZ Content one [Domain-ZZ]
@@ -91,6 +97,8 @@ menu:
     Cross-Profile Considerations: volume-1.html#476-npfs-cross-profile-considerations
   Volume 2:
     "Submit File [ITI-87]": ITI-87.html
+    "Search File [ITI-88]": ITI-88.html
+    "Update DocumentReference [ITI-89]": ITI-89.html
   Volume 3:
     "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html
