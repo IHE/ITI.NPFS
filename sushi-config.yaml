@@ -69,6 +69,9 @@ pages:
   ITI-89.md:
     title: 3.89.Update DocumentReference [ITI-89]
     generation: markdown
+  useCase.md:
+    title: 3.68.2.Use Case Roles
+    generation: markdown
   domain-ZZ.md:
     title: 3:?.ZZ Content one [Domain-ZZ]
     generation: markdown
@@ -99,6 +102,7 @@ menu:
     "Submit File [ITI-87]": ITI-87.html
     "Search File [ITI-88]": ITI-88.html
     "Update DocumentReference [ITI-89]": ITI-89.html
+    "Use Case Roles": useCase.html
   Volume 3:
     "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html

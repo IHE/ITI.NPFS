@@ -261,9 +261,9 @@ of the codes within the value set can apply to the concept being
 communicated. If the table does not cover the concept (based on human
 review), an alternate code may be used instead.
 
-<p style="text-align:center; font-weight:bold">Table 3.87.4.1.2.1-1: Coded values the category element</p>
+<p style="font-weight:bold">Table 3.87.4.1.2.1-1: Coded values the category element</p>
  
-<table  align="center">
+<table>
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 40%" />

@@ -23,7 +23,10 @@ This guide is organized into the following sections:
    1. [Cross Profile Considerations](volume-1.html#476-npfs-cross-profile-considerations)
    1. **TODO: point to the Volume 1 Appendix if there is one**
 2. Volume 2: Transaction Detail
-   1. [ToDo do \[domain-YY\]](domain-YY.html)
+   1. [Submit File \[ITI-87\]](ITI-87.html)
+   1. [Search File \[ITI-88\]](ITI-88.html)
+   1. [Update DocumentReference \[ITI-89\]](ITI-89.html)
+   1. [Use Case Roles](useCase.html)
    1. **TODO: point to the Volume 2 Appendix if there is one**
 3. Volume 3: Metadata and Content
    1. [Content One](domain-ZZ.html)
