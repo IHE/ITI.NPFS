@@ -4,7 +4,7 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.npfs
 canonical: https://profiles.ihe.net/ITI/NPFS
-version: 2.1-current
+version: 2.2.0-current
 name: IHE_ITI_NPFS
 title: "Non-patient File Sharing (NPFS)"
 description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Non-patient File Sharing (NPFS)
