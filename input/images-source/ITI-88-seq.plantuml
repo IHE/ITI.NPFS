@@ -1,0 +1,12 @@
+@startuml
+hide footbox
+participant "File Consumer" as Client
+participant "File Manager" as Server
+"Client" -> "Server" : Search File Request
+activate "Server"
+activate "Client"
+"Server" --> "Client" : Search File Response
+deactivate "Server"
+deactivate "Client"
+
+@enduml

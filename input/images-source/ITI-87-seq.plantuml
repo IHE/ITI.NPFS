@@ -1,0 +1,28 @@
+@startuml
+hide footbox
+participant "File Source" as Client
+participant "File Manager" as Server
+"Client" -> "Server" : Create File Request
+activate "Server"
+activate "Client"
+"Server" --> "Client" : Submit File Response
+deactivate "Server"
+deactivate "Client"
+
+"Client" -> "Server" : Update File Request
+activate "Server"
+activate "Client"
+
+"Server" --> "Client" : Update File Response
+deactivate "Server"
+deactivate "Client"
+
+"Client" -> "Server" : Replace File Request
+activate "Server"
+activate "Client"
+
+"Server" --> "Client" : Submit File Response
+deactivate "Server"
+deactivate "Client"
+
+@enduml
