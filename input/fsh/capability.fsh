@@ -187,7 +187,7 @@ InstanceOf: CapabilityStatement
 Title: "File Source (client) implementing Update DocumentReference "
 Usage: #definition
 * description = "IHE ITI Non-patient File Sharing (NPFS) - File Source (client) - with ITI-89 Update DocumentReference"
-* url = "https://profiles.ihe.net/ITI/NPFS/CapabilityStatement/IHE.NPFS.FileSource"
+* url = "https://profiles.ihe.net/ITI/NPFS/CapabilityStatement/IHE.NPFS.FileSourceOption"
 * name = "IHE_NPFS_FileSource"
 * title = "File Source (client) implementing Update DocumentReference "
 * status = #active
