@@ -39,10 +39,10 @@ Profile:        NPFSUpdateDocumentBundle
 Parent:         Bundle
 Id:             IHE.NPFS.UpdateDocumentBundle
 Title:          "NPFS Update Document Bundle"
-Description:    "A profile on the Bundle transaction for ITI-87 Submit File used to update a new file and related metadata
+Description:    "A profile on the Bundle transaction for ITI-87 Submit File used to update a file and related metadata
   - shall be a Transaction Bundle
   - all resources shall be compliant with constraints
-  - may create one [DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html)
+  - may update one [DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html)
     - with a document as a [Binary](http://hl7.org/fhir/R4/binary.html)"
 
 * type = #transaction
@@ -76,10 +76,10 @@ Profile:        NPFSReplaceDocumentBundle
 Parent:         Bundle
 Id:             IHE.NPFS.ReplaceDocumentBundle
 Title:          "NPFS Replace Document Bundle"
-Description:    "A profile on the Bundle transaction for ITI-87 Submit File used to replace a new file and related metadata
+Description:    "A profile on the Bundle transaction for ITI-87 Submit File used to replace a file and related metadata
   - shall be a Transaction Bundle
   - all resources shall be compliant with constraints
-  - may create one [DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html)
+  - may replace one [DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html)
     - with a document as a [Binary](http://hl7.org/fhir/R4/binary.html)"
 
 * type = #transaction

@@ -7,9 +7,9 @@ patient.
 
 ### 3.88.2 Actor Roles
 
-<table width="80%" border="1" borderspacing="0"
+<table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
-    <caption>
+    <caption style="text-align:left">
         <b> Table 3.88.2-1: Actor Roles </b>
     </caption>
     <tbody>
@@ -34,12 +34,12 @@ patient.
 
 ### 3.88.3 Referenced Standards
 
-<table width="80%" border="1" borderspacing="0"
+<table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
     <tbody>
         <tr>
             <td style="padding:3px">HL7 FHIR</td>
-            <td><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR R4</a></td>
+            <td><a href="http://hl7.org/fhir/R4/index.html">HL7 FHIR Release 4.0</a></td>
         </tr>
     </tbody>
 </table>
@@ -47,7 +47,7 @@ patient.
 
 ### 3.88.4 Messages
 
-<div align="center">
+<div>
 {%include ITI-88-seq.svg%}
 <p><b>Figure 3.88.4-1: Interaction Diagram</b></p>
 </div>

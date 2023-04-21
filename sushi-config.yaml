@@ -4,12 +4,12 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.npfs
 canonical: https://profiles.ihe.net/ITI/NPFS
-version: 2.1-current
+version: Rev.2.1
 name: IHE_ITI_NPFS
 title: "Non-patient File Sharing (NPFS)"
 description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Non-patient File Sharing (NPFS)
-releaseLabel: ci-build
-#releaseLabel: Trial-Implementation
+#releaseLabel: ci-build
+releaseLabel: Trial-Implementation
 #date: 2022-01-02
 status: active
 publisher:
@@ -58,7 +58,7 @@ pages:
     title: NPFS Home
     generation: markdown
   volume-1.md:
-    title: Volume 1
+    title: 47 Non-Patient File Sharing (NPFS) Profile
     generation: markdown
   ITI-87.md:
     title: 3.87.Submit File [ITI-87]

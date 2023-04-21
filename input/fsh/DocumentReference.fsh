@@ -9,7 +9,7 @@ Description: "A profile on the DocumentReference resource for NPFS."
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
 * identifier ^slicing.rules = #open
-* status 1..1
+* status 1..1 
 * type 1..1 
 * category 1..1 
 * subject 0..0

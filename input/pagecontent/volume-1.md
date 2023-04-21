@@ -1,4 +1,3 @@
-# 47 Non-Patient File Sharing (NPFS) Profile
 
 The Non-Patient File Sharing Profile defines how to enable sharing of
 non-patient files such as clinical workflow definitions, domain

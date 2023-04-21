@@ -1,5 +1,5 @@
 
-### Scope
+### 3.87.1 Scope
 
 This transaction allows a File Source to publish a new file and related
 metadata. It also enables update of an existing file and update its
@@ -7,24 +7,24 @@ metadata and replacement of a file.
 
 The files are not associated with a patient.
 
-### Actors Roles
+### 3.87.2 Actors Roles
 
 <div align="center">
-<img src="ITI87ActorRoles.png" width="40%">
+<img src="ITI87ActorRoles.png">
 <p><b>Figure: Use Case Diagram</b></p>
 <br>
 </div>
 
-<div align="center">
-<table width="80%" border="1" borderspacing="0"
+<div>
+<table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
-    <caption>
-        <b> Table: Actor Roles </b>
+    <caption style="text-align:left">
+        <b> Table 3.87.2-1: Actor Roles </b>
     </caption>
     <tbody>
         <tr>
             <td style="padding:3px"><b>Actor:</b></td>
-            <td><a href="volume-1.html#47111-file-source">File Source</a></td>
+            <td><a href="volume-1.html#47113-file-source">File Source</a></td>
         </tr>
        <tr>
             <td><b>Role:</b></td>
@@ -43,9 +43,9 @@ The files are not associated with a patient.
 </div>
 <br>
 
-### Referenced Standards
+### 3.87.3 Referenced Standards
 
-<table width="80%" border="1" borderspacing="0"
+<table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
     <tbody>
         <tr>
@@ -55,14 +55,13 @@ The files are not associated with a patient.
     </tbody>
 </table>
 
-### Interactions
+### 3.87.4 Messages
 
-<div align="center">
+<div>
 {%include ITI-87-seq.svg%}
 <p><b>Figure 3.87.4-1: Interaction Diagram</b></p>
 </div>
 <br clear="all">
-
 
 #### 3.87.4.1 Create File Request Message
 
@@ -103,13 +102,13 @@ format. Values for media-type of the request message are defined in the
 ITI TF-2x: Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement)*.*
 
-<p style="text-align:center; font-weight:bold">Table 3.87.4.1.2-1: DocumentReference Resource Constraints</p>
+<p style="font-weight:bold">Table 3.87.4.1.2-1: DocumentReference Resource Constraints</p>
 
 <table>
 <colgroup>
-<col style="width: 35%" />
-<col style="width: 25%" />
-<col style="width: 40%" />
+<col style="width: 34%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -124,14 +123,14 @@ Implementation Supplement)*.*
 <p>[0..1]</p></td>
 <td style="border:1px solid black"></td>
 <td style="border:1px solid black">The id element shall be provided if the File Source is sending a
-Replace File Message Section 3.87.4.2.2). The value is the id of the
+Replace File Message (<a href="ITI-87.html#387422-message-semantics">Section 3.87.4.2.2</a>). The value is the id of the
 DocumentReference Resource to be updated.</td>
 </tr>
 <tr class="even">
 <td style="border:1px solid black"><p>masterIdentifier</p>
 <p>[0..1]</p></td>
 <td style="border:1px solid black"></td>
-<td style="border:1px solid black">See Section 3.87.4.1.2.4.</td>
+<td style="border:1px solid black"><a href="ITI-87.html#3874124-masteridentifier-element">See Section 3.87.4.1.2.4.</a></td>
 </tr>
 <tr class="odd">
 <td style="border:1px solid black"><p>status</p>
@@ -143,14 +142,14 @@ DocumentReference Resource to be updated.</td>
 <td style="border:1px solid black"><p>type</p>
 <p>[0..1]</p></td>
 <td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black">See Section 3.87.4.1.2.2.</td>
+<td style="border:1px solid black"><a href="ITI-87.html#3874122-type-element">See Section 3.87.4.1.2.2.</a></td>
 </tr>
 <tr class="odd">
 <td style="border:1px solid black"><p>category</p>
 <p>[0..1]</p></td>
 <td style="border:1px solid black">[1..1]</td>
 <td style="border:1px solid black">File’s class (e.g., Workflow Definition, Stylesheet, Privacy
-Policy). See Section 3.87.4.1.2.1.</td>
+Policy). <a href="ITI-87.html#3874121-category-element">See Section 3.87.4.1.2.1.</a></td>
 </tr>
 <tr class="even">
 <td style="border:1px solid black"><p>subject</p>
@@ -175,7 +174,7 @@ Organization Resource.</td>
 <td style="border:1px solid black"><p>relatesTo</p>
 <p>[0..*]</p></td>
 <td style="border:1px solid black"></td>
-<td style="border:1px solid black">See Section 3.87.4.1.2.3.</td>
+<td style="border:1px solid black"><a href="ITI-87.html#3874123-file-relationships">See Section 3.87.4.1.2.3.</a></td>
 </tr>
 <tr class="even">
 <td style="border:1px solid black"><p>content.attachment.contentType</p>

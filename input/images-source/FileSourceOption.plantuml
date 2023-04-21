@@ -1,0 +1,6 @@
+@startuml
+title Actors Interactions
+agent "File Source" as FileSource
+agent "File Manager" as FileManager
+FileSource -- FileManager : "Submit File [ITI-87]↓\nUpdate DocumentReference [ITI-89]↓"
+@enduml
