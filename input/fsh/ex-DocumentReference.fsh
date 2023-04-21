@@ -56,7 +56,7 @@ Usage: #example
 * content.attachment.size = 0
 * content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
-* relatesTo.target = Reference(NPFSDocumentReference/ex-DocumentReferenceMinimal)
+* relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
 Instance:   ex-DocumentReferenceReplaceOld
@@ -94,7 +94,7 @@ Usage: #example
 * content.attachment.size = 0
 * content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
-* relatesTo.target = Reference(NPFSDocumentReference/ex-DocumentReferenceMinimal)
+* relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
 Instance:   ex-DocumentReferenceReplaceNew
@@ -132,7 +132,7 @@ Usage: #example
 * content.attachment.size = 0
 * content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #replaces
-* relatesTo.target = Reference(NPFSDocumentReference/ex-DocumentReferenceMinimal)
+* relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
 Instance:   in-patient
