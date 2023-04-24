@@ -199,7 +199,7 @@ Usage: #definition
 * format[+] = #application/fhir+json
 * rest
   * mode = #client
-  * documentation = "CapabilityStatement for File Source implementing Update DocumentReference "
+  * documentation = "CapabilityStatement for File Source implementing Update DocumentReference"
   * security
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"
   * interaction[+]
