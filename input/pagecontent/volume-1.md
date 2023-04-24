@@ -88,7 +88,7 @@ optional transactions (labeled “O”).
         </tr>
         <tr>
             <td rowspan="2">
-                <a href="volume-1.html#47111-file-consumer">File Consumer</a>
+                <a href="volume-1.html#47112-file-consumer">File Consumer</a>
             </td>
             <td><a href="ITI-88.html">Search File [ITI-88]</a> </td>
             <td align="center"> R </td>
@@ -102,7 +102,7 @@ optional transactions (labeled “O”).
         </tr>
         <tr>
             <td rowspan="2">
-                <a href="volume-1.html#47111-file-source">File Source</a>
+                <a href="volume-1.html#47113-file-source">File Source</a>
             </td>
             <td><a href="ITI-87.html">Submit File [ITI-87]</a></td>
             <td align="center"> R </td>
