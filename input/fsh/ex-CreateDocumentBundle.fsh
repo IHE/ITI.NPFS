@@ -41,10 +41,10 @@ Description:      "Example of Bundle transaction for ITI-87 Submit File used to 
 Usage: #example
 
 * type = #transaction
-/** entry[OldDocumenReference].fullUrl = "ex-DocumentReferenceReplaceOld"
+* entry[OldDocumenReference].fullUrl = "urn:uuid:ex-DocumentReferenceReplaceOld"
 * entry[OldDocumenReference].resource = ex-DocumentReferenceReplaceOld
 * entry[OldDocumenReference].request.url = "DocumentReference"
-* entry[OldDocumenReference].request.method = #PUT*/
+* entry[OldDocumenReference].request.method = #PUT
 
 * entry[NewDocumenReference].fullUrl = "ex-DocumentReferenceReplaceNew"
 * entry[NewDocumenReference].resource = ex-DocumentReferenceReplaceNew 
