@@ -83,8 +83,10 @@ Description:    "A profile on the Bundle transaction for ITI-87 Submit File used
     - with a document as a [Binary](http://hl7.org/fhir/R4/binary.html)"
 
 * type = #transaction
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator[0].type = #profile
+* entry ^slicing.discriminator[0].path = "resource"
+* entry ^slicing.discriminator[1].type = #value
+* entry ^slicing.discriminator[1].path = "request.method"
 * entry ^slicing.rules = #closed
 * entry ^slicing.description = "Slicing based on the profile conformance of the entry"
 * entry and entry.resource MS
@@ -94,7 +96,7 @@ Description:    "A profile on the Bundle transaction for ITI-87 Submit File used
     OldDocumenReference 1..1 and
     Documents 1..1
 * entry[OldDocumenReference].resource only 
-    IHE.NPFS.DocumentReferenceOld 
+    IHE.NPFS.DocumentReference
 * entry[OldDocumenReference] ^short = "the DocumentReference resource with metadata of the previous file"
 * entry[OldDocumenReference] ^definition = "DocumentReference of the previous file"
 * entry[OldDocumenReference].resource 1..1
@@ -102,7 +104,7 @@ Description:    "A profile on the Bundle transaction for ITI-87 Submit File used
 * entry[OldDocumenReference].request.method = #PUT
 
 * entry[NewDocumenReference].resource only 
-    IHE.NPFS.DocumentReferenceNew 
+    IHE.NPFS.DocumentReference 
 * entry[NewDocumenReference] ^short = "the DocumentReference resource with metadata of the new file"
 * entry[NewDocumenReference] ^definition = "DocumentReference of the new file"
 * entry[NewDocumenReference].resource 1..1
