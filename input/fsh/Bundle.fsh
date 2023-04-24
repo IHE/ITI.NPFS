@@ -94,7 +94,7 @@ Description:    "A profile on the Bundle transaction for ITI-87 Submit File used
     OldDocumenReference 1..1 and
     Documents 1..1
 * entry[OldDocumenReference].resource only 
-    IHE.NPFS.DocumentReference 
+    IHE.NPFS.DocumentReferenceOld 
 * entry[OldDocumenReference] ^short = "the DocumentReference resource with metadata of the previous file"
 * entry[OldDocumenReference] ^definition = "DocumentReference of the previous file"
 * entry[OldDocumenReference].resource 1..1
@@ -102,7 +102,7 @@ Description:    "A profile on the Bundle transaction for ITI-87 Submit File used
 * entry[OldDocumenReference].request.method = #PUT
 
 * entry[NewDocumenReference].resource only 
-    IHE.NPFS.DocumentReference 
+    IHE.NPFS.DocumentReferenceNew 
 * entry[NewDocumenReference] ^short = "the DocumentReference resource with metadata of the new file"
 * entry[NewDocumenReference] ^definition = "DocumentReference of the new file"
 * entry[NewDocumenReference].resource 1..1
