@@ -59,7 +59,8 @@ Usage: #example
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
-Instance:   ex-DocumentReferenceReplaceOld
+//Instance:   ex-DocumentReferenceReplaceOld
+Instance:   aaaaaaaa-bbbb-cccc-dddd-e00777700006
 InstanceOf: NPFSDocumentReference
 Title: "Old DocumentReference for Replace"
 Description:      "Example of a Old DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
@@ -97,7 +98,8 @@ Usage: #example
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
-Instance:   ex-DocumentReferenceReplaceNew
+//Instance:   ex-DocumentReferenceReplaceNew
+Instance:   aaaaaaaa-bbbb-cccc-dddd-e00777700005
 InstanceOf: NPFSDocumentReference
 Title: "New DocumentReference for Replace"
 Description:      "Example of a New DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
