@@ -12,7 +12,7 @@ The File Manager is not required to support FHIR resource versioning
 <div>
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
-    <caption style="text-align:center">
+    <caption style="text-align:left">
         <b> Table 3.89.2-1: Actor Roles </b>
     </caption>
     <tbody>

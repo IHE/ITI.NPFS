@@ -9,12 +9,6 @@ The files are not associated with a patient.
 
 ### 3.87.2 Actors Roles
 
-<div align="center">
-<img src="ITI87ActorRoles.png">
-<p><b>Figure: Use Case Diagram</b></p>
-<br>
-</div>
-
 <div>
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
