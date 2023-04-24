@@ -43,12 +43,12 @@ Usage: #example
 * type = #transaction
 * entry[OldDocumenReference].fullUrl = "ex-DocumentReferenceReplaceOld"
 * entry[OldDocumenReference].resource = ex-DocumentReferenceReplaceOld
-* entry[OldDocumenReference].request.url = "ex-DocumentReferenceReplaceOld"
+* entry[OldDocumenReference].request.url = "DocumentReference"
 * entry[OldDocumenReference].request.method = #PUT
 
 * entry[NewDocumenReference].fullUrl = "ex-DocumentReferenceReplaceNew"
 * entry[NewDocumenReference].resource = ex-DocumentReferenceReplaceNew 
-* entry[NewDocumenReference].request.url = "ex-DocumentReferenceReplaceNew"
+* entry[NewDocumenReference].request.url = "DocumentReference"
 * entry[NewDocumenReference].request.method = #POST
 
 * entry[Documents].fullUrl = "ex-binary"

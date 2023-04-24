@@ -68,7 +68,7 @@ Usage: #example
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21"
+* identifier.value = "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb22"
 * identifier.use = #official
 * status = #superseded
 * content.attachment.contentType = #text/plain
@@ -106,7 +106,7 @@ Usage: #example
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21"
+* identifier.value = "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb23"
 * identifier.use = #official
 * status = #current
 * content.attachment.contentType = #text/plain
