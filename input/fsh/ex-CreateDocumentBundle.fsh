@@ -41,15 +41,14 @@ Description:      "Example of Bundle transaction for ITI-87 Submit File used to 
 Usage: #example
 
 * type = #transaction
-//* entry[OldDocumenReference].fullUrl = "ex-DocumentReferenceReplaceOld"
-* entry[OldDocumenReference].fullUrl = "http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-ex-DocumentReferenceReplaceOld.html"
+* entry[OldDocumenReference].fullUrl = "ex-DocumentReferenceReplaceOld"
 * entry[OldDocumenReference].resource = ex-DocumentReferenceReplaceOld
 * entry[OldDocumenReference].request.url = "ex-DocumentReferenceReplaceOld"
 * entry[OldDocumenReference].request.method = #PUT
 
 * entry[NewDocumenReference].fullUrl = "ex-DocumentReferenceReplaceNew"
 * entry[NewDocumenReference].resource = ex-DocumentReferenceReplaceNew 
-* entry[NewDocumenReference].request.url = "DocumentReference"
+* entry[NewDocumenReference].request.url = "ex-DocumentReferenceReplaceNew"
 * entry[NewDocumenReference].request.method = #POST
 
 * entry[Documents].fullUrl = "ex-binary"
