@@ -18,7 +18,7 @@ The File Manager is not required to support FHIR resource versioning
     <tbody>
         <tr>
             <td style="padding:3px"><b>Actor:</b></td>
-            <td><a href="volume-1.html#47111-file-source">File Source</a></td>
+            <td><a href="volume-1.html#47113-file-source">File Source</a></td>
         </tr>
        <tr>
             <td><b>Role:</b></td>
