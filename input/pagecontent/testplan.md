@@ -50,8 +50,6 @@ The tests listed below are defined in Gazelle Master Model (https://gazelle.ihe.
 - NPFSm_20_Create_Upd_File_JSON
 - NPFSm_21_Update_Metadata_ITI-89
 - NPFSm_20_Create_Upd_File_XML
-- MHD_XDSonFHIR_Append
-- MHD_XDSonFHIR_Transform
 
 ### File Consumer --> File Manager Interoperability Tests
 
