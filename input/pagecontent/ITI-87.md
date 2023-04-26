@@ -335,86 +335,7 @@ file’s revision, update or replacement.
 
 ###### 3.87.4.1.2.5 Create File request message example
 
-An example of a Create File Request Bundle is presented below.
-
-<table style="width:70%; border:1px solid black">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="padding:5px; font-weight:normal">{<br />
-"resourceType": "Bundle",<br />
-"type": "transaction",<br />
-"entry": [<br />
-{<br />
-"resource": {<br />
-"resourceType": "DocumentReference",<br />
-"status": "current",<br />
-"type": {"coding": [{<br />
-"code": "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1",<br />
-"display": "eReferral workflow "<br />
-}]},<br />
-"category": {"coding": [{<br />
-"system": "urn:ihe:iti:npfs:2017:class-codes",<br />
-"code": "WORKFLOW_DEFINITION"<br />
-}]},<br />
-"date": "2017-04-17T11:00:00",<br />
-"author": [{"reference":
-"urn:uuid:9f146027-bbab-467e-b8f7-5b695c4c6891"}],<br />
-"content": [{<br />
-"attachment": {<br />
-"contentType": "application/pdf",<br />
-"language": "en-US",<br />
-"url": "urn:uuid:d3e62cb3-7be5-4971-a765-471669688f33",<br />
-"size": "3456",<br />
-"hash":
-"07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"<br />
-},<br />
-"format": [{"code": "application/pdf"}]<br />
-}]<br />
-},<br />
-"request": {<br />
-"method": "POST",<br />
-"url": "http://ihe-npfs.com/DocumentReference"<br />
-}<br />
-},<br />
-{<br />
-"fullUrl": "urn:uuid:d3e62cb3-7be5-4971-a765-471669688f33",<br />
-"resource": {<br />
-"resourceType": "Binary",<br />
-"contentType": "application/pdf",<br />
-"content":
-"PD94bWwgdmVyc2ldHRwOi8vd3d3LncKPC9DbGluaWNhbERvY3VtZW50Pgo="<br />
-},<br />
-"request": {<br />
-"method": "POST",<br />
-"url": "http://ihe-npfs.com/Binary"<br />
-}<br />
-},<br />
-{<br />
-"fullUrl": "urn:uuid:9f146027-bbab-467e-b8f7-5b695c4c6891",<br />
-"resource": {<br />
-"resourceType": "Organization",<br />
-"identifier": [{<br />
-"system": "urn:oid:1.12.234.56",<br />
-"value": "IHE FACILITY1039"<br />
-}]<br />
-},<br />
-"request": {<br />
-"method": "POST",<br />
-"url": "http://ihe-npfs.com/Organization"<br />
-}<br />
-}<br />
-]<br />
-}</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-Figure 3.87.4.1.2.5-1: Create File Request example
+For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-ex-DocumentReferenceComprehensive.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-ex-DocumentReferenceComprehensive.html</a>
 
 ##### 3.87.4.1.3 Expected Actions
 
@@ -489,75 +410,7 @@ Implementation Supplement)*.*
 
 ###### 3.87.4.2.2.1 Update File Request message example
 
-An example of a Replace File Request Bundle is presented below.
-
-<table style="width:70%; border:1px solid black">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="padding:5px"><p><br/>{<br />
-"resourceType": "Bundle",<br />
-"type": "transaction",<br />
-"entry": [<br />
-{</p>
-<p>"fullUrl": "http://ihe-npfs.com/DocumentReference/1234",<br />
-"resource": {<br />
-"resourceType": "DocumentReference",</p>
-<p>"id": "1234",<br />
-"status": "current",<br />
-"type": {"coding": [{<br />
-"code": "1.3.6.1.4.1.19376.1.5.3.1.5. ",<br />
-"display": "eReferral workflow "<br />
-}]},<br />
-"category": {"coding": [{<br />
-"system": "urn:ihe:iti:npfs:2017:class-codes",<br />
-"code": "WORKFLOW_DEFINITION"<br />
-}]},<br />
-"date": "2017-04-17T11:00:00",<br />
-"author": [{"reference": "
-http://ihe-npfs.com/Organization/1564"}],<br />
-"content": [{<br />
-"attachment": {<br />
-"contentType": "application/pdf",<br />
-"language": "en-US",<br />
-"url": "http://ihe-npfs.com/Binary/1236",<br />
-"size": "3456",<br />
-"hash":
-"07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"<br />
-},<br />
-"format": [{"code": "application/pdf"}]<br />
-}]<br />
-},<br />
-"request": {<br />
-"method": "PUT",<br />
-"url": "http://ihe-npfs.com/DocumentReference/1234"<br />
-}<br />
-},<br />
-{<br />
-"fullUrl": "http://ihe-npfs.com/Binary/1236",<br />
-"resource": {<br />
-"resourceType": "Binary",</p>
-<p>"id": "1236",<br />
-"contentType": "application/pdf",<br />
-"content":
-"PD94bWwgdmVyc2ldHRwOi8vd3d3LncKPC9DbGluaWNhbERvY3VtZW50Pgo="<br />
-},<br />
-"request": {<br />
-"method": "PUT",<br />
-"url": "http://ihe-npfs.com/Binary/1236"<br />
-}<br />
-}<br />
-]<br />
-}</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-Figure 3.87.4.2.2.1-1: Update File Request example
+For an example of a Replace File Request Bundle see For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-ReplaceDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-ReplaceDocumentBundle.html</a>
 
 ##### 3.87.4.2.3 Expected Actions
 
@@ -699,44 +552,32 @@ to internal business rules that are out of scope for this transaction.
 
 ###### 3.87.4.4.2.1 Submit File Response message example 
 
-<table style="width:70%; border:1px solid black">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="padding:5px"><p><br/>{<br />
-“resourceType”:”Bundle”,<br />
-“type”:”transaction-response”,<br />
-“entry”:[<br />
-{<br />
-“response”:<br />
-{<br />
-“status”:”201”</p>
-<p>“location”:”http://www.ihe.org/DocumentReference/453”<br />
-}<br />
-},<br />
-{<br />
-“response”:<br />
-{<br />
-“status”:”201”</p>
-<p>“location”:”http://www.ihe.org/Binary/123”<br />
-}<br />
-},</p>
-<p>{<br />
-“response”:<br />
-{<br />
-“status”:”201”</p>
-<p>“location”:”http://www.ihe.org/Organization/789”<br />
-}<br />
-}<br />
-]<br />
-}</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+```json
+{
+    "resourceType": "Bundle",
+    "type": "transaction-response",
+    "entry": [
+        {
+            "response": {
+                "status": "201",
+                "location": "http://www.ihe.org/DocumentReference/453"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "http://www.ihe.org/Binary/123"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "http://www.ihe.org/Organization/789"
+            }
+        }
+    ]
+}
+```
 
 ##### 3.87.4.4.3 Expected Actions
 

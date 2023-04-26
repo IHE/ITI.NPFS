@@ -46,77 +46,6 @@ mandatory grouping are shown in conjoined boxes.
 <p><b>Figure 47.1-1: NPFS Actor Diagram</b></p>
 </div>
 
-Table 47.1-1 lists the transactions for each actor directly involved in
-the NPFS Profile. To claim compliance with this profile, an actor shall
-support all required transactions (labeled “R”) and may support the
-optional transactions (labeled “O”).
-
-<div>
-<table border="1" borderspacing="0"
-    style="border: 1px solid black; border-collapse: collapse">
-    <caption>
-        <b> Table 47.1-1: NPFSm Profile - Actors and transactions </b>
-    </caption>
-    <thead>
-        <tr>
-            <th style="text-align:center">Actors</th>
-            <th style="text-align:center">Transactions</th>
-            <th style="text-align:center">Optionality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="4">
-                <a href="volume-1.html#47111-file-manager">File Manager</a>
-            </td>
-            <td><a href="ITI-87.html">Submit File [ITI-87]</a></td>
-            <td align="center"> R </td>
-        </tr>
-        <tr>
-            <td><a href="ITI-88.html">Search File [ITI-88]</a></td>
-            <td align="center"> R </td>
-        </tr>
-        <tr>
-            <td>  <a href="ITI-109.html">Retrieve File
-                    [ITI-109]</a></td>
-            <td align="center"> R </td>
-        </tr>
-        <tr>
-            <td> <a href="ITI-89.html">Update DocumentReference File [ITI-89]</a> </td>
-            <td align="center"> R </td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <a href="volume-1.html#47112-file-consumer">File Consumer</a>
-            </td>
-            <td><a href="ITI-88.html">Search File [ITI-88]</a> </td>
-            <td align="center"> R </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="ITI-109.html">Retrieve File
-                    [ITI-109]</a>
-            </td>
-            <td align="center"> O </td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <a href="volume-1.html#47113-file-source">File Source</a>
-            </td>
-            <td><a href="ITI-87.html">Submit File [ITI-87]</a></td>
-            <td align="center"> R </td>
-        </tr>
-        <tr>
-            <td> <a href="ITI-89.html">Update DocumentReference File [ITI-89]</a> </td>
-            <td align="center"> O </td>
-        </tr>
-    </tbody>
-</table>
-</div>
-<p>Note: This transaction is currently specified in the MHD Trial
-Implementation Supplement.</p>
-<br>
-
 ### 47.1.1 Actor Descriptions and Actor Profile Requirements
 
 Most requirements are documented in transactions (Volume 2) and Content
@@ -269,40 +198,6 @@ reference it as an XSL transformation of the Laboratory Report.
 <p><b>Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets management</b></p>
 </div>
 
-The text in Figure 47.4.2.1.2-2 was used to generate the diagram in
-Figure 47.4.2.1.2-1. Readers will generally find the diagram more
-informative. The text is included here to facilitate editing.
-
-<table style="border: 1px solid gray">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align:center" ><p style="font-weight:bold">File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
-Request message</p>
-<p style="font-weight:bold">File Manager-&gt;-File Source: Submit File Response message</p>
-<p style="font-weight:bold">File/Document Consumer-&gt;+Document Repository: Retrieve Document
-Set [ITI-43] (Laboratory Report)</p>
-<p style="font-weight:bold">Document Repository-&gt;+File/Document Consumer: Retrieve Document
-Set response</p>
-<p style="font-weight:bold">File/Document Consumer-&gt;+File Manager: Search File
-[ITI-88]\nSearch File Request message\nparameters:
-class=STYLESHEET,\nauthor.identifier=IHE-FACILITY1039,\npatient:exists=false</p>
-<p style="font-weight:bold">File Manager-&gt;-File/Document Consumer:Search File Response
-message\n Bundle with DocumentReference resource</p>
-<p style="font-weight:bold">File/Document Consumer-&gt;+File Manager: Retrieve File
-[ITI-109]\nRetrieve File Request message</p>
-<p style="font-weight:bold">File Manager-&gt;-File/Document Consumer:Retrieve File Response
-message</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-Figure 47.4.2.1.2-2: Pseudocode for Process Flow Diagram
-
 #### 47.4.2.2 Use Case \#2: Replace Privacy Policies 
 
 In this use case, the hospital’s privacy office creates files that
@@ -369,51 +264,6 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
 <p><b>Figure 47.4.2.2.2-1: Basic Process Flow in NPFS Profile for Privacy Policies management</b></p>
 </div>
 
-The text in Figure 47.4.2.2.2-2 was used to generate the diagram in
-Figure 47.4.2.2.2-1. Readers will generally find the diagram more
-informative. The text is included here to facilitate editing.
-
-<table style="border: 1px solid gray">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align:center"><p style="font-weight:bold">File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
-Request message</p>
-<p style="font-weight:bold">File Manager-&gt;-File Source: Submit File Response message</p>
-<p style="font-weight:bold">File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
-Request Message\nparameters: class=PRIVACY_POLICY, status=current,\n
-patient:exists=false</p>
-<p style="font-weight:bold">File Manager-&gt;-File Consumer: Search File Response Message\nBundle
-with DocumentReference resource (id=456)</p>
-<p style="font-weight:bold">File Consumer-&gt;+File Manager: Retrieve File [ITI-109]\nRetrieve
-File Request message</p>
-<p style="font-weight:bold">File Manager-&gt;-File Consumer: Retrieve File response
-message</p>
-<p style="font-weight:bold">File Source-&gt;+File Manager: Submit File [ITI-87]\nReplace File
-Request message\nnew Binary and DocumentReference with replace
-association and\nupdate of previous DocumentReference (id=456) with
-status=superseded</p>
-<p style="font-weight:bold">File Manager-&gt;-File Source: Submit File Response message</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-Figure 47.4.2.2.2-1: Pseudocode for Process Flow Diagram
-
-#### 47.4.2.3 Use Case \#3: Manage change to Workflow Definitions 
-
-A technician at Goodcare Hospital uses the Hospital Information System
-to create and later update a BPMN (“Business Process Model and
-Notation;” see <http://www.bpmn.org/>) Workflow Definition file to
-design an eReferral Process. This file is published using a File Source.
-Later, a specialist who does not regularly work with Goodcare Hospital
-can access this Workflow Definition to review the workflow steps before
-referring a patient.
-
 ##### 47.4.2.3.1 Manage change to Workflow Definitions - Use Case Description
 
 An HIE decides to design the eReferral Process for all the participants
@@ -459,40 +309,6 @@ effect, overwritten.
 <p><b>Figure 47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow Definition Documents management</b></p>
 </div>
 
-The text in Figure 47.4.2.3.2-2 was used to generate the diagram in
-Figure 47.4.2.3.2-1. Readers will generally find the diagram more
-informative. The text is included here to facilitate editing.
-
-<table style="border: 1px solid gray">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align:center"><p style="font-weight:bold">File Source-&gt;+File Manager: Submit File [ITI-87]\nCreate File
-Request message</p>
-<p style="font-weight:bold">File Manager-&gt;-File Source: Submit File Response message</p>
-<p style="font-weight:bold">File Consumer-&gt;+File Manager: Search File [ITI-88]\nSearch File
-Request message\nparameters:
-class=WORKFLOW_DEFINITION,\ntype=1.3.6.1.4.1.19376.1.5.3.1.5.1,\npatient:exists=false</p>
-<p style="font-weight:bold">File Manager-&gt;-File Consumer:Search File Response message\n Bundle
-with DocumentReference resources</p>
-<p style="font-weight:bold">File Consumer-&gt;+File Manager: Retrieve File [ITI-109]\nRetrieve
-File Request message</p>
-<p style="font-weight:bold">File Manager-&gt;-File Consumer:Retrieve File Response
-message</p>
-<p style="font-weight:bold">File Source-&gt;+File Manager: Submit File [ITI-87]\nUpdate File
-Request message\nmetadata: DocumentReference.id=456, Binary.id=789</p>
-<p style="font-weight:bold">File Manager-&gt;-File Source: Submit File Response message</p>
-</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-Figure 47.4.2.3.2-2: Pseudocode for Process Flow Diagram
-
 #### 47.4.2.4 Use Case \#4: Update of file’s ownership 
 
 A technician creates a stylesheet to render the XML documents produced
@@ -532,33 +348,6 @@ Peace.
 {%include useCase4.svg%}
 <p><b>Figure 47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of file’s ownership</b></p>
 </div>
-
-The text in Figure 47.4.2.4.2-2 was used to generate the diagram in
-Figure 47.4.2.4.2-1. Readers will generally find the diagram more
-informative. The text is included here to facilitate editing.
-
-<table style="border: 1px solid gray">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align:center"><p style="font-weight:bold">File Source-&gt;File Source: Produce stylesheet</p>
-<p style="font-weight:bold">File Source-&gt;File Manager: Submit File [ITI-87]\nCreate File
-Request message</p>
-<p style="font-weight:bold">File Manager-&gt;File Source: Submit File Response message</p>
-<p style="font-weight:bold">File Source-&gt;File Source: update of the ownership</p>
-<p style="font-weight:bold">File Source-&gt;File Manager: Update DocumentReference [ITI-89]\n
-DocumentRefernce.author=Organization/123,Organization/456</p>
-<p style="font-weight:bold">File Manager-&gt;File Source: Update DocumentReference response
-message</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-Figure 47.4.2.4.2-2: Pseudocode for Process Flow Diagram
 
 ## 47.5 NPFS Security Considerations
 
