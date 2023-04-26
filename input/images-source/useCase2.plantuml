@@ -1,0 +1,24 @@
+@startuml
+participant "File Source" as 1
+participant "File Manager" as 2
+participant "File Consumer" as 3
+
+
+1->2: Submit File [ITI-87]\nCreate File Request message
+activate 2
+2->1: Submit File Response message
+deactivate 2
+
+3->2: Search File [ITI-88]\nSearch File Request Message\nparameters: class=PRIVACY_POLICY, status=current,\n patient:exists=false
+activate 2
+2->3: Search File Response Message\nBundle with DocumentReference resource (id=456)
+deactivate 2
+3->2: Retrieve File [ITI-109]\nRetrieve File Request message
+activate 2
+2->3: Retrieve File response message
+deactivate 2
+1->2: Submit File [ITI-87]\nReplace File Request message\nnew Binary and DocumentReference with replace association and\nupdate of previous DocumentReference (id=456) with status=superseded
+activate 2
+2->1: Submit File Response message
+deactivate 2
+@enduml

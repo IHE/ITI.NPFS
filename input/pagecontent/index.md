@@ -5,9 +5,8 @@ systems involved in a wide variety of data sharing workflows (clinical
 workflow definition, domain policies sharing, stylesheets management,
 etc.). This profile identifies three actors: File Manager, File
 Consumer, and File Source. To fulfill use-case requirements, this
-profile defines three new transactions (Submit File \[ITI-87\], Search
-File \[ITI-88\], and Update DocumentReference \[ITI-89\]) and re-uses an
-MHD transaction: Retrieve Document \[ITI-68\].
+profile defines four new transactions (Submit File \[ITI-87\], Search
+File \[ITI-88\], and Update DocumentReference \[ITI-89\]) and Retrieve File \[ITI-109\].
 
 There are IHE profiles that define the content of files that are not
 patient-related; this profile does not require that the actors be able
@@ -34,7 +33,7 @@ can be classified using the metadata model described in this profile.
 
 <div markdown="1" class="stu-note">
 
-| [Open and Closed Issues](issues.html) |
+| [Significant Changes, Open, and Closed Issues](issues.html) |
 {: .grid}
 
 </div>
@@ -54,7 +53,7 @@ This guide is organized into the following sections:
    1. [Submit File \[ITI-87\]](ITI-87.html)
    1. [Search File \[ITI-88\]](ITI-88.html)
    1. [Update DocumentReference \[ITI-89\]](ITI-89.html)
-   1. [Retrieve Document [ITI-68]](ITI-68.html)
+   1. [Retrieve File [ITI-109]](ITI-109.html)
 6. Other
    1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)

@@ -50,7 +50,7 @@ patient.
 
 <div>
 {%include ITI-88-seq.svg%}
-<p><b>Figure 3.88.4-1: Interaction Diagram</b></p>
+<p><b>Figure 3.88.4-1: Search File Interactions</b></p>
 </div>
 <br clear="all">
 

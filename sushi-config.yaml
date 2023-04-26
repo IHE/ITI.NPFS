@@ -69,8 +69,8 @@ pages:
   ITI-89.md:
     title: 3.89.Update DocumentReference [ITI-89]
     generation: markdown
-  ITI-68.md:
-    title: 3.68.Retrieve Document [ITI-68]
+  ITI-109.md:
+    title: 3.109.Retrieve File [ITI-109]
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -99,7 +99,7 @@ menu:
     "Submit File [ITI-87]": ITI-87.html
     "Search File [ITI-88]": ITI-88.html
     "Update DocumentReference [ITI-89]": ITI-89.html
-    "Retrieve Document [ITI-68]": ITI-68.html
+    "Retrieve File [ITI-109]": ITI-109.html
   Artifacts: artifacts.html
   Other:
     Test Plan: testplan.html

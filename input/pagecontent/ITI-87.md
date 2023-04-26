@@ -53,7 +53,7 @@ The files are not associated with a patient.
 
 <div>
 {%include ITI-87-seq.svg%}
-<p><b>Figure 3.87.4-1: Interaction Diagram</b></p>
+<p><b>Figure 3.87.4-1: Create File Interactions</b></p>
 </div>
 <br clear="all">
 
@@ -197,7 +197,7 @@ same opaque identifier of the entry.fullurl related to the Binary
 Resource.</p>
 <p>For updates to files this element shall be valued with the URL of the
 Binary Resource that can be used to retrieve the file using the Retrieve
-Document [ITI-68] transaction.</p></td>
+File [ITI-109] transaction.</p></td>
 </tr>
 <tr class="even">
 <td style="border:1px solid black"><p>content.attachment.size</p>
@@ -432,7 +432,7 @@ The File Manager shall support Create File Request messages that contain
 one Binary Resource and one DocumentReference Resource. The File Manager
 shall store these resources and make them available for further
 processing, e.g., file update or replacement \[ITI-87\], file metadata
-update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-68\].
+update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\].
 
 If the File Manager receives a Create File Request message that contains
 resources other than the required ones, it may respond to the File
@@ -575,7 +575,7 @@ The File Manager shall support Update File Request messages that contain
 one Binary Resource and one DocumentReference Resource. The File Manager
 shall store these resources and make them available for further
 processing, e.g., file update or replacement \[ITI-87\], file metadata
-update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-68\]
+update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\]
 
 The previous content in the updated Binary and DocumentReference
 Resources will be no longer accessible, and the new file will be
@@ -642,7 +642,7 @@ The File Manager shall process the Bundle atomically.
 The File Manager shall store these resources and make the new file
 available for further processing, e.g., file update or replacement
 \[ITI-87\], file metadata update \[ITI-89\], search \[ITI-88\], and
-retrieve \[ITI-68\].
+retrieve \[ITI-109\].
 
 If the File Manager receives a Replace File Request message that
 contains resources other than the required ones, it may respond to the

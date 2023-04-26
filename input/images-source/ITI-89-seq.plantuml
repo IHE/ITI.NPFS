@@ -5,7 +5,7 @@ participant "File Manager" as Server
 "Client" -> "Server" : Update DocumentReference Request
 activate "Server"
 activate "Client"
-"Server" --> "Client" : Update DocumentReference Request
+"Server" --> "Client" : Update DocumentReference Response
 deactivate "Server"
 deactivate "Client"
 

@@ -1,4 +1,14 @@
+## Significant Changes
 
+### Significant changes from Revision 2.1 (PDF)
+
+- Converted to an IG
+- Replaced reference to MHD [ITI-68] Retrieve Document transaction width [ITI-109] Retrieve File transaction 
+- Include CapabilityStatements for the actors
+
+## Issues
+
+### Submit an Issue
 
 IHE welcomes [New Issues](https://github.com/IHE/ITI.NPFS/issues/new/choose) from the GitHub community. 
 For those without GitHub access, issues may be submitted to the [Public Comment form](https://www.ihe.net/resources/public_comment/).

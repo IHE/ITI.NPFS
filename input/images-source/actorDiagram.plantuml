@@ -1,0 +1,9 @@
+@startuml
+agent "File Source" as Source
+agent "File Consumer" as Consumer
+agent "File Manager" as Manager
+Source -right-> Manager : "Update Document Reference [ITI-89]"
+Source -up->Manager : "Submit File [ITI-87]"
+Consumer -left->Manager : "Search File [ITI-88]"
+Consumer -up-> Manager : "Retrieve File [ITI-109]"
+@enduml

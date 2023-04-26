@@ -76,9 +76,9 @@ Usage: #definition
 
 Instance: IHE.NPFS.FileConsumerOption
 InstanceOf: CapabilityStatement
-Title: "File Consumer (client) implementing Retrieve Document"
+Title: "File Consumer (client) implementing Retrieve File"
 Usage: #definition
-* description = "IHE ITI Non-patient File Sharing (NPFS) - File Consumer (client) - with ITI-68 Retrieve Document"
+* description = "IHE ITI Non-patient File Sharing (NPFS) - File Consumer (client) - with ITI-109 Retrieve File"
 * url = "https://profiles.ihe.net/ITI/NPFS/CapabilityStatement/IHE.NPFS.FileConsumerOption"
 * name = "IHE_NPFS_FileConsumerOption"
 * title = "File Consumer (client) implementing Retrieve Document"

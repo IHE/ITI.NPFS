@@ -1,0 +1,29 @@
+@startuml
+participant "File Source" as 1
+participant "File Manager" as 2
+participant "File Consumer" as 3
+participant "Document Repository" as 4
+
+1->2: Submit File [ITI-87] Create File Request message
+activate 2
+2-->1: Submit File Response message
+deactivate 2
+
+3->4: Retrieve Document Set [ITI-43] (Laboratory Report)
+activate 4
+4-->3: Retrieve Document Set response
+activate 3
+
+3->2: Search File [ITI-88]\nSearch File Request message\nparameters: class=STYLESHEET,\nauthor.identifier=IHE-FACILITY1039,\npatient:exists=false
+activate 2
+2-->3:Search File Response message\n Bundle with DocumentReference resource
+deactivate 2
+
+3->2: Retrieve File [ITI-109]\nRetrieve File Request message
+activate 2
+2-->3:Retrieve File Response message
+deactivate 2
+deactivate 3
+deactivate 4 
+
+@enduml

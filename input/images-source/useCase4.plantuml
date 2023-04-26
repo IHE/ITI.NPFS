@@ -1,0 +1,20 @@
+@startuml
+participant "File Source" as 1
+participant "File Manager" as 2
+
+
+1->1: Produce stylesheet
+
+1->2: Submit File [ITI-87]\nCreate File Request message
+activate 2
+2->1: Submit File Response message
+deactivate 2
+
+1->1: update of the ownership
+
+1->2: Update DocumentReference [ITI-89]\n DocumentRefernce.author=Organization/123,Organization/456
+activate 2
+2->1: Update DocumentReference response message
+deactivate 2
+
+@enduml

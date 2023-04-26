@@ -52,8 +52,8 @@ The File Manager is not required to support FHIR resource versioning
 ### 3.89.4 Messages
 
 <div>
-{%include ITI-88-seq.svg%}
-<p><b>Figure 3.89.4-1: Interaction Diagram</b></p>
+{%include ITI-89-seq.svg%}
+<p><b>Figure 3.89.4-1: Update DocumentReference Interactions</b></p>
 </div>
 <br clear="all">
 

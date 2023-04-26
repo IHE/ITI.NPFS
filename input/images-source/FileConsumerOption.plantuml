@@ -2,5 +2,5 @@
 title Query Actors Interactions
 agent "File Consumer" as FileConsumer
 agent "File Manager" as FileManager
-FileConsumer -- FileManager : "Search File [ITI-88]↓\nRetrieve Document [ITI-68]↓"
+FileConsumer -- FileManager : "Search File [ITI-88]↓\nRetrieve File [ITI-109]↓"
 @enduml

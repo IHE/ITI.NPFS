@@ -1,27 +1,63 @@
 <div markdown="1" class="stu-note">
 
-This Test Plan page is a prototype.   We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
+This Test Plan page is a prototype. We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
 </div>
-
-
-**TODO: fill in the goals of the testing.
 
 ## Introduction
 
-Overall test plan leverages the Profiles, and Examples shown on the [Artifacts Summary](artifacts.html). The [Profiles](artifacts.html#structures-resource-profiles) listed are describing the constraints that would be adhered to by Actors claiming conformance to this implementation guide. Thus any applicable Resources that are known to have been published by an app or server MUST be conformant to these profiles as appropriate.
+NPFS is an API between three actors. The transactions between actors specify semantics of the data exchanged. The NPFS test plan focuses on these semantics and on the expected actions on the actors (File Manager, File Source and File Consumer).
 
-The Examples listed in [Example Instances](artifacts.html#example-example-instances) are example instances. Some are conformant to the profiles. Other examples that either assist with the structure of the examples (e.g. Patient and Encounter) or are examples that  should be able to handle in various ways. 
+Specific capabilities that different systems are expected to have are defined into CapabilityStatement resources.
 
-This section will be filled in as the IHE-Connectathon need drives the creation of the test plans, test procedures, test tools, and reporting.
+## High-level Test Scope
 
-**TODO: include actor based tests, include positive and edge cases. **
+### [ITI-87] Submit File
 
-### Unit Test Procedure
+- File Source publishes non-patient file
+- File Manager receives and responds as appropriate 
+
+### [ITI-88] Search File
+
+- File Consumer requests query for DocumentReference
+- File Manager responds to query as appropriate
+
+### Options
+
+### [ITI-89] Update Document Reference
+
+- File Source publishes an updated Document Reference resorce
+- File Manager receives and responds as appropriate
+
+### [ITI-109] Retrieve File
+
+- File Consumer requests query for retrieve file
+- File Manager retrieve as appropriate
+<div><br></div>
+
+## Unit Test Procedure
 
 Unit Tests in this context is where a SUT is tested against a simulator or validator.  A simulator is a implementation of an actor that is designed specifically to test the opposite pair actor. The simulator might be a reference implementation or may be a specially designed test-bench. Where a reference implementation is used the negative tests are harder to simulate. A validator is a implementation that can check conformance. A validator may be a simulator, but may also be a standalone tool used to validate only a message encoding. Some reference implementations may be able to validate to a StructureDefinition profile, but often these do not include sufficient constraints given the overall actor conformance criteria. 
 
-### Integration Test Procedure
+## Integration Test Procedure
 
-Integration Tests in this context is where two SUT of paired actors test against each other. In this case the subset of tests that can be tested is the intersection. Testing only this intersection is necessary but not sufficient. The testing must also include the capability of the client to exercise the test scenarios that this SUT can test, to determine that failure-modes are handled properly by both SUT.
+Integration Testing in this context is where two SUT of paired actors test against each other. Integration testing is often limited by the capability of the client (Document Source or Document Consumer), which may support only a subset of the semantics required to be supported by the server (Document Recipient or Document Responder). Full message semantics and failure-modes are more thoroughly exercised with unit (conformance) tests.
+
+The tests listed below are defined in Gazelle Master Model (https://gazelle.ihe.net/GMM) and are performed by systems testing NPFS at IHE Connectathons.
+
+### File Source --> File Manager Interoperability Tests
+
+- NPFSm_15_Resource_Check_EVS
+- NPFSm_20_Create_Upd_File_JSON
+- NPFSm_21_Update_Metadata_ITI-89
+- NPFSm_20_Create_Upd_File_XML
+- MHD_XDSonFHIR_Append
+- MHD_XDSonFHIR_Transform
+
+### File Consumer --> File Manager Interoperability Tests
+
+- NPFSm_31_Read_XML_ITI-68
+- NPFSm_31_Read_JSON_ITI-68
+- NPFSm_30_Search_XML_ITI-88
+- NPFSm_30_Search_JSON_ITI-88
 
 

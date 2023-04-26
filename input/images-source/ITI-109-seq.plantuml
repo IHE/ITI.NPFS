@@ -1,0 +1,12 @@
+@startuml
+title Retrieve File [ITI-109]
+hide footbox
+participant "File Consumer" as FileConsumer
+participant "File Manager" as FileManager
+activate "FileConsumer"
+activate "FileManager"
+"FileConsumer" -> "FileManager" : 1. Retrieve File [ITI-109]
+return
+deactivate "FileConsumer"
+deactivate "FileManager"
+@enduml
