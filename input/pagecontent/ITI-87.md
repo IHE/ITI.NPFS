@@ -396,7 +396,7 @@ The Bundle Resource shall contain:
   (<https://www.hl7.org/fhir/R4/documentreference.html>) with updated
   metadata. The id of the DocumentReference Resource shall be valued
   with the id of the DocumentReference Resource to be updated;
-  constraints on the DocumentReference Resource are listed in <a href="Table1">Table
+  constraints on the DocumentReference Resource are listed in <a href="#Table1">Table
   3.87.4.1.2-1</a>.
 
 The File Source shall submit FHIR resources in either XML format or JSON
