@@ -18,7 +18,7 @@ Usage: #example
 * content.attachment.url = "urn:uuid:d3e62cb3-7be5-4971-a765-471669688f33"
 * content.attachment.size = 3456
 * content.attachment.hash = "07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"
-* content.format.system = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode
+* content.format.system = "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
 * content.format.code = #urn:ihe:iti:xds-sd:text:2008
 
 Instance:   ex-DocumentReferenceComprehensive
