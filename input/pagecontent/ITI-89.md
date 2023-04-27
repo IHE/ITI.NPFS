@@ -92,54 +92,7 @@ Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
 ###### 3.89.4.1.2.1 Update DocumentReference Request message example 
 
-<table style="width:70%; border:1px solid black">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="padding:5px; font-weight:normal">{<br />
-"resourceType": "DocumentReference",<br />
-"id": "112345",<br />
-"contained": [<br />
-{<br />
-"resourceType": "Organization",<br />
-"id": "org1",<br />
-"identifier": [{<br />
-"system": "urn:oid:1.12.234.56",<br />
-"value": "IHE Facility"<br />
-}]<br />
-}<br />
-],<br />
-"status": "current",<br />
-"type": {"coding": [{<br />
-"system": "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1",<br />
-"code": "eReferral workflow"<br />
-}]},<br />
-"class": {"coding": [{<br />
-"system": "urn:ihe:iti:npfs:2017:class-codes",<br />
-"code": "WORKFLOW_DEFINITION"<br />
-}]},<br />
-"created": "2017-04-17T10:30:00",<br />
-"indexed": "2017-04-17T11:00:00",<br />
-"author": [{"reference": "#org1"}],<br />
-"content": [{<br />
-"attachment": {<br />
-"contentType": "application/pdf",<br />
-"language": "en-US",<br />
-"url": "http://ihe-npfs.com/214",<br />
-"size": "3456",<br />
-"hash":
-"07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"<br />
-},<br />
-"format": [{"code": "application/pdf"}]<br />
-}]<br />
-}</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+For an example of a Update DocumentReference Request see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html</a>
 
 ##### 3.89.4.1.3 Expected Actions
 

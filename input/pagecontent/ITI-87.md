@@ -335,7 +335,7 @@ file’s revision, update or replacement.
 
 ###### 3.87.4.1.2.5 Create File request message example
 
-For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-ex-DocumentReferenceComprehensive.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-ex-DocumentReferenceComprehensive.html</a>
+For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-CreateDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-CreateDocumentBundle.html</a>
 
 ##### 3.87.4.1.3 Expected Actions
 
@@ -410,7 +410,7 @@ Implementation Supplement)*.*
 
 ###### 3.87.4.2.2.1 Update File Request message example
 
-For an example of a Replace File Request Bundle see For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-ReplaceDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-ReplaceDocumentBundle.html</a>
+For an example of a Update File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html</a>
 
 ##### 3.87.4.2.3 Expected Actions
 
