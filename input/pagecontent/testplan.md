@@ -40,7 +40,7 @@ Unit Tests in this context is where a SUT is tested against a simulator or valid
 
 ## Integration Test Procedure
 
-Integration Testing in this context is where two SUT of paired actors test against each other. Integration testing is often limited by the capability of the client (Document Source or Document Consumer), which may support only a subset of the semantics required to be supported by the server (Document Recipient or Document Responder).Full message semantics and failure-modes are more thoroughly exercised with unit (conformance) tests.
+Integration Testing in this context is where two SUT of paired actors test against each other. Integration testing is often limited by the capability of the client (Document Source or Document Consumer), which may support only a subset of the semantics required to be supported by the server (Document Recipient or Document Responder). Full message semantics and failure-modes are more thoroughly exercised with unit (conformance) tests.
 
 The tests listed below are defined in [Gazelle Master Model](https://gazelle.ihe.net/GMM) and are performed by systems testing NPFS at IHE Connectathons.
 
