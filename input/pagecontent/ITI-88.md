@@ -221,7 +221,7 @@ it should, at a minimum, display the error to the user.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 exchange of those Resources could compromise patient care or have other
-legal ramifications. For general security considerations, see [ITI TF-2x: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the Appendix Z on HL7 FHIR Trial
+legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 #### 3.88.5.1 Security Audit Considerations
