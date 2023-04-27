@@ -92,7 +92,7 @@ Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
 ###### 3.89.4.1.2.1 Update DocumentReference Request message example 
 
-For an example of a Update DocumentReference Request see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html</a>
+For an example of a Update DocumentReference Request see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-12345.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-12345.html</a>
 
 ##### 3.89.4.1.3 Expected Actions
 
