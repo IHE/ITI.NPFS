@@ -18,7 +18,7 @@ Usage: #example
 * content.attachment.url = "urn:uuid:d3e62cb3-7be5-4971-a765-471669688f33"
 * content.attachment.size = 3456
 * content.attachment.hash = "07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"
-* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 
 
 Instance:   ex-DocumentReferenceComprehensive
@@ -54,7 +54,7 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
@@ -92,7 +92,7 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
@@ -130,7 +130,7 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #replaces
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
@@ -168,7 +168,7 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format.code = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #replaces
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
