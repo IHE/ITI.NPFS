@@ -82,27 +82,26 @@ conveys to the File Manager the update to a file’s metadata.
 
 This message shall convey one DocumentReference Resource. The id of the
 DocumentReference Resource shall be valued with the id of the
-DocumentReference Resource to be updated; see Table 3.87.4.1.2-1 for
+DocumentReference Resource to be updated; see <a href="ITI-87.html#Table1">Table 3.87.4.1.2-1</a> for
 other constraints upon the DocumentReference Resource.
 
 The File Source shall submit the DocumentReference Resource in either
 XML format or JSON format. Values accepted for media-type of the request
-message are defined in the ITI TF-2x: Appendix Z.6 (currently in the
+message are defined in the [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the
 Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
 ###### 3.89.4.1.2.1 Update DocumentReference Request message example 
 
-
+For an example of a Update DocumentReference Request see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-12345.html">Example DocumentReference: DocumentReference for Update</a>
 
 ##### 3.89.4.1.3 Expected Actions
 
-The File Manager shall support all the media-type listed in ITI TF-2x:
-Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
+The File Manager shall support all the media-type listed in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 On receipt of the DocumentReference Update Request, the File Manager
 shall validate and update the existing resource and respond with one of
-the HTTP codes defined in Section 3.89.4.2.2 Message Semantics.
+the HTTP codes defined in [Section 3.89.4.2.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-89.html#389422-message-semantics).
 
 #### 3.89.4.2 Update DocumentReference Response Message
 
@@ -134,8 +133,7 @@ rules.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 updating those Resources could compromise patient care or have other
-legal ramifications. For general security considerations, see ITI TF-2x:
-Appendix Z.8 (currently in the Appendix Z on HL7 FHIR Trial
+legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 #### 3.89.5.1 Security Audit Considerations
@@ -145,6 +143,5 @@ messages to an Audit Record Repository because does not convey PHI.
 However, the auditing of the update operation is suggested in order to
 avoid malicious update of the metadata for files associated with the
 care of the patient. The audit message for the Update DocumentReference
-transaction shall comply with the structure defined in DICOM PS3.15
-Annex A.5.1
+transaction shall comply with the structure defined in DICOM [PS3.15 Annex A.5.1](https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_A.5.1)
 

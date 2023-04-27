@@ -78,8 +78,7 @@ the DocumentReference Resource <http://hl7.org/fhir/R4/http.html>:
 > \[base\]/DocumentReference?\[Parameters\]
 
 The Parameters element represents a series of encoded name-value pairs
-representing the filter for the query, as specified in Section
-3.88.4.1.2.1, as well as control parameters to modify the behavior of
+representing the filter for the query, as specified in [Section 3.88.4.1.2.1](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-88.html#3884121-query-search-parameters), as well as control parameters to modify the behavior of
 the File Manager such as response format, or pagination.
 
 ###### 3.88.4.1.2.1 Query Search Parameters
@@ -118,7 +117,7 @@ or a date that lies within the range specified by the parameter.
 - **author.identifier**
 
 This parameter, of type token, specifies the identifier of the author
-that has submitted the file. See ITI TF-2x: Appendix Z.2.2 (currently in
+that has submitted the file. See [ITI TF-2: Appendix Z.2.2](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.2.2-token-parameters) (currently in
 the Appendix Z on HL7 FHIR Trial Implementation Supplement) for use of
 the token data type.
 
@@ -160,7 +159,7 @@ This parameter, of type composite, is the combination of the
 
 ###### 3.88.4.1.2.2 Populating Expected Response Format
 
-See ITI TF-2x: Appendix Z.6 (currently in the Appendix Z on HL7 FHIR
+See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR
 Trial Implementation Supplement) for details.
 
 ##### 3.88.4.1.3 Expected Actions
@@ -171,7 +170,7 @@ search parameters. The File Manager shall send a Search File Response
 message containing matching results.
 
 The File Manager may return DocumentReference Resources that are not
-constrained as specified in Table 3.87.4.1.2-1.
+constrained as specified in <a href="ITI-87.html#Table1">Table 3.87.4.1.2-1</a>.
 
 #### 3.88.4.2 Search File Response Message
 
@@ -190,7 +189,7 @@ Based on the query results, the File Manager shall either return an
 error or success.
 
 Guidance on handling Access Denied related to use of 200, 403 and 404
-can be found in ITI TF- 2x: Appendix Z.7 (currently in the Appendix Z on
+can be found in [ITI TF- 2: Appendix Z.7](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.7-guidance-on-access-denied-results) (currently in the Appendix Z on
 HL7 FHIR Trial Implementation Supplement).
 
 When the File Manager needs to report an error, it shall use HTTP error
@@ -206,7 +205,7 @@ File Manager is responding with warnings, the Bundle Resource shall also
 contain an OperationOutcome Resource that contains those warnings.
 
 The response shall adhere to the FHIR Bundle constraints specified in
-ITI TF-2x: Appendix Z.1 (currently in the Appendix Z on HL7 FHIR Trial
+[ITI TF-2: Appendix Z.1](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.1-resource-bundles) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 ##### 3.88.4.2.3 Expected Actions
@@ -222,8 +221,7 @@ it should, at a minimum, display the error to the user.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 exchange of those Resources could compromise patient care or have other
-legal ramifications. For general security considerations, see ITI TF-2x:
-Appendix Z.8 (currently in the Appendix Z on HL7 FHIR Trial
+legal ramifications. For general security considerations, see [ITI TF-2x: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 #### 3.88.5.1 Security Audit Considerations
@@ -232,5 +230,4 @@ This transaction does not require the actor involved to send audit
 messages to an Audit Record Repository because does not convey PHI.
 However, the auditing of the search operation is recommended in order
 track unusual access to files. The audit message for the Search File
-transaction shall comply with the structure defined in DICOM PS3.15
-Annex A.5.1
+transaction shall comply with the structure defined in DICOM [PS3.15 Annex A.5.1](https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_A.5.1)

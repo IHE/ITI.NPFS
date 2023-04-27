@@ -86,17 +86,17 @@ The Bundle Resource:
 - shall contain one FHIR DocumentReference Resource
   (<https://www.hl7.org/fhir/R4/documentreference.html)> with the file’s
   metadata. Constraints on the DocumentReference Resource are listed in
-  Table 3.87.4.1.2-1.
+  <a href="#Table1">Table 3.87.4.1.2-1</a>.
 
 - may contain other resources that are referenced by the
   DocumentReference Resource.
 
 The File Source shall submit FHIR resources in either XML format or JSON
 format. Values for media-type of the request message are defined in the
-ITI TF-2x: Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
+[ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement)*.*
-
-<p style="font-weight:bold">Table 3.87.4.1.2-1: DocumentReference Resource Constraints</p>
+<a name="Table1"> </a>
+<p id="Table1" style="font-weight:bold">Table 3.87.4.1.2-1: DocumentReference Resource Constraints</p>
 
 <table>
 <colgroup>
@@ -239,7 +239,7 @@ local domain policies.</td>
 </tbody>
 </table>
 
-See ITI TF-2x: Appendix W for informative implementation material for
+See [ITI TF-2: Appendix W](https://profiles.ihe.net/ITI/TF/Volume2/ch-W.html#Appendix%20W) for informative implementation material for
 this transaction.
 
 Sections below provide specific guidance about how handle metadata for
@@ -249,12 +249,12 @@ category, format, mime-type and masterIdentifier elements
 
 ###### 3.87.4.1.2.1 category element
 
-Codes in the category element shall be from Table 3.87.4.1.2.1-1, if any
+Codes in the category element shall be from <a href="#Table2">Table 3.87.4.1.2.1-1</a>, if any
 of the codes within the value set can apply to the concept being
 communicated. If the table does not cover the concept (based on human
 review), an alternate code may be used instead.
 
-<p style="font-weight:bold">Table 3.87.4.1.2.1-1: Coded values the category element</p>
+<p id="Table2" style="font-weight:bold">Table 3.87.4.1.2.1-1: Coded values the category element</p>
  
 <table>
 <colgroup>
@@ -296,12 +296,12 @@ depends on the “class” of the file:
 - If the file submitted is a Workflow Definition template, the type
   element could be valued with the workflow definition reference of the
   Workflow Definition profile (see workflowDefinitionReference as
-  defined by the XDW Profile; see ITI TF-3: 5.4.2.2).
+  defined by the XDW Profile; [see ITI TF-3: 5.4.2.2](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Rev15.0_Vol3_FT_2018-07-24.pdf)).
 
 - If the file submitted is a Patient Privacy Policy (see ITI TF-1:
   19.2.1 Basic Patient Privacy Consent), the type element should be
   valued with the LOINC code 57017-6 “Privacy policy Organization
-  Document” as shown in Table 3.87.4.1.2.1-1 .
+  Document” as shown in <a href="#Table2">Table 3.87.4.1.2.1-1</a> .
 
 - If the file submitted is a Stylesheet, the type element will be valued
   with a codeable concept defined by local policy that classifies the
@@ -323,11 +323,9 @@ element, if used:
 
 - If the file submitted is a Workflow Definition template, the
   masterIdentifier element shall be valued with the
-  workflowDefinitionReference as defined by the XDW Profile (see ITI
-  TF-3: 5.4.2.2).
+  workflowDefinitionReference as defined by the XDW Profile ([see ITI TF-3: 5.4.2.2](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Rev15.0_Vol3_FT_2018-07-24.pdf)) .
 
-- If the file submitted is a Patient Privacy Policy (see ITI TF-1:
-  19.2.1 Basic Patient Privacy Consent),, the masterIdentifier element
+- If the file submitted is a Patient Privacy Policy ([see ITI TF-1: 19.2.1 Basic Patient Privacy Consent](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html)), the masterIdentifier element
   shall be valued with the associated Patient Privacy Policy Identifier.
 
 Local policies should define how to handle this element in case of
@@ -335,17 +333,15 @@ file’s revision, update or replacement.
 
 ###### 3.87.4.1.2.5 Create File request message example
 
-For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-CreateDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-CreateDocumentBundle.html</a>
+For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-CreateDocumentBundle.html">Example Bundle: Create Document Bundle</a>
 
 ##### 3.87.4.1.3 Expected Actions
 
-The File Manager shall support all the media-types defined in ITI TF-2x:
-Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
+The File Manager shall support all the media-types defined in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 On receipt of the Create File Request, the File Manager shall validate
-the Resources and respond with one of the HTTP codes defined in Section
-3.87.4.4.2 Message Semantics.
+the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -357,7 +353,7 @@ update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\].
 
 If the File Manager receives a Create File Request message that contains
 resources other than the required ones, it may respond to the File
-Source with a failure (see Section 3.87.4.4.2).
+Source with a failure (see [Section 3.87.4.4.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics)).
 
 #### 3.87.4.2 Update File Request Message
 
@@ -400,27 +396,25 @@ The Bundle Resource shall contain:
   (<https://www.hl7.org/fhir/R4/documentreference.html>) with updated
   metadata. The id of the DocumentReference Resource shall be valued
   with the id of the DocumentReference Resource to be updated;
-  constraints on the DocumentReference Resource are listed in Table
-  3.87.4.1.2-1.
+  constraints on the DocumentReference Resource are listed in <a href="Table1">Table
+  3.87.4.1.2-1</a>.
 
 The File Source shall submit FHIR resources in either XML format or JSON
 format. Values for media-type of the request message are defined in the
-ITI TF-2x: Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
+[ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement)*.*
 
 ###### 3.87.4.2.2.1 Update File Request message example
 
-For an example of a Update File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html">http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html</a>
+For an example of a Update File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html">Example Bundle: Update Document Bundle</a>
 
 ##### 3.87.4.2.3 Expected Actions
 
-The File Manager shall support all the media-type defined in ITI TF-2x:
-Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
+The File Manager shall support all the media-type defined in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 On receipt of the Update File Request, the File Manager shall respond
-with one of the HTTP codes defined in Section 3.87.4.4.2 Message
-Semantics.
+with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -436,7 +430,7 @@ retrievable using the same bundle.entry.fullUrl as the previous one.
 
 If the File Manager receives an Update File Request message that
 contains resources other than the required ones, it may respond to the
-File Source with a failure (see Section 3.87.4.4.2).
+File Source with a failure (see [Section 3.87.4.4.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics)).
 
 #### 3.87.4.3 Replace File Request Message
 
@@ -466,7 +460,7 @@ DocumentReference Resource that needs to be replaced.
 The Bundle Resource shall contain:
 
 - one Binary Resource representing the new file, valued according to
-  Section 3.87.4.1.2, with the bundle.entry.request.method element set
+  [Section 3.87.4.1.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387412-message-semantics), with the bundle.entry.request.method element set
   to POST
 
 - one DocumentReference Resource with metadata for the new file, where
@@ -476,19 +470,17 @@ The Bundle Resource shall contain:
   bundle.entry.request.method element set to POST
 
 - one DocumentReference Resource with metadata of the previous file,
-  valued as specified in Section 3.89.4.1.1 with the
+  valued as specified in [Section 3.89.4.1.1](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-89.html#389411-trigger-events) with the
   bundle.entry.request.method element set to PUT and the
   DocumentReference.status to “superseded”.
 
 ##### 3.87.4.3.3 Expected Actions
 
-The File Manager shall support all the media-types defined in ITI TF-2x:
-Appendix Z.6 (currently in the Appendix Z on HL7 FHIR Trial
+The File Manager shall support all the media-types defined in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
 On receipt of the Replace File Request, the File Manager shall validate
-the Resources and respond with one of the HTTP codes defined in Section
-3.87.4.4.2 Message Semantics.
+the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -499,7 +491,7 @@ retrieve \[ITI-109\].
 
 If the File Manager receives a Replace File Request message that
 contains resources other than the required ones, it may respond to the
-File Source with a failure (see Section 3.87.4.4.2).
+File Source with a failure ([see Section 3.87.4.4.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics)).
 
 #### 3.87.4.4 Submit File Response Message
 
@@ -590,7 +582,7 @@ Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 actions such creating, updating, or replacing those Resources could
 compromise patient care or have other legal ramifications. For general
-security considerations, see ITI TF-2x: Appendix Z.8 (currently in the
+security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the
 Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
 #### 3.87.5.1 Security Audit Considerations
@@ -600,5 +592,4 @@ messages to an Audit Record Repository because it does not convey PHI.
 However, the auditing of the Submit File transaction is recommended in
 order to avoid malicious creation/updating of files associated with the
 care of the patient. The audit message for the Submit File transaction
-shall comply with the structure defined in DICOM<sup>®</sup>[^2] PS3.15
-Annex A.5.1.
+shall comply with the structure defined in DICOM<sup>®</sup>[^2] [PS3.15 Annex A.5.1](https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_A.5.1).

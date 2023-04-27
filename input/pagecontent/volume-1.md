@@ -14,12 +14,10 @@ file type can be shared using this profile; however, specific guidance
 is given for three types of files:
 
 - Workflow Definitions: files which define the processing rules for a
-  specific clinical/administrative workflow (see ITI TF-1: 30.4.1.1 “XDW
-  Workflow Architecture”)
+  specific clinical/administrative workflow (see [ITI TF-1: 30.4.1.1 “XDW Workflow Architecture”](https://profiles.ihe.net/ITI/TF/Volume1/ch-30.html#30.4.1.1))
 
 - Privacy Domain Policies: files which describe a specific privacy
-  policy that applies to, or may be agreed to, by a patient (see ITI
-  TF-1: 19.2 “Creating Patient Privacy Policies”)
+  policy that applies to, or may be agreed to, by a patient (see [ITI TF-1: 19.2 “Creating Patient Privacy Policies”](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19.2))
 
 - Stylesheets: structured documents that can be used by user-agents
   (e.g., Web Browsers) to render the content of an XML document.
@@ -206,7 +204,7 @@ patient is admitted, the admitting nurse uses a NPFS File Consumer to
 search the File Manager for the current Privacy Policy files available.
 
 Then, when the patient selects a Privacy Policy, the nurse uses a Basic
-Patient Privacy Consent (BPPC) Content Creator Actor (see ITI TF-1: 19)
+Patient Privacy Consent (BPPC) Content Creator Actor (see [ITI TF-1: 19](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19))
 to create the patient’s Privacy Policy Consent document for the patient.
 
 ##### 47.4.2.2.1 Replace Privacy Policies - Use Case Description
@@ -257,7 +255,7 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
   Policy file and metadata, and update the metadata of the replaced file
   to “superseded” (deprecated). (The new DocumentReference Resource is
   linked to the previous one via a replacement relationship, using the
-  relatesTo parameter; see ITI TF-2c: 3.87.4.3.2.)
+  relatesTo parameter; see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387432-message-semantics">ITI TF-2c: 3.87.4.3.2)
 
 <div>
 {%include useCase2.svg%}

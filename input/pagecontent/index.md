@@ -18,12 +18,10 @@ file type can be shared using this profile; however, specific guidance
 is given for three types of files:
 
 - Workflow Definitions: files which define the processing rules for a
-  specific clinical/administrative workflow (see ITI TF-1: 30.4.1.1 “XDW
-  Workflow Architecture” for additional information).
+  specific clinical/administrative workflow (see [ITI TF-1: 30.4.1.1 “XDW Workflow Architecture”](https://profiles.ihe.net/ITI/TF/Volume1/ch-30.html#30.4.1.1) for additional information).
 
 - Privacy Domain Policies: files which describe a specific privacy
-  policy that applies to, or may be agreed by the patient (see ITI TF-1:
-  19.2 “Creating Patient Privacy Policies” for further details).
+  policy that applies to, or may be agreed by the patient (see [ITI TF-1: 19.2 “Creating Patient Privacy Policies”](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19.2) for further details).
 
 - Stylesheets: structured documents used by user-agents (e.g., Web
   Browsers) to render the content of an XML document.
