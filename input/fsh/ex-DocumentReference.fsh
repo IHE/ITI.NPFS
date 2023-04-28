@@ -7,7 +7,8 @@ Usage: #example
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
 * status = #current
-* type.coding.code = #urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1
+* type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
+* type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
 * category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
 * category.coding.code = #WORKFLOW_DEFINITION
@@ -34,7 +35,8 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #text/plain
 * content.attachment.url = "http://example.com/nowhere.txt"
-* type.coding.code = #urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1
+* type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
+* type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
 * category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
 * category.coding.code = #WORKFLOW_DEFINITION
@@ -72,7 +74,8 @@ Usage: #example
 * status = #superseded
 * content.attachment.contentType = #text/plain
 * content.attachment.url = "http://example.com/nowhere.txt"
-* type.coding.code = #urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1
+* type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
+* type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
 * category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
 * category.coding.code = #WORKFLOW_DEFINITION
@@ -110,7 +113,8 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #text/plain
 * content.attachment.url = "http://example.com/nowhere.txt"
-* type.coding.code = #urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1
+* type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
+* type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
 * category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
 * category.coding.code = #WORKFLOW_DEFINITION
@@ -148,7 +152,8 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #text/plain
 * content.attachment.url = "http://example.com/nowhere.txt"
-* type.coding.code = #urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5.1
+* type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
+* type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
 * category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
 * category.coding.code = #WORKFLOW_DEFINITION
