@@ -91,7 +91,7 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
