@@ -29,7 +29,7 @@ Description: "A profile on the DocumentReference resource for NPFS."
 * content.attachment.title 0..1
 * content.attachment.creation 0..1 MS
 * content.format 1..1 MS
-* content.format from http://hl7.org/fhir/ValueSet/formatcodes (preferred)
+* content.format from http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode (preferred)
 * context.encounter 0..0
 * context.event 0..*
 * context.period 0..1 MS
