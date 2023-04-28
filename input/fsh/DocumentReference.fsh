@@ -28,7 +28,7 @@ Description: "A profile on the DocumentReference resource for NPFS."
 * content.attachment.hash 1..1
 * content.attachment.title 0..1
 * content.attachment.creation 0..1 MS
-* content.format 1..1
+* content.format 1..1 MS
 * content.format from http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode (preferred)
 * context.encounter 0..0
 * context.event 0..*
