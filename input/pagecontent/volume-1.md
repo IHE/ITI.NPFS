@@ -360,6 +360,7 @@ Although this profile does not require actors to audit the transactions
 that exchange non-patient files, grouping with an ATNA Secure Node or
 Secure Application is strongly encouraged in order to track file and
 metadata creation and update.
+For further considerations about Audit record refer to [BALP profile](https://profiles.ihe.net/ITI/BALP/).
 
 User authentication/authorization represents another important factor to
 consider in order to avoid malicious creation/updating of files.

@@ -541,41 +541,14 @@ returning the following status code:
 The File Manager can return other status codes 4xx or 5xx in accordance
 to internal business rules that are out of scope for this transaction.
 
-###### 3.87.4.4.2.1 Submit File Response message example 
-
-```json
-{
-    "resourceType": "Bundle",
-    "type": "transaction-response",
-    "entry": [
-        {
-            "response": {
-                "status": "201",
-                "location": "http://www.ihe.org/DocumentReference/453"
-            }
-        },
-        {
-            "response": {
-                "status": "201",
-                "location": "http://www.ihe.org/Binary/123"
-            }
-        },
-        {
-            "response": {
-                "status": "201",
-                "location": "http://www.ihe.org/Organization/789"
-            }
-        }
-    ]
-}
-```
-
 ##### 3.87.4.4.3 Expected Actions
 
 The File Source processes the response according to application-defined
 rules.
 
 ### 3.87.5 Security Considerations
+
+See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
 
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,

@@ -44,6 +44,10 @@ Integration Testing in this context is where two SUT of paired actors test again
 
 The tests listed below are defined in [Gazelle Master Model](https://gazelle.ihe.net/GMM) and are performed by systems testing NPFS at IHE Connectathons.
 
+<div markdown="1" class="stu-note">
+In the Gazelle platform, there are tests with reference to ITI-68 pending the replacement with ITI-109 that occurred during the conversion of the NPFS profile to IG.
+</div>
+
 ### File Source --> File Manager Interoperability Tests
 
 - NPFSm_15_Resource_Check_EVS

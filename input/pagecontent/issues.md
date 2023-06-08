@@ -18,12 +18,12 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
 
 ### Open Issues
 
-***NPFS_010: This document begins the definition of a value set for the
+***[NPFS_010](https://github.com/IHE/ITI.NPFS/issues/5): This document begins the definition of a value set for the
 class element. How do we complete the value set for this profile.
 Suggestions are requested. How do we coordinate this value set with
 other Document Sharing profiles? Suggestions are requested. ***
 
-***NPFS_012: This document does not require the use of profile tags to
+***[NPFS_012](https://github.com/IHE/ITI.NPFS/issues/6): This document does not require the use of profile tags to
 identify compliant resources. Use of profile tags will also allow the
 File Consumer to search just for resources that matches this profile in
 a FHIR Server that store different types of resources. Readers are

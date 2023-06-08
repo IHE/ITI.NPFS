@@ -130,6 +130,8 @@ rules.
 
 ### 3.89.5 Security Considerations
 
+See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
+
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 updating those Resources could compromise patient care or have other
