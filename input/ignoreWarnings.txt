@@ -1,9 +1,19 @@
 == Suppressed Messages ==
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 # IHE valueset that is not yet a real valueset
-Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be validated
 Code System URI 'urn:ihe:iti:npfs:2017:class-codes' is unknown so the code cannot be validated
 # Valueset of Document Identifier defined by PCC https://wiki.ihe.net/index.php/PCC_Vocabulary_Registry_and_Data_Dictionary
 Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5' is unknown so the code cannot be validated
 
+# AuditEvent profiling uses this valueset for transaction numbers
+Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be validated
 
+# AuditEvent profiling does not have examples
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.RetrieveFile.Audit.Consumer'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.RetrieveFile.Audit.Manager'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.SearchFile.Audit.Consumer'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.SearchFile.Audit.Manager'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.SubmitFile.Audit.Manager'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.SubmitFile.Audit.Source'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.UpdateDocumentReference.Audit.Manager'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://profiles.ihe.net/ITI/NPFS/StructureDefinition/IHE.NPFS.UpdateDocumentReference.Audit.Source'): The Implementation Guide contains no examples for this profile
