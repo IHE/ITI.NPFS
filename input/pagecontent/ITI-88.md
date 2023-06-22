@@ -78,7 +78,7 @@ the DocumentReference Resource <http://hl7.org/fhir/R4/http.html>:
 > \[base\]/DocumentReference?\[Parameters\]
 
 The Parameters element represents a series of encoded name-value pairs
-representing the filter for the query, as specified in [Section 3.88.4.1.2.1](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-88.html#3884121-query-search-parameters), as well as control parameters to modify the behavior of
+representing the filter for the query, as specified in [Section 3.88.4.1.2.1](ITI-88.html#3884121-query-search-parameters), as well as control parameters to modify the behavior of
 the File Manager such as response format, or pagination.
 
 ###### 3.88.4.1.2.1 Query Search Parameters

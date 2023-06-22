@@ -11,7 +11,8 @@ Description: "A profile on the DocumentReference resource for NPFS."
 * identifier ^slicing.rules = #open
 * status 1..1 
 * type 1..1 
-* category 1..1 
+* category 1..1
+* category from DocumentReferenceCategory (extensible)
 * subject 0..0
 * date 1..1 
 * author 1..* 
@@ -37,3 +38,4 @@ Description: "A profile on the DocumentReference resource for NPFS."
 * context.practiceSetting 0..1 MS
 * context.sourcePatientInfo 0..0
 * context.related 0..0
+

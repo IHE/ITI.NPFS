@@ -105,44 +105,10 @@ category, format, mime-type and masterIdentifier elements
 
 ###### 3.87.4.1.2.1 category element
 
-Codes in the category element shall be from <a href="#Table2">Table 3.87.4.1.2.1-1</a>, if any
+Codes in the category element shall be from [ValueSet: NPFS DocumentReference category](ValueSet-DocumentReferenceCategory.html), if any
 of the codes within the value set can apply to the concept being
 communicated. If the table does not cover the concept (based on human
 review), an alternate code may be used instead.
-
-<p id="Table2" style="font-weight:bold">Table 3.87.4.1.2.1-1: Coded values the category element</p>
- 
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="border:1px solid black; padding:3px; text-align:center">coding.code</th>
-<th style="border:1px solid black; padding:3px; text-align:center">coding.display</th>
-<th style="border:1px solid black; padding:3px; text-align:center">coding.system</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="border:1px solid black">STYLESHEET</td>
-<td style="border:1px solid black">Code for Stylesheets</td>
-<td style="border:1px solid black">urn:ihe:iti:npfs:2017:class-codes</td>
-</tr>
-<tr>
-<td style="border:1px solid black">WORKFLOW_DEFINITION</td>
-<td style="border:1px solid black">Code for Workflow Definitions</td>
-<td style="border:1px solid black">urn:ihe:iti:npfs:2017:class-codes</td>
-</tr>
-<tr>
-<td style="border:1px solid black">57017-6</td>
-<td style="border:1px solid black">Code for Privacy policy Organization Document</td>
-<td style="border:1px solid black">http://www.loinc.org</td>
-</tr>
-</tbody>
-</table> 
 
 ###### 3.87.4.1.2.2 type element
 
@@ -157,7 +123,7 @@ depends on the “class” of the file:
 - If the file submitted is a Patient Privacy Policy (see ITI TF-1:
   19.2.1 Basic Patient Privacy Consent), the type element should be
   valued with the LOINC code 57017-6 “Privacy policy Organization
-  Document” as shown in <a href="#Table2">Table 3.87.4.1.2.1-1</a> .
+  Document” as shown in [ValueSet: NPFS DocumentReference category](ValueSet-DocumentReferenceCategory.html).
 
 - If the file submitted is a Stylesheet, the type element will be valued
   with a codeable concept defined by local policy that classifies the

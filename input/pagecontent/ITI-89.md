@@ -101,7 +101,7 @@ Implementation Supplement).
 
 On receipt of the DocumentReference Update Request, the File Manager
 shall validate and update the existing resource and respond with one of
-the HTTP codes defined in [Section 3.89.4.2.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-89.html#389422-message-semantics).
+the HTTP codes defined in [Section 3.89.4.2.2 Message Semantics](ITI-89.html#389422-message-semantics).
 
 #### 3.89.4.2 Update DocumentReference Response Message
 
