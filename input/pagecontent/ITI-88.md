@@ -170,7 +170,7 @@ search parameters. The File Manager shall send a Search File Response
 message containing matching results.
 
 The File Manager may return DocumentReference Resources that are not
-constrained as specified in <a href="ITI-87.html#Table1">Table 3.87.4.1.2-1</a>.
+constrained as specified in [Resource Profile: NPFS DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html).
 
 #### 3.88.4.2 Search File Response Message
 
@@ -215,6 +215,13 @@ application-defined rules.
 
 If a File Consumer cannot automatically recover from an error condition,
 it should, at a minimum, display the error to the user.
+
+#### 3.88.4.3 CapabilityStatement Resource
+
+File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented. 
+- Requirements CapabilityStatement for [File Consumer](CapabilityStatement-IHE.NPFS.FileConsumer.html)
+- Requirements CapabilityStatement for [File Consumer implementing Retrieve File](CapabilityStatement-IHE.NPFS.FileConsumerOption.html)
+- Requirements CapabilityStatement for [File Manager](CapabilityStatement-IHE.NPFS.FileManager.html)
 
 ### 3.88.5 Security Considerations
 

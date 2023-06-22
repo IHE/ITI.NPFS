@@ -85,8 +85,7 @@ The Bundle Resource:
 
 - shall contain one FHIR DocumentReference Resource
   (<https://www.hl7.org/fhir/R4/documentreference.html)> with the file’s
-  metadata. Constraints on the DocumentReference Resource are listed in
-  <a href="StructureDefinition-IHE.NPFS.DocumentReference.html">Table 3.87.4.1.2-1</a>.
+  metadata. Constraints on the DocumentReference Resource are listed in [Resource Profile: NPFS DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html).
 
 - may contain other resources that are referenced by the
   DocumentReference Resource.
@@ -95,149 +94,6 @@ The File Source shall submit FHIR resources in either XML format or JSON
 format. Values for media-type of the request message are defined in the
 [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement)*.*
-<a name="Table1"> </a>
-<p id="Table1" style="font-weight:bold">Table 3.87.4.1.2-1: DocumentReference Resource Constraints</p>
-
-<table>
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 38%" />
-<col style="width: 27%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="border:1px solid black; text-align:center">Element Name</th>
-<th style="border:1px solid black; text-align:center">IHE Constraint</th>
-<th style="border:1px solid black; text-align:center">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="border:1px solid black"><p>id</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black"></td>
-<td style="border:1px solid black">The id element shall be provided if the File Source is sending a
-Replace File Message (<a href="ITI-87.html#387422-message-semantics">Section 3.87.4.2.2</a>). The value is the id of the
-DocumentReference Resource to be updated.</td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>masterIdentifier</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black"></td>
-<td style="border:1px solid black"><a href="ITI-87.html#3874124-masteridentifier-element">See Section 3.87.4.1.2.4.</a></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>status</p>
-<p>[1..1]</p></td>
-<td style="border:1px solid black"></td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>type</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black"><a href="ITI-87.html#3874122-type-element">See Section 3.87.4.1.2.2.</a></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>category</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black">File’s class (e.g., Workflow Definition, Stylesheet, Privacy
-Policy). <a href="ITI-87.html#3874121-category-element">See Section 3.87.4.1.2.1.</a></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>subject</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[0..0]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>date</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black">Time when the file was submitted.</td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>author</p>
-<p>[0..*]</p></td>
-<td style="border:1px solid black">[1..*]</td>
-<td style="border:1px solid black">The author element shall be valued with at least a reference to an
-Organization Resource.</td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>relatesTo</p>
-<p>[0..*]</p></td>
-<td style="border:1px solid black"></td>
-<td style="border:1px solid black"><a href="ITI-87.html#3874123-file-relationships">See Section 3.87.4.1.2.3.</a></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>content.attachment.contentType</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>content.attachment.language</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">Required if known</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>content.attachment.data</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[0..0]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>content.attachment.url</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black"><p>For new submitted files this element shall be valued with the
-same opaque identifier of the entry.fullurl related to the Binary
-Resource.</p>
-<p>For updates to files this element shall be valued with the URL of the
-Binary Resource that can be used to retrieve the file using the Retrieve
-File [ITI-109] transaction.</p></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>content.attachment.size</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>content.attachment.hash</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>content.format</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[1..1]</td>
-<td style="border:1px solid black">File’s format. The values of this metadata should be defined by
-local domain policies.</td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>context.sourcePatientInfo</p>
-<p>[0..1]</p></td>
-<td style="border:1px solid black">[0..0]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="even">
-<td style="border:1px solid black"><p>context.encounter</p>
-<p>[0..*]</p></td>
-<td style="border:1px solid black">[0..0]</td>
-<td style="border:1px solid black"></td>
-</tr>
-<tr class="odd">
-<td style="border:1px solid black"><p>context.related</p>
-<p>[0..*]</p></td>
-<td style="border:1px solid black">[0..0]</td>
-<td style="border:1px solid black"></td>
-</tr>
-</tbody>
-</table>
 
 See [ITI TF-2: Appendix W](https://profiles.ihe.net/ITI/TF/Volume2/ch-W.html#Appendix%20W) for informative implementation material for
 this transaction.
@@ -396,7 +252,7 @@ The Bundle Resource shall contain:
   (<https://www.hl7.org/fhir/R4/documentreference.html>) with updated
   metadata. The id of the DocumentReference Resource shall be valued
   with the id of the DocumentReference Resource to be updated;
-  constraints on the DocumentReference Resource are listed in <a href="#Table1">Table 3.87.4.1.2-1</a>.
+  constraints on the DocumentReference Resource are listed in [Resource Profile: NPFS DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html).
 
 The File Source shall submit FHIR resources in either XML format or JSON
 format. Values for media-type of the request message are defined in the
@@ -413,7 +269,7 @@ The File Manager shall support all the media-type defined in [ITI TF-2: Appendix
 Implementation Supplement).
 
 On receipt of the Update File Request, the File Manager shall respond
-with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics).
+with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -545,6 +401,13 @@ to internal business rules that are out of scope for this transaction.
 
 The File Source processes the response according to application-defined
 rules.
+
+#### 3.87.4.5 CapabilityStatement Resource
+
+File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented. 
+- Requirements CapabilityStatement for [File Source](CapabilityStatement-IHE.NPFS.FileSource.html)
+- Requirements CapabilityStatement for [File Source implementing Update DocumentReference](CapabilityStatement-IHE.NPFS.FileSourceOption.html)
+- Requirements CapabilityStatement for [File Manager](CapabilityStatement-IHE.NPFS.FileManager.html)
 
 ### 3.87.5 Security Considerations
 

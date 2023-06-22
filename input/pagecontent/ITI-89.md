@@ -82,7 +82,7 @@ conveys to the File Manager the update to a file’s metadata.
 
 This message shall convey one DocumentReference Resource. The id of the
 DocumentReference Resource shall be valued with the id of the
-DocumentReference Resource to be updated; see <a href="ITI-87.html#Table1">Table 3.87.4.1.2-1</a> for
+DocumentReference Resource to be updated; see [Resource Profile: NPFS DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html) for
 other constraints upon the DocumentReference Resource.
 
 The File Source shall submit the DocumentReference Resource in either
@@ -127,6 +127,12 @@ specified in <https://www.hl7.org/fhir/R4/http.html#update>.
 
 The File Source processes the results according to application-defined
 rules.
+
+#### 3.89.4.3 CapabilityStatement Resource
+
+File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented. 
+- Requirements CapabilityStatement for [File Consumer implementing Retrieve File](CapabilityStatement-IHE.NPFS.FileConsumerOption.html)
+- Requirements CapabilityStatement for [File Manager](CapabilityStatement-IHE.NPFS.FileManager.html)
 
 ### 3.89.5 Security Considerations
 
