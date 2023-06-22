@@ -189,7 +189,7 @@ file’s revision, update or replacement.
 
 ###### 3.87.4.1.2.5 Create File request message example
 
-For an example of a Create File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-CreateDocumentBundle.html">Example Bundle: Create Document Bundle</a>
+For an example of a Create File Request Bundle see <a href="Bundle-ex-CreateDocumentBundle.html">Example Bundle: Create Document Bundle</a>
 
 ##### 3.87.4.1.3 Expected Actions
 
@@ -197,7 +197,7 @@ The File Manager shall support all the media-types defined in [ITI TF-2: Appendi
 Implementation Supplement).
 
 On receipt of the Create File Request, the File Manager shall validate
-the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics).
+the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -209,7 +209,7 @@ update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\].
 
 If the File Manager receives a Create File Request message that contains
 resources other than the required ones, it may respond to the File
-Source with a failure (see [Section 3.87.4.4.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics)).
+Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
 
 #### 3.87.4.2 Update File Request Message
 
@@ -261,7 +261,7 @@ Implementation Supplement)*.*
 
 ###### 3.87.4.2.2.1 Update File Request message example
 
-For an example of a Update File Request Bundle see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/Bundle-ex-UpdateDocumentBundle.html">Example Bundle: Update Document Bundle</a>
+For an example of a Update File Request Bundle see <a href="Bundle-ex-UpdateDocumentBundle.html">Example Bundle: Update Document Bundle</a>
 
 ##### 3.87.4.2.3 Expected Actions
 
@@ -285,7 +285,7 @@ retrievable using the same bundle.entry.fullUrl as the previous one.
 
 If the File Manager receives an Update File Request message that
 contains resources other than the required ones, it may respond to the
-File Source with a failure (see [Section 3.87.4.4.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics)).
+File Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
 
 #### 3.87.4.3 Replace File Request Message
 
@@ -315,7 +315,7 @@ DocumentReference Resource that needs to be replaced.
 The Bundle Resource shall contain:
 
 - one Binary Resource representing the new file, valued according to
-  [Section 3.87.4.1.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387412-message-semantics), with the bundle.entry.request.method element set
+  [Section 3.87.4.1.2](ITI-87.html#387412-message-semantics), with the bundle.entry.request.method element set
   to POST
 
 - one DocumentReference Resource with metadata for the new file, where
@@ -325,7 +325,7 @@ The Bundle Resource shall contain:
   bundle.entry.request.method element set to POST
 
 - one DocumentReference Resource with metadata of the previous file,
-  valued as specified in [Section 3.89.4.1.1](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-89.html#389411-trigger-events) with the
+  valued as specified in [Section 3.89.4.1.1](ITI-89.html#389411-trigger-events) with the
   bundle.entry.request.method element set to PUT and the
   DocumentReference.status to “superseded”.
 
@@ -335,7 +335,7 @@ The File Manager shall support all the media-types defined in [ITI TF-2: Appendi
 Implementation Supplement).
 
 On receipt of the Replace File Request, the File Manager shall validate
-the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics).
+the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -346,7 +346,7 @@ retrieve \[ITI-109\].
 
 If the File Manager receives a Replace File Request message that
 contains resources other than the required ones, it may respond to the
-File Source with a failure ([see Section 3.87.4.4.2](http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387442-message-semantics)).
+File Source with a failure ([see Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
 
 #### 3.87.4.4 Submit File Response Message
 
