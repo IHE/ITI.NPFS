@@ -86,7 +86,7 @@ The Bundle Resource:
 - shall contain one FHIR DocumentReference Resource
   (<https://www.hl7.org/fhir/R4/documentreference.html)> with the file’s
   metadata. Constraints on the DocumentReference Resource are listed in
-  <a href="#Table1">Table 3.87.4.1.2-1</a>.
+  <a href="StructureDefinition-IHE.NPFS.DocumentReference.html">Table 3.87.4.1.2-1</a>.
 
 - may contain other resources that are referenced by the
   DocumentReference Resource.
