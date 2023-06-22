@@ -550,6 +550,7 @@ rules.
 
 See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
 
+The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 actions such creating, updating, or replacing those Resources could
@@ -559,9 +560,8 @@ Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
 #### 3.87.5.1 Security Audit Considerations
 
-This transaction does not require the actors involved to send audit
-messages to an Audit Record Repository because it does not convey PHI.
-However, the auditing of the Submit File transaction is recommended in
-order to avoid malicious creation/updating of files associated with the
-care of the patient. The audit message for the Submit File transaction
-shall comply with the structure defined in DICOM<sup>®</sup>[^2] [PS3.15 Annex A.5.1](https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_A.5.1).
+The File Source, when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor, shall be able to record a [Submit File Source Audit Event Log](StructureDefinition-IHE.NPFS.SubmitFile.Audit.Source.html).
+
+The File Manager, when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor, shall be able to record a [Submit File Manager Audit Event Log](StructureDefinition-IHE.NPFS.SubmitFile.Audit.Manager.html).
+
+The File Source and File Manager may also record fundamental AuditEvents for each individual resource Created or Updated, using the [BALP](https://profiles.ihe.net/ITI/BALP/index.html) [basic profile for REST events](https://profiles.ihe.net/ITI/BALP/content.html#3573-restful-activities).

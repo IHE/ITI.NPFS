@@ -220,16 +220,14 @@ it should, at a minimum, display the error to the user.
 
 See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
 
+The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 exchange of those Resources could compromise patient care or have other
-legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the Appendix Z on HL7 FHIR Trial
-Implementation Supplement).
+legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations).
 
 #### 3.88.5.1 Security Audit Considerations
 
-This transaction does not require the actor involved to send audit
-messages to an Audit Record Repository because does not convey PHI.
-However, the auditing of the search operation is recommended in order
-track unusual access to files. The audit message for the Search File
-transaction shall comply with the structure defined in DICOM [PS3.15 Annex A.5.1](https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_A.5.1)
+The File Consumer when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor shall be able to record a [Search File Consumer Audit Event Log](StructureDefinition-IHE.NPFS.SearchFile.Audit.Consumer.html).
+
+The File Manager when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor shall be able to record a [Search File Manager Audit Event Log](StructureDefinition-IHE.NPFS.SearchFile.Audit.Manager.html).

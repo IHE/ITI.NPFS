@@ -357,7 +357,7 @@ consuming/sharing workflows. The reader should know that mistakes will
 be made, and these files may convey private information.
 
 Although this profile does not require actors to audit the transactions
-that exchange non-patient files, grouping with an ATNA Secure Node or
+that exchange non-patient files, grouping with an [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or
 Secure Application is strongly encouraged in order to track file and
 metadata creation and update.
 For further considerations about Audit record refer to [BALP profile](https://profiles.ihe.net/ITI/BALP/).

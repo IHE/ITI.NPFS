@@ -132,18 +132,14 @@ rules.
 
 See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
 
+The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 updating those Resources could compromise patient care or have other
-legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the Appendix Z on HL7 FHIR Trial
-Implementation Supplement).
+legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations).
 
 #### 3.89.5.1 Security Audit Considerations
 
-This transaction does not require the actor involved to send audit
-messages to an Audit Record Repository because does not convey PHI.
-However, the auditing of the update operation is suggested in order to
-avoid malicious update of the metadata for files associated with the
-care of the patient. The audit message for the Update DocumentReference
-transaction shall comply with the structure defined in DICOM [PS3.15 Annex A.5.1](https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_A.5.1)
+The File Source when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor shall be able to record a [Update DocumentReference Source Audit Event Log](StructureDefinition-IHE.NPFS.UpdateDocumentReference.Audit.Source.html).
 
+The File Manager when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor shall be able to record a [Update DocumentReference Manager Audit Event Log](StructureDefinition-IHE.NPFS.UpdateDocumentReference.Audit.Manager.html).
