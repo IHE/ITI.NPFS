@@ -2,8 +2,8 @@ ValueSet: DocumentReferenceCategory
 Title: "NPFS DocumentReference category"
 Description: "ValueSet for the different values of element category"
 * ^experimental = false
-* classcode#STYLESHEET
-* classcode#WORKFLOW_DEFINITION
+* NPFSclasscode#STYLESHEET
+* NPFSclasscode#WORKFLOW_DEFINITION
 * LOINC#57017-6
 
 CodeSystem:  NPFSclasscode 
@@ -26,4 +26,4 @@ Description:  "IHE Category (Class) Code set for use with Non-Patient File Shari
 * content = #complete
 */
 * #STYLESHEET "Code for Stylesheets"
-* #WORKFLOW_DEFINITION "Code for Workflow Definitions"    
+* #WORKFLOW_DEFINITION "Code for Workflow Definitions" 
