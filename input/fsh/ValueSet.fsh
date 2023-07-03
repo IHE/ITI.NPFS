@@ -25,5 +25,6 @@ Description:  "IHE Category (Class) Code set for use with Non-Patient File Shari
 * caseSensitive = true
 * content = #complete
 */
+
 * #STYLESHEET "Code for Stylesheets"
 * #WORKFLOW_DEFINITION "Code for Workflow Definitions" 

@@ -10,7 +10,7 @@ Usage: #example
 * type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
 * type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
-* category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
+* category.coding.system = "https://profiles.ihe.net/ITI/NPFS/CodeSystem/NPFSclasscode"
 * category.coding.code = #WORKFLOW_DEFINITION
 * date = 2023-04-04T11:00:00-05:00
 * author = Reference(Patient/ex-patient)
@@ -38,7 +38,7 @@ Usage: #example
 * type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
 * type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
-* category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
+* category.coding.system = "https://profiles.ihe.net/ITI/NPFS/CodeSystem/NPFSclasscode"
 * category.coding.code = #WORKFLOW_DEFINITION
 * date = 2023-04-04T11:00:00-05:00
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
@@ -77,7 +77,7 @@ Usage: #example
 * type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
 * type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
-* category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
+* category.coding.system = "https://profiles.ihe.net/ITI/NPFS/CodeSystem/NPFSclasscode"
 * category.coding.code = #WORKFLOW_DEFINITION
 * date = 2023-04-04T11:00:00-05:00
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
@@ -116,7 +116,7 @@ Usage: #example
 * type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
 * type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
-* category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
+* category.coding.system = "https://profiles.ihe.net/ITI/NPFS/CodeSystem/NPFSclasscode"
 * category.coding.code = #WORKFLOW_DEFINITION
 * date = 2023-04-04T11:00:00-05:00
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
@@ -155,7 +155,7 @@ Usage: #example
 * type.coding.system = "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.5"
 * type.coding.code = #1.3.6.1.4.1.19376.1.5.3.1.5.1
 * type.coding.display = "eReferral workflow"
-* category.coding.system = "urn:ihe:iti:npfs:2017:class-codes"
+* category.coding.system = "https://profiles.ihe.net/ITI/NPFS/CodeSystem/NPFSclasscode"
 * category.coding.code = #WORKFLOW_DEFINITION
 * date = 2023-04-04T11:00:00-05:00
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
