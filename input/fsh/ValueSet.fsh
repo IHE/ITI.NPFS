@@ -8,7 +8,7 @@ Description: "ValueSet for the different values of element category"
 
 CodeSystem:  NPFSclasscode 
 Title: "NPFS classcode"
-Description:  "IHE Category (Class) Code set for use with Non-Patient File Sharing"
+Description:  "IHE Category (Class) Code set for use with Non-Patient File Sharing "
 
 /** status = #active
 * experimental = false
