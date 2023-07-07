@@ -55,7 +55,6 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
@@ -94,7 +93,6 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #appends
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
@@ -133,7 +131,6 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
 * relatesTo.code = #replaces
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
@@ -172,7 +169,6 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format = http://terminology.hl7.org/CodeSystem/hl7-document-format-codes#urn:ihe:iti:dsg:enveloping:2014
 * relatesTo.code = #replaces
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
