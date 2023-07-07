@@ -19,7 +19,7 @@ Usage: #example
 * content.attachment.url = "urn:uuid:d3e62cb3-7be5-4971-a765-471669688f33"
 * content.attachment.size = 3456
 * content.attachment.hash = "07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"
-* content.format = urn:oid:2.16.840.1.113883.2.9.2.50.6.34.3#urn:ad:rve:pdf
+* content.format = urn:ietf:bcp:13#application/pdf
 
 Instance:   ex-DocumentReferenceComprehensive
 InstanceOf: NPFSDocumentReference
