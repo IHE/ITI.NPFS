@@ -125,7 +125,7 @@ Usage: #example
 * context.period.start = 2020-12-31T23:50:50-05:00
 * context.period.end = 2020-12-31T23:50:50-05:00
 * context.event = http://terminology.hl7.org/CodeSystem/v3-ActCode#ACCTRECEIVABLE
-* content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDC
+* content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDF
 * content.attachment.title = "DocumentReference for Comprehensive minimally filled metadata"
 * description = "Example of a New DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
 * content.attachment.size = 3456
