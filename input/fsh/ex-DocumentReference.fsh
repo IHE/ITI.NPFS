@@ -49,7 +49,7 @@ Usage: #example
 * context.period.start = 2020-12-31T23:50:50-05:00
 * context.period.end = 2020-12-31T23:50:50-05:00
 * context.event = http://terminology.hl7.org/CodeSystem/v3-ActCode#ACCTRECEIVABLE
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDF
 * content.attachment.title = "DocumentReference for Comprehensive minimally filled metadata"
 * description = "Example of a Comprehensive DocumentReference resource. This is minimally filled for all mandatory elements."
 * content.attachment.size = 3456
@@ -87,7 +87,7 @@ Usage: #example
 * context.period.start = 2020-12-31T23:50:50-05:00
 * context.period.end = 2020-12-31T23:50:50-05:00
 * context.event = http://terminology.hl7.org/CodeSystem/v3-ActCode#ACCTRECEIVABLE
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDF
 * content.attachment.title = "DocumentReference for Comprehensive minimally filled metadata"
 * description = "Example of a Old DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
 * content.attachment.size = 3456
@@ -125,7 +125,7 @@ Usage: #example
 * context.period.start = 2020-12-31T23:50:50-05:00
 * context.period.end = 2020-12-31T23:50:50-05:00
 * context.event = http://terminology.hl7.org/CodeSystem/v3-ActCode#ACCTRECEIVABLE
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDF
 * content.attachment.title = "DocumentReference for Comprehensive minimally filled metadata"
 * description = "Example of a New DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
 * content.attachment.size = 3456
@@ -163,7 +163,7 @@ Usage: #example
 * context.period.start = 2020-12-31T23:50:50-05:00
 * context.period.end = 2020-12-31T23:50:50-05:00
 * context.event = http://terminology.hl7.org/CodeSystem/v3-ActCode#ACCTRECEIVABLE
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds-sd:text:2008
+* content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDF
 * content.attachment.title = "DocumentReference for Comprehensive minimally filled metadata"
 * description = "Example of a New DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
 * content.attachment.size = 3456
