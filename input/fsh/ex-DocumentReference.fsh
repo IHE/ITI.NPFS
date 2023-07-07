@@ -133,7 +133,8 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format.code = #PDF
+* content.format.system = 	"http://hl7.org/fhir/ValueSet/mimetypes"
+* content.format.code = 	#application/pdf
 * relatesTo.code = #replaces
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
