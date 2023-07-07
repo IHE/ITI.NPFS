@@ -6,7 +6,7 @@
 - Replaced reference to MHD [ITI-68] Retrieve Document transaction width [ITI-109] Retrieve File transaction 
 - Include CapabilityStatements for the actors
 - Add defined AuditEvent requirements leveraging BALP when grouped with ATNA
-- Integrated CP 1139 in IG.
+- Integrated CP 1139
 
 ## Issues
 
