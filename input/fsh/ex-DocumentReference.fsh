@@ -133,7 +133,7 @@ Usage: #example
 * content.attachment.size = 3456
 * content.attachment.hash = "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ=="
 * content.attachment.size = 0
-* content.format = urn:oid:2.16.840.1.113883.5.79#application/pdf
+* content.format.code = #PDF
 * relatesTo.code = #replaces
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
