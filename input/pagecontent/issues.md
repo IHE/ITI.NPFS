@@ -31,16 +31,10 @@ File Consumer to search just for resources that matches this profile in
 a FHIR Server that store different types of resources. Readers are
 required to provide feedback on this topic.***
 
-***[NPFS_013](https://github.com/IHE/ITI.NPFS/issues/8): DocumentReference.subject is set to 0..0; the .subject element may still be useful for subjects that are not patient. 
-
-Practitioner -- this is individual, so I wonder if we really want NPFS to also be (non practitioner)?
-
+***[NPFS_013](https://github.com/IHE/ITI.NPFS/issues/8): DocumentReference.subject is set to 0..0; the .subject element may still be useful for subjects that are not patient.Practitioner -- this is individual, so I wonder if we really want NPFS to also be (non practitioner)?
 Group -- groups can be made up of Patients. So it is not clear how we would allow Group, but not allow Groups of Patients.
-
 Device -- often a Device is associated with a Patient, although many Devices are just Devices. Allowing Device might be the most clear use-case.
-
 Seems we should have a positive use-case to drive deviation from 0..0. Suggestions are requested.
-
 Note that in the future, using FHIR R5, subject can be a reference to ANY kind of Resource. This is just mentioned as foreshadowing, it should not be part of the current profile.***
 
 ### Closed Issues
