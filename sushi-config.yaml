@@ -8,9 +8,10 @@ version: 2.2.0-comment
 name: IHE_ITI_NPFS
 title: "Non-patient File Sharing (NPFS)"
 description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Non-patient File Sharing (NPFS)
-releaseLabel: ci-build
+#releaseLabel: ci-build
 #releaseLabel: Trial-Implementation
-#date: 2022-01-02
+releaseLabel: ballot
+date: 2023-08-04
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
@@ -31,11 +32,11 @@ dependencies:
   ihe.formatcode.fhir:
     id: iheformatcodefhir
     uri: https://profiles.ihe.net/fhir/ihe.formatcode.fhir/ImplementationGuide/ihe.formatcode.fhir
-    version: 1.1.0
+    version: 1.1.x
   ihe.iti.balp:
     id: iheitibasicaudit
     uri: https://profiles.ihe.net/ITI/BALP/ImplementationGuide/ihe.iti.balp
-    version: 1.1.1
+    version: 1.1.x
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
@@ -55,7 +56,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-publisher: 'true'
   apply-version: 'true'
 
-resources:
+# resources:
 # list every example here with a name, description and that exampleBoolean is true; These are used to populate the artifacts page, and are needed to eliminate build warnings 
 # You may delay filling out this section until you approach publication as it is merely a nice to have and eliminates build warnings -- If you do this then you will need above the autoload-resources true
 
