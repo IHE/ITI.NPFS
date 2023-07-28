@@ -39,23 +39,23 @@ can be classified using the metadata model described in this profile.
 ### Organization of This Guide
 This guide is organized into the following sections:
 
-1. Volume 1:
-   1. [Introduction](volume-1.html)
-   1. [Actors, Transactions, and Content](volume-1.html#471-npfs-actors-transactions-and-content-modules)
-   1. [Actor Options](volume-1.html#472-npfs-actor-options)
-   1. [Actor Required Groupings](volume-1.html#473-npfs-required-actor-groupings)
-   1. [Overview](volume-1.html#474-npfs-overview)
-   1. [Security Considerations](volume-1.html#475-npfs-security-considerations)
-   1. [Cross Profile Considerations](volume-1.html#476-npfs-cross-profile-considerations)
-2. Volume 2: Transaction Detail
-   1. [Submit File \[ITI-87\]](ITI-87.html)
-   1. [Search File \[ITI-88\]](ITI-88.html)
-   1. [Update DocumentReference \[ITI-89\]](ITI-89.html)
-   1. [Retrieve File [ITI-109]](ITI-109.html)
-6. Other
-   1. [Test Plan](testplan.html)
-   1. [Changes to Other IHE Specifications](other.html)
-   1. [Download and Analysis](download.html) 
+- Volume 1:
+  - [Introduction](volume-1.html)
+  - [Actors, Transactions, and Content](volume-1.html#471-npfs-actors-transactions-and-content-modules)
+  - [Actor Options](volume-1.html#472-npfs-actor-options)
+  - [Actor Required Groupings](volume-1.html#473-npfs-required-actor-groupings)
+  - [Overview](volume-1.html#474-npfs-overview)
+  - [Security Considerations](volume-1.html#475-npfs-security-considerations)
+  - [Cross Profile Considerations](volume-1.html#476-npfs-cross-profile-considerations)
+- Volume 2: Transaction Detail
+  - [Submit File \[ITI-87\]](ITI-87.html)
+  - [Search File \[ITI-88\]](ITI-88.html)
+  - [Update DocumentReference \[ITI-89\]](ITI-89.html)
+  - [Retrieve File [ITI-109]](ITI-109.html)
+- Other
+  - [Test Plan](testplan.html)
+  - [Changes to Other IHE Specifications](other.html)
+  - [Download and Analysis](download.html) 
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 

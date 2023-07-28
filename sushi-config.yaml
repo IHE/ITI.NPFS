@@ -87,11 +87,11 @@ pages:
   other.md:
     title: Changes to Other Documents
     generation: markdown
-  download.md:
-    title: "Download and Analysis"
-    generation: markdown
   issues.md:
     title: Issues
+    generation: markdown
+  download.md:
+    title: "Download and Analysis"
     generation: markdown
 
 menu:
