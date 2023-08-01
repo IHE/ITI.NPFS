@@ -1,16 +1,16 @@
-### 3.88.1 Scope
+### 2:3.88.1 Scope
 
 The transaction is used by the File Consumer to find DocumentReference
 Resources that are stored and managed by a File Manager. The
 DocumentReference Resources represent files that are not associated with
 patient.
 
-### 3.88.2 Actor Roles
+### 2:3.88.2 Actor Roles
 
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
     <caption style="text-align:left">
-        <b> Table 3.88.2-1: Actor Roles </b>
+        <b> Table 2:3.88.2-1: Actor Roles </b>
     </caption>
     <tbody>
         <tr>
@@ -33,7 +33,7 @@ patient.
 </table>
 <br>
 
-### 3.88.3 Referenced Standards
+### 2:3.88.3 Referenced Standards
 
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
@@ -46,27 +46,27 @@ patient.
 </table>
 
 
-### 3.88.4 Messages
+### 2:3.88.4 Messages
 
 <div>
 {%include ITI-88-seq.svg%}
-<p><b>Figure 3.88.4-1: Search File Interactions</b></p>
+<p><b>Figure 2:3.88.4-1: Search File Interactions</b></p>
 </div>
 <br clear="all">
 
 
-#### 3.88.4.1 Search File Request Message
+#### 2:3.88.4.1 Search File Request Message
 
 This message is a parametrized HTTP GET that allows a File Consumer to
 search for a list of the FHIR DocumentReference Resources managed by the
 File Manager, based on a set of search parameters.
 
-##### 3.88.4.1.1 Trigger Events
+##### 2:3.88.4.1.1 Trigger Events
 
 A File Consumer sends this message to the File Manager when it needs to
 discover DocumentReference Resources for non-patient-related files.
 
-##### 3.88.4.1.2 Message Semantics
+##### 2:3.88.4.1.2 Message Semantics
 
 The File Consumer executes an HTTP GET against the File Manager. This
 request shall comply with requirements specified in the HL7<sup>®</sup>
@@ -81,7 +81,7 @@ The Parameters element represents a series of encoded name-value pairs
 representing the filter for the query, as specified in [Section 3.88.4.1.2.1](ITI-88.html#3884121-query-search-parameters), as well as control parameters to modify the behavior of
 the File Manager such as response format, or pagination.
 
-###### 3.88.4.1.2.1 Query Search Parameters
+###### 2:3.88.4.1.2.1 Query Search Parameters
 
 The File Consumer may supply and the File Manager shall support all the
 query parameters listed below:
@@ -157,12 +157,12 @@ the type of relation allowed.
 This parameter, of type composite, is the combination of the
 **relatesTo** and **relation** search parameter.
 
-###### 3.88.4.1.2.2 Populating Expected Response Format
+###### 2:3.88.4.1.2.2 Populating Expected Response Format
 
 See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR
 Trial Implementation Supplement) for details.
 
-##### 3.88.4.1.3 Expected Actions
+##### 2:3.88.4.1.3 Expected Actions
 
 The File Manager shall process the query to discover DocumentReference
 Resources that are not associated to any patient and that match the
@@ -172,18 +172,18 @@ message containing matching results.
 The File Manager may return DocumentReference Resources that are not
 constrained as specified in [Resource Profile: NPFS DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html).
 
-#### 3.88.4.2 Search File Response Message
+#### 2:3.88.4.2 Search File Response Message
 
 The File Manager returns a HTTP Status code appropriate to the
 processing as well as a list of the matching DocumentReference
 Resources.
 
-##### 3.88.4.2.1 Trigger Events
+##### 2:3.88.4.2.1 Trigger Events
 
 The File Manager has completed the processing of the Search File Request
 message.
 
-##### 3.88.4.2.2 Message Semantics
+##### 2:3.88.4.2.2 Message Semantics
 
 Based on the query results, the File Manager shall either return an
 error or success.
@@ -208,7 +208,7 @@ The response shall adhere to the FHIR Bundle constraints specified in
 [ITI TF-2: Appendix Z.1](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.1-resource-bundles) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
 
-##### 3.88.4.2.3 Expected Actions
+##### 2:3.88.4.2.3 Expected Actions
 
 The File Consumer shall process the results according to
 application-defined rules.
@@ -216,14 +216,14 @@ application-defined rules.
 If a File Consumer cannot automatically recover from an error condition,
 it should, at a minimum, display the error to the user.
 
-#### 3.88.4.3 CapabilityStatement Resource
+#### 2:3.88.4.3 CapabilityStatement Resource
 
 File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented. 
 - Requirements CapabilityStatement for [File Consumer](CapabilityStatement-IHE.NPFS.FileConsumer.html)
 - Requirements CapabilityStatement for [File Consumer implementing Retrieve File](CapabilityStatement-IHE.NPFS.FileConsumerOption.html)
 - Requirements CapabilityStatement for [File Manager](CapabilityStatement-IHE.NPFS.FileManager.html)
 
-### 3.88.5 Security Considerations
+### 2:3.88.5 Security Considerations
 
 See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
 
@@ -233,7 +233,7 @@ Resources exchanged do not contain PHI or other private information,
 exchange of those Resources could compromise patient care or have other
 legal ramifications. For general security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations).
 
-#### 3.88.5.1 Security Audit Considerations
+#### 2:3.88.5.1 Security Audit Considerations
 
 The File Consumer when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor shall be able to record a [Search File Consumer Audit Event Log](StructureDefinition-IHE.NPFS.SearchFile.Audit.Consumer.html).
 
