@@ -21,7 +21,7 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
 ### Open Issues
 
 ***[NPFS_010](https://github.com/IHE/ITI.NPFS/issues/5): This document begins the definition of a value set for the
-class element. How do we complete the value set for this profile.
+class element. How do we complete the value set for this profile?
 Suggestions are requested. How do we coordinate this value set with
 other Document Sharing profiles? Suggestions are requested. ***
 
