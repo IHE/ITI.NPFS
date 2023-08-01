@@ -64,7 +64,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: NPFS Home
+    title: Non-patient File Sharing Home
     generation: markdown
   volume-1.md:
     title: 47 Non-Patient File Sharing (NPFS) Profile
@@ -88,7 +88,7 @@ pages:
     title: Changes to Other Documents
     generation: markdown
   issues.md:
-    title: Issues
+    title: Significant Changes & Issues
     generation: markdown
   download.md:
     title: "Download and Analysis"
