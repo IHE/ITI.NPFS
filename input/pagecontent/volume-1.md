@@ -20,66 +20,66 @@ is given for three types of files:
   policy that applies to, or may be agreed to, by a patient (see [ITI TF-1: 19.2 “Creating Patient Privacy Policies”](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19.2))
 
 - Stylesheets: structured documents that can be used by user-agents
-  (e.g., Web Browsers) to render the content of an XML document.
+  (e.g., Web Browsers) to render the content of an XML document
 
 Local policies may extend the types of files that are being shared using
 NPFS and that can be classified using the metadata model described in
 this profile.
 
-## 47.1 NPFS Actors, Transactions, and Content Modules
+## 1:47.1 NPFS Actors, Transactions, and Content Modules
 
 This section defines the actors, transactions, and/or content modules in
 this profile. General definitions of actors are given in the Technical
 Frameworks General Introduction Appendix A at
 <https://www.ihe.net/resources/technical_frameworks/#GenIntro>.
 
-Figure 47.1-1 shows the actors directly involved in NPFS Profile and the
+Figure 1:47.1-1 shows the actors directly involved in NPFS Profile and the
 relevant transactions between them. If needed for context, other actors
 that may be indirectly involved due to their participation in other
 related profiles are shown in dotted lines. Actors which have a
 mandatory grouping are shown in conjoined boxes.
 
-<div style="text-align:center">
+<div>
 {%include actorDiagram.svg%}
-<p><b>Figure 47.1-1: NPFS Actor Diagram</b></p>
+<p><b>Figure 1:47.1-1: NPFS Actor Diagram</b></p>
 </div>
 
-### 47.1.1 Actor Descriptions and Actor Profile Requirements
+### 1:47.1.1 Actor Descriptions and Actor Profile Requirements
 
 Most requirements are documented in transactions (Volume 2) and Content
 Modules (Volume 3). This section documents any additional requirements
 on profile’s actors.
 
-#### 47.1.1.1 File Manager
+#### 1:47.1.1.1 File Manager
 
 The File Manager stores files provided by the File Source and maintains
 related metadata. The File Manager responds to search and retrieve
 requests initiated by the File Consumer. The File Manager responds to
 metadata update requests initiated by the File Source.
 
-#### 47.1.1.2 File Consumer 
+#### 1:47.1.1.2 File Consumer 
 
 The File Consumer queries for file metadata meeting certain criteria,
 and may retrieve selected files.
 
-#### 47.1.1.3 File Source 
+#### 1:47.1.1.3 File Source 
 
 The File Source publishes and updates files produced by either the File
 Source or by other systems. It is responsible for sending files and
 related metadata to a File Manager. The File Source can send metadata
 update requests to the File Manager.
 
-## 47.2 NPFS Actor Options
+## 1:47.2 NPFS Actor Options
 
 Options that may be selected for each actor in this profile, if any, are
-listed in Table 47.2-1. Dependencies between options when applicable are
+listed in Table 1:47.2-1. Dependencies between options when applicable are
 specified in notes.
 
 <div>
 <table width="50%" border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
     <caption>
-        <b> Table 47.2-1: Not-patient File Sharing - Actors and Options </b>
+        <b> Table 1:47.2-1: Not-patient File Sharing - Actors and Options </b>
     </caption>
     <thead>
         <tr>
@@ -109,7 +109,7 @@ specified in notes.
 </div>
 <br>
 
-### 47.2.1 File Retrieve Option
+### 1:47.2.1 File Retrieve Option
 
 The File Retrieve Option enables a File Consumer to retrieve a file
 stored/managed by the File Manager.
@@ -117,7 +117,7 @@ stored/managed by the File Manager.
 A File Consumer that supports the File Retrieve Option shall support the
 Retrieve File \[ITI-109\] transaction.
 
-### 47.2.2 Update File Metadata Option
+### 1:47.2.2 Update File Metadata Option
 
 The Update File Metadata Option enables a File Source to update the
 metadata of a file stored/managed by the File Manager.
@@ -125,13 +125,13 @@ metadata of a file stored/managed by the File Manager.
 A File Source that supports the Update File Metadata Option shall
 support the Update DocumentReference \[ITI-89\] transaction.
 
-## 47.3 NPFS Required Actor Groupings 
+## 1:47.3 NPFS Required Actor Groupings 
 
 This profile does not mandate the grouping with other actors.
 
-## 47.4 NPFS Overview
+## 1:47.4 NPFS Overview
 
-### 47.4.1 Concepts – distinguishing files from documents
+### 1:47.4.1 Concepts – distinguishing files from documents
 
 The NPFS Profile uses the term “**file**” to mark a clear distinction
 from the IHE Document Sharing profiles.
@@ -145,9 +145,9 @@ Other IHE profiles are used to share (using different sharing paradigms)
 information related to patients. In IHE terminology, such
 patient-specific content is a “**document**.”
 
-### 47.4.2 Use Cases
+### 1:47.4.2 Use Cases
 
-#### 47.4.2.1 Use Case \#1: Manage Stylesheets
+#### 1:47.4.2.1 Use Case \#1: Manage Stylesheets
 
 A technician creates a stylesheet to render the XML of
 CDA<sup>®</sup>[^1] Laboratory Reports produced in all the Laboratory
@@ -156,7 +156,7 @@ Information System (LIS) involved in the Healthcare Information Exchange
 LISs involved in the HIE so that they can search for the stylesheet and
 reference it as an XSL transformation of the Laboratory Report.
 
-##### 47.4.2.1.1 Manage Stylesheets - Use Case Description
+##### 1:47.4.2.1.1 Manage Stylesheets - Use Case Description
 
 A Healthcare Organization desires to use a stylesheet for uniform
 rendering of XML Laboratory Reports produced within the organization.
@@ -178,7 +178,7 @@ HIE Organization, in order to discover the resource URL of the
 stylesheet applicable to the Laboratory Reports. This URL is used to
 reference it as an XSL transformation of the Laboratory Report.
 
-##### 47.4.2.1.2 Stylesheet’s Management Process Flow
+##### 1:47.4.2.1.2 Stylesheet’s Management Process Flow
 
 - The Health Information System acting as a File Source issues a Submit
   File \[ITI-87\] transaction to the File Manager to submit the
@@ -193,10 +193,10 @@ reference it as an XSL transformation of the Laboratory Report.
 
 <div>
 {%include useCase1.svg%}
-<p><b>Figure 47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets management</b></p>
+<p><b>Figure 1:47.4.2.1.2-1: Basic Process Flow in NPFS Profile for Stylesheets Management</b></p>
 </div>
 
-#### 47.4.2.2 Use Case \#2: Replace Privacy Policies 
+#### 1:47.4.2.2 Use Case \#2: Replace Privacy Policies 
 
 In this use case, the hospital’s privacy office creates files that
 describe the Privacy Policies that the patient can agree to. When a
@@ -207,7 +207,7 @@ Then, when the patient selects a Privacy Policy, the nurse uses a Basic
 Patient Privacy Consent (BPPC) Content Creator Actor (see [ITI TF-1: 19](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19))
 to create the patient’s Privacy Policy Consent document for the patient.
 
-##### 47.4.2.2.1 Replace Privacy Policies - Use Case Description
+##### 1:47.4.2.2.1 Replace Privacy Policies - Use Case Description
 
 A hospital’s privacy office defines a set of Privacy Policies that a
 patient can agree to. Mr. Blue, a hospital privacy office employee,
@@ -236,7 +236,7 @@ the previous Privacy Policy, changing its status to “superseded”.
 This use case is different than Use Case \#3 because here the original
 Privacy Policy file needs to be preserved (i.e., it is not overwritten).
 
-##### 47.4.2.2.2 Privacy Domain Policies Process Flow
+##### 1:47.4.2.2.2 Privacy Domain Policies Process Flow
 
 - The Health Information System, acting as a File Source, issues a
   Submit File \[ITI-87\] (create) transaction to the File Manager to
@@ -259,10 +259,10 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
 
 <div>
 {%include useCase2.svg%}
-<p><b>Figure 47.4.2.2.2-1: Basic Process Flow in NPFS Profile for Privacy Policies management</b></p>
+<p><b>Figure 1:47.4.2.2.2-1: Basic Process Flow in NPFS Profile for Privacy Policies management</b></p>
 </div>
 
-##### 47.4.2.3.1 Manage change to Workflow Definitions - Use Case Description
+##### 1:47.4.2.3.1 Manage change to Workflow Definitions - Use Case Description
 
 An HIE decides to design the eReferral Process for all the participants
 involved in that workflow. Mr. Smith, a technician at Goodcare Hospital,
@@ -283,7 +283,7 @@ This use case is different than Use Case \#2 because here the original
 Workflow Definition file does not need to be preserved so it is, in
 effect, overwritten.
 
-##### 47.4.2.3.2 Workflow Definitions Process Flow
+##### 1:47.4.2.3.2 Workflow Definitions Process Flow
 
 - The Health Information System acting as a File Source issues a Submit
   File \[ITI-87\] (create) transaction to the File Manager to submit the
@@ -304,10 +304,10 @@ effect, overwritten.
 
 <div>
 {%include useCase3.svg%}
-<p><b>Figure 47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow Definition Documents management</b></p>
+<p><b>Figure 1:47.4.2.3.2-1: Basic Process Flow in NPFS Profile for Workflow Definition Documents management</b></p>
 </div>
 
-#### 47.4.2.4 Use Case \#4: Update of file’s ownership 
+#### 1:47.4.2.4 Use Case \#4: Update of file’s ownership 
 
 A technician creates a stylesheet to render the XML documents produced
 by document producers belonging to Hospital Hope. After some time, the
@@ -316,7 +316,7 @@ order to accomplish this task, the technician updates metadata that
 describe the file in order to extend the ownership also to Hospital
 Peace.
 
-##### 47.4.2.4.1 Update of file’s ownership - Use Case Description
+##### 1:47.4.2.4.1 Update of file’s ownership - Use Case Description
 
 Hospital Hope desires uniform rendering of XML documents produced within
 the organization, so it creates a stylesheet file. Mr. Black, a
@@ -332,7 +332,7 @@ DocumentReference \[ITI-89\] transaction. Now the stylesheet’s
 DocumentReference reflects the ownership of Hospital Hope and Hospital
 Peace.
 
-##### 47.4.2.4.2 Update of file’s ownership Process Flow
+##### 1:47.4.2.4.2 Update of file’s ownership Process Flow
 
 - The Health Information System acting as a File Source issues a Submit
   File \[ITI-87\] (create) transaction to the File Manager to submit the
@@ -344,10 +344,10 @@ Peace.
 
 <div>
 {%include useCase4.svg%}
-<p><b>Figure 47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of file’s ownership</b></p>
+<p><b>Figure 1:47.4.2.4.2-1: Basic Process Flow in NPFS Profile for Update of file’s ownership</b></p>
 </div>
 
-## 47.5 NPFS Security Considerations
+## 1:47.5 NPFS Security Considerations
 
 Non-patient files do not contain Patient Health Information (PHI), but
 they may contain other sensitive information such as physician reviews,
@@ -367,7 +367,7 @@ consider in order to avoid malicious creation/updating of files.
 Grouping NPFS actors with actors in the Internet User Authorization
 (IUA) Profile enables deployments to mitigate these security issues.
 
-## 47.6 NPFS Cross Profile Considerations
+## 1:47.6 NPFS Cross Profile Considerations
 
 None.
 

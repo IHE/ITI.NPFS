@@ -31,7 +31,7 @@ can be classified using the metadata model described in this profile.
 
 <div markdown="1" class="stu-note">
 
-| [Significant Changes, Open, and Closed Issues](issues.html) |
+| [Significant Changes, Open and Closed Issues](issues.html) |
 {: .grid}
 
 </div>

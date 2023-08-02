@@ -1,5 +1,5 @@
 
-### 3.87.1 Scope
+### 2:3.87.1 Scope
 
 This transaction allows a File Source to publish a new file and related
 metadata. It also enables update of an existing file and update its
@@ -7,13 +7,13 @@ metadata and replacement of a file.
 
 The files are not associated with a patient.
 
-### 3.87.2 Actors Roles
+### 2:3.87.2 Actors Roles
 
 <div>
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
     <caption style="text-align:left">
-        <b> Table 3.87.2-1: Actor Roles </b>
+        <b> Table 2:3.87.2-1: Actor Roles </b>
     </caption>
     <tbody>
         <tr>
@@ -37,7 +37,7 @@ The files are not associated with a patient.
 </div>
 <br>
 
-### 3.87.3 Referenced Standards
+### 2:3.87.3 Referenced Standards
 
 <table border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
@@ -49,27 +49,27 @@ The files are not associated with a patient.
     </tbody>
 </table>
 
-### 3.87.4 Messages
+### 2:3.87.4 Messages
 
 <div>
 {%include ITI-87-seq.svg%}
-<p><b>Figure 3.87.4-1: Create File Interactions</b></p>
+<p><b>Figure 2:3.87.4-1: Create File Interactions</b></p>
 </div>
 <br clear="all">
 
-#### 3.87.4.1 Create File Request Message
+#### 2:3.87.4.1 Create File Request Message
 
 The File Source uses this message to submit a new file (Binary Resource)
 and related metadata (DocumentReference Resource) to a target File
 Manager using a FHIR transaction.
 
-##### 3.87.4.1.1 Trigger Events
+##### 2:3.87.4.1.1 Trigger Events
 
 The File Source needs to submit a new file to a File Manager. The file
 may have been created by the File Source itself or by another file
 creator.
 
-##### 3.87.4.1.2 Message Semantics
+##### 2:3.87.4.1.2 Message Semantics
 
 The File Source shall issue an HTTP request according to requirements
 defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard for “create”
@@ -103,14 +103,14 @@ stylesheets, workflow definitions, and privacy policies. If other files
 types will be managed, local policy should establish values for type,
 category, format, mime-type and masterIdentifier elements
 
-###### 3.87.4.1.2.1 category element
+###### 2:3.87.4.1.2.1 category element
 
 Codes in the category element shall be from [ValueSet: NPFS DocumentReference category](ValueSet-DocumentReferenceCategory.html), if any
 of the codes within the value set can apply to the concept being
 communicated. If the table does not cover the concept (based on human
 review), an alternate code may be used instead.
 
-###### 3.87.4.1.2.2 type element
+###### 2:3.87.4.1.2.2 type element
 
 This section identifies specific guidelines for the type element which
 depends on the “class” of the file:
@@ -131,14 +131,14 @@ depends on the “class” of the file:
   be defined by both a code and a system (e.g., code= “laboratory”
   system=”http://localdomain.org/stylesheetstype”).
 
-###### 3.87.4.1.2.3 File relationships 
+###### 2:3.87.4.1.2.3 File relationships 
 
 The relatesTo element holds relationships that the file has with other
 non-patient files. The DocumentReference.relatesTo element allows for
 the creation of those relationships (i.e., replacement, sign, transform,
 or append).
 
-###### 3.87.4.1.2.4 MasterIdentifier element
+###### 2:3.87.4.1.2.4 MasterIdentifier element
 
 This section identifies specific requirements for the masterIdentifier
 element, if used:
@@ -153,11 +153,11 @@ element, if used:
 Local policies should define how to handle this element in case of
 file’s revision, update or replacement.
 
-###### 3.87.4.1.2.5 Create File request message example
+###### 2:3.87.4.1.2.5 Create File request message example
 
 For an example of a Create File Request Bundle see <a href="Bundle-ex-CreateDocumentBundle.html">Example Bundle: Create Document Bundle</a>
 
-##### 3.87.4.1.3 Expected Actions
+##### 2:3.87.4.1.3 Expected Actions
 
 The File Manager shall support all the media-types defined in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
@@ -177,7 +177,7 @@ If the File Manager receives a Create File Request message that contains
 resources other than the required ones, it may respond to the File
 Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
 
-#### 3.87.4.2 Update File Request Message
+#### 2:3.87.4.2 Update File Request Message
 
 The File Source uses this message to update a file already existing on
 the File Manager.
@@ -188,7 +188,7 @@ preserved.
 The File Manager is not required to support FHIR resource versioning
 (<https://www.hl7.org/fhir/R4/versions.html>.)
 
-##### 3.87.4.2.1 Trigger Events
+##### 2:3.87.4.2.1 Trigger Events
 
 The File Source needs to update a file that exists on the File Manager.
 
@@ -196,7 +196,7 @@ Prior to sending the update, the File Source shall discover the resource
 ids of the existing DocumentReference Resource and the Binary Resource
 to be updated.
 
-##### 3.87.4.2.2 Message Semantics
+##### 2:3.87.4.2.2 Message Semantics
 
 The File Source shall issue an HTTP request according to requirements
 defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard for “update”
@@ -225,11 +225,11 @@ format. Values for media-type of the request message are defined in the
 [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement)*.*
 
-###### 3.87.4.2.2.1 Update File Request message example
+###### 2:3.87.4.2.2.1 Update File Request message example
 
 For an example of a Update File Request Bundle see <a href="Bundle-ex-UpdateDocumentBundle.html">Example Bundle: Update Document Bundle</a>
 
-##### 3.87.4.2.3 Expected Actions
+##### 2:3.87.4.2.3 Expected Actions
 
 The File Manager shall support all the media-type defined in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
@@ -253,7 +253,7 @@ If the File Manager receives an Update File Request message that
 contains resources other than the required ones, it may respond to the
 File Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
 
-#### 3.87.4.3 Replace File Request Message
+#### 2:3.87.4.3 Replace File Request Message
 
 The File Source uses this message to replace a file already existing on
 the File Manager.
@@ -265,14 +265,14 @@ be superseded (i.e., deprecated).
 The File Manager is not required to support FHIR resource versioning
 (<https://www.hl7.org/fhir/R4/versions.html>.)
 
-##### 3.87.4.3.1 Trigger Events
+##### 2:3.87.4.3.1 Trigger Events
 
 The File Source needs to replace a file that exists on the File Manager.
 
 The replace mechanism will be handled by creating a new file and
 updating the previous DocumentReference Resource in one message.
 
-##### 3.87.4.3.2 Message Semantics
+##### 2:3.87.4.3.2 Message Semantics
 
 This message uses an HTTP POST to submit a FHIR Bundle that contains the
 new Binary and DocumentReference Resources and also the prior
@@ -295,7 +295,7 @@ The Bundle Resource shall contain:
   bundle.entry.request.method element set to PUT and the
   DocumentReference.status to “superseded”.
 
-##### 3.87.4.3.3 Expected Actions
+##### 2:3.87.4.3.3 Expected Actions
 
 The File Manager shall support all the media-types defined in [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
 Implementation Supplement).
@@ -314,20 +314,20 @@ If the File Manager receives a Replace File Request message that
 contains resources other than the required ones, it may respond to the
 File Source with a failure ([see Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
 
-#### 3.87.4.4 Submit File Response Message
+#### 2:3.87.4.4 Submit File Response Message
 
 The File Manager sends a Submit File Response message in response to a
 Create File Request, an Update File Request, or a Replace File Request
 Message.
 
-##### 3.87.4.4.1 Trigger Events
+##### 2:3.87.4.4.1 Trigger Events
 
 When the File Manager has finished creating or updating the file and
 metadata received from the File Source, the File Manager sends this
 message to the File Source acknowledging the result of the create,
 update or replace request.
 
-##### 3.87.4.4.2 Message Semantics
+##### 2:3.87.4.4.2 Message Semantics
 
 When the File Manager has processed the request, it shall return an HTTP
 response with an overall status code.
@@ -363,19 +363,19 @@ returning the following status code:
 The File Manager can return other status codes 4xx or 5xx in accordance
 to internal business rules that are out of scope for this transaction.
 
-##### 3.87.4.4.3 Expected Actions
+##### 2:3.87.4.4.3 Expected Actions
 
 The File Source processes the response according to application-defined
 rules.
 
-#### 3.87.4.5 CapabilityStatement Resource
+#### 2:3.87.4.5 CapabilityStatement Resource
 
 File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented. 
 - Requirements CapabilityStatement for [File Source](CapabilityStatement-IHE.NPFS.FileSource.html)
 - Requirements CapabilityStatement for [File Source implementing Update DocumentReference](CapabilityStatement-IHE.NPFS.FileSourceOption.html)
 - Requirements CapabilityStatement for [File Manager](CapabilityStatement-IHE.NPFS.FileManager.html)
 
-### 3.87.5 Security Considerations
+### 2:3.87.5 Security Considerations
 
 See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
 
@@ -387,7 +387,7 @@ compromise patient care or have other legal ramifications. For general
 security considerations, see [ITI TF-2: Appendix Z.8](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations) (currently in the
 Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
-#### 3.87.5.1 Security Audit Considerations
+#### 2:3.87.5.1 Security Audit Considerations
 
 The File Source, when grouped with [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application Actor, shall be able to record a [Submit File Source Audit Event Log](StructureDefinition-IHE.NPFS.SubmitFile.Audit.Source.html).
 

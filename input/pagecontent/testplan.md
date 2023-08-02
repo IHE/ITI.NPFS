@@ -11,24 +11,24 @@ Specific capabilities that different systems are expected to have are defined in
 
 ## High-level Test Scope
 
-### [ITI-87] Submit File
+### Submit File [ITI-87] 
 
 - File Source publishes non-patient file
 - File Manager receives and responds as appropriate 
 
-### [ITI-88] Search File
+### Search File [ITI-88] 
 
 - File Consumer requests query for DocumentReference
 - File Manager responds to query as appropriate
 
 ### Options
 
-### [ITI-89] Update Document Reference
+### Update DocumentReference [ITI-89] 
 
-- File Source publishes an updated Document Reference resorce
+- File Source publishes an updated DocumentReference resource
 - File Manager receives and responds as appropriate
 
-### [ITI-109] Retrieve File
+### Retrieve File [ITI-109] 
 
 - File Consumer requests query for retrieve file
 - File Manager retrieve as appropriate
