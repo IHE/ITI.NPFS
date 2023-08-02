@@ -18,7 +18,7 @@ The File Manager is not required to support FHIR resource versioning
     <tbody>
         <tr>
             <td style="padding:3px"><b>Actor:</b></td>
-            <td><a href="volume-1.html#47113-file-source">File Source</a></td>
+            <td><a href="volume-1.html#147113-file-source">File Source</a></td>
         </tr>
        <tr>
             <td><b>Role:</b></td>
@@ -26,7 +26,7 @@ The File Manager is not required to support FHIR resource versioning
         </tr>
         <tr>
             <td><b>Actor:</b></td>
-            <td><a href="volume-1.html#47111-file-manager">File Manager</a></td>
+            <td><a href="volume-1.html#147111-file-manager">File Manager</a></td>
         </tr>
         <tr>
             <td><b>Role:</b></td>
@@ -101,7 +101,7 @@ Implementation Supplement).
 
 On receipt of the DocumentReference Update Request, the File Manager
 shall validate and update the existing resource and respond with one of
-the HTTP codes defined in [Section 3.89.4.2.2 Message Semantics](ITI-89.html#389422-message-semantics).
+the HTTP codes defined in [Section 3.89.4.2.2 Message Semantics](ITI-89.html#2389422-message-semantics).
 
 #### 2:3.89.4.2 Update DocumentReference Response Message
 
@@ -136,7 +136,7 @@ File Managers implementing this transaction shall provide a CapabilityStatement 
 
 ### 2:3.89.5 Security Considerations
 
-See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
+See [NPFS Security Considerations](volume-1.html#1475-npfs-security-considerations).
 
 The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the

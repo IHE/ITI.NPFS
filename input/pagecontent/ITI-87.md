@@ -18,7 +18,7 @@ The files are not associated with a patient.
     <tbody>
         <tr>
             <td style="padding:3px"><b>Actor:</b></td>
-            <td><a href="volume-1.html#47113-file-source">File Source</a></td>
+            <td><a href="volume-1.html#147113-file-source">File Source</a></td>
         </tr>
        <tr>
             <td><b>Role:</b></td>
@@ -26,7 +26,7 @@ The files are not associated with a patient.
         </tr>
         <tr>
             <td><b>Actor:</b></td>
-            <td><a href="volume-1.html#47111-file-manager">File Manager</a></td>
+            <td><a href="volume-1.html#147111-file-manager">File Manager</a></td>
         </tr>
         <tr>
             <td><b>Role:</b></td>
@@ -163,7 +163,7 @@ The File Manager shall support all the media-types defined in [ITI TF-2: Appendi
 Implementation Supplement).
 
 On receipt of the Create File Request, the File Manager shall validate
-the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#387442-message-semantics).
+the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#2387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -175,7 +175,7 @@ update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\].
 
 If the File Manager receives a Create File Request message that contains
 resources other than the required ones, it may respond to the File
-Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
+Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#2387442-message-semantics)).
 
 #### 2:3.87.4.2 Update File Request Message
 
@@ -235,7 +235,7 @@ The File Manager shall support all the media-type defined in [ITI TF-2: Appendix
 Implementation Supplement).
 
 On receipt of the Update File Request, the File Manager shall respond
-with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#387442-message-semantics).
+with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#2387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -251,7 +251,7 @@ retrievable using the same bundle.entry.fullUrl as the previous one.
 
 If the File Manager receives an Update File Request message that
 contains resources other than the required ones, it may respond to the
-File Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
+File Source with a failure (see [Section 3.87.4.4.2](ITI-87.html#2387442-message-semantics)).
 
 #### 2:3.87.4.3 Replace File Request Message
 
@@ -281,7 +281,7 @@ DocumentReference Resource that needs to be replaced.
 The Bundle Resource shall contain:
 
 - one Binary Resource representing the new file, valued according to
-  [Section 3.87.4.1.2](ITI-87.html#387412-message-semantics), with the bundle.entry.request.method element set
+  [Section 3.87.4.1.2](ITI-87.html#2387412-message-semantics), with the bundle.entry.request.method element set
   to POST
 
 - one DocumentReference Resource with metadata for the new file, where
@@ -291,7 +291,7 @@ The Bundle Resource shall contain:
   bundle.entry.request.method element set to POST
 
 - one DocumentReference Resource with metadata of the previous file,
-  valued as specified in [Section 3.89.4.1.1](ITI-89.html#389411-trigger-events) with the
+  valued as specified in [Section 3.89.4.1.1](ITI-89.html#2389411-trigger-events) with the
   bundle.entry.request.method element set to PUT and the
   DocumentReference.status to “superseded”.
 
@@ -301,7 +301,7 @@ The File Manager shall support all the media-types defined in [ITI TF-2: Appendi
 Implementation Supplement).
 
 On receipt of the Replace File Request, the File Manager shall validate
-the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#387442-message-semantics).
+the Resources and respond with one of the HTTP codes defined in [Section 3.87.4.4.2 Message Semantics](ITI-87.html#2387442-message-semantics).
 
 The File Manager shall process the Bundle atomically.
 
@@ -312,7 +312,7 @@ retrieve \[ITI-109\].
 
 If the File Manager receives a Replace File Request message that
 contains resources other than the required ones, it may respond to the
-File Source with a failure ([see Section 3.87.4.4.2](ITI-87.html#387442-message-semantics)).
+File Source with a failure ([see Section 3.87.4.4.2](ITI-87.html#2387442-message-semantics)).
 
 #### 2:3.87.4.4 Submit File Response Message
 
@@ -370,14 +370,15 @@ rules.
 
 #### 2:3.87.4.5 CapabilityStatement Resource
 
-File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented. 
+File Managers implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2: Appendix Z.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.3-capabilitystatement-resource) indicating the transaction has been implemented.
+
 - Requirements CapabilityStatement for [File Source](CapabilityStatement-IHE.NPFS.FileSource.html)
 - Requirements CapabilityStatement for [File Source implementing Update DocumentReference](CapabilityStatement-IHE.NPFS.FileSourceOption.html)
 - Requirements CapabilityStatement for [File Manager](CapabilityStatement-IHE.NPFS.FileManager.html)
 
 ### 2:3.87.5 Security Considerations
 
-See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
+See [NPFS Security Considerations](volume-1.html#1475-npfs-security-considerations).
 
 The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the

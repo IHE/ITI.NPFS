@@ -15,7 +15,7 @@ patient.
     <tbody>
         <tr>
             <td style="padding:3px"><b>Actor:</b></td>
-            <td><a href="volume-1.html#47112-file-consumer">File Consumer</a></td>
+            <td><a href="volume-1.html#147112-file-consumer">File Consumer</a></td>
         </tr>
        <tr>
             <td><b>Role:</b></td>
@@ -23,7 +23,7 @@ patient.
         </tr>
         <tr>
             <td><b>Actor:</b></td>
-            <td><a href="volume-1.html#47111-file-manager">File Manager</a></td>
+            <td><a href="volume-1.html#147111-file-manager">File Manager</a></td>
         </tr>
         <tr>
             <td><b>Role:</b></td>
@@ -78,7 +78,7 @@ the DocumentReference Resource <http://hl7.org/fhir/R4/http.html>:
 > \[base\]/DocumentReference?\[Parameters\]
 
 The Parameters element represents a series of encoded name-value pairs
-representing the filter for the query, as specified in [Section 3.88.4.1.2.1](ITI-88.html#3884121-query-search-parameters), as well as control parameters to modify the behavior of
+representing the filter for the query, as specified in [Section 3.88.4.1.2.1](ITI-88.html#23884121-query-search-parameters), as well as control parameters to modify the behavior of
 the File Manager such as response format, or pagination.
 
 ###### 2:3.88.4.1.2.1 Query Search Parameters
@@ -225,7 +225,7 @@ File Managers implementing this transaction shall provide a CapabilityStatement 
 
 ### 2:3.88.5 Security Considerations
 
-See [NPFS Security Considerations](volume-1.html#475-npfs-security-considerations).
+See [NPFS Security Considerations](volume-1.html#1475-npfs-security-considerations).
 
 The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the

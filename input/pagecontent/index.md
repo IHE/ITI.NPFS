@@ -41,12 +41,12 @@ This guide is organized into the following sections:
 
 - Volume 1:
   - [Introduction](volume-1.html)
-  - [Actors, Transactions, and Content](volume-1.html#471-npfs-actors-transactions-and-content-modules)
-  - [Actor Options](volume-1.html#472-npfs-actor-options)
-  - [Actor Required Groupings](volume-1.html#473-npfs-required-actor-groupings)
-  - [Overview](volume-1.html#474-npfs-overview)
-  - [Security Considerations](volume-1.html#475-npfs-security-considerations)
-  - [Cross Profile Considerations](volume-1.html#476-npfs-cross-profile-considerations)
+  - [Actors, Transactions, and Content](volume-1.html#1471-npfs-actors-transactions-and-content-modules)
+  - [Actor Options](volume-1.html#1472-npfs-actor-options)
+  - [Actor Required Groupings](volume-1.html#1473-npfs-required-actor-groupings)
+  - [Overview](volume-1.html#1474-npfs-overview)
+  - [Security Considerations](volume-1.html#1475-npfs-security-considerations)
+  - [Cross Profile Considerations](volume-1.html#1476-npfs-cross-profile-considerations)
 - Volume 2: Transaction Detail
   - [Submit File \[ITI-87\]](ITI-87.html)
   - [Search File \[ITI-88\]](ITI-88.html)

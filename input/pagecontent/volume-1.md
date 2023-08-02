@@ -255,7 +255,7 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
   Policy file and metadata, and update the metadata of the replaced file
   to “superseded” (deprecated). (The new DocumentReference Resource is
   linked to the previous one via a replacement relationship, using the
-  relatesTo parameter; see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#387432-message-semantics">ITI TF-2c: 3.87.4.3.2)
+  relatesTo parameter; see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#2387432-message-semantics">ITI TF-2c: 3.87.4.3.2)
 
 <div>
 {%include useCase2.svg%}
