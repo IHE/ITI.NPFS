@@ -150,7 +150,7 @@ patient-specific content is a “**document**.”
 #### 1:47.4.2.1 Use Case \#1: Manage Stylesheets
 
 A technician creates a stylesheet to render the XML of
-CDA<sup>®</sup>[^1] Laboratory Reports produced in all the Laboratory
+CDA<sup>®</sup> Laboratory Reports produced in all the Laboratory
 Information System (LIS) involved in the Healthcare Information Exchange
 (HIE). The technician wants to make the stylesheet available to all the
 LISs involved in the HIE so that they can search for the stylesheet and
@@ -255,7 +255,7 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
   Policy file and metadata, and update the metadata of the replaced file
   to “superseded” (deprecated). (The new DocumentReference Resource is
   linked to the previous one via a replacement relationship, using the
-  relatesTo parameter; see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#2387432-message-semantics">ITI TF-2c: 3.87.4.3.2)
+  relatesTo parameter; see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#2387432-message-semantics">ITI TF-2: 3.87.4.3.2)
 
 <div>
 {%include useCase2.svg%}
