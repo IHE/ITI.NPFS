@@ -44,6 +44,64 @@ mandatory grouping are shown in conjoined boxes.
 <p><b>Figure 1:47.1-1: NPFS Actor Diagram</b></p>
 </div>
 
+Table 1:47.1-1 lists the transactions for each actor directly involved in the NPFS Profile. To claim
+310 compliance with this profile, an actor shall support all required transactions (labeled “R”) and
+may support the optional transactions (labeled “O”). 
+
+<div>
+<table width="70%" border="1" borderspacing="0"
+    style="border: 1px solid black; border-collapse: collapse">
+    <caption>
+        <b> Table 1:47.1-1: NPFS Profile - Actors and transactions </b>
+    </caption>
+    <thead>
+        <tr>
+            <th style="text-align:center">Actors</th>
+            <th style="text-align:center">Transactions</th>
+            <th style="text-align:center">Optionality</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4" style="padding-left:10px">File Manager</td>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html">Submit File [ITI-87]</a></td>
+            <td style="text-align:center">R</td>
+		</tr>
+        <tr>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-88.html">Search File [ITI-88]</a></td>
+            <td style="text-align:center">R</td>
+		</tr>
+		<tr>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-109.html">Retrieve File [ITI-109]</a></td>
+            <td style="text-align:center">R</td>
+		</tr>
+		<tr>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-89.html">Update DocumentReference [ITI-89]</a></td>
+            <td style="text-align:center">R</td>
+		</tr>
+		<tr>
+            <td rowspan="2" style="padding-left:10px">File Consumer</td>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-88.html">Search File [ITI-88]</a></td>
+            <td style="text-align:center">R</td>
+		</tr>
+		<tr>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-109.html">Retrieve File [ITI-109]</a></td>
+            <td style="text-align:center">O</td>
+		</tr>
+		<tr>
+            <td rowspan="2" style="padding-left:10px">File Source</td>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html">Submit File [ITI-87]</a></td>
+            <td style="text-align:center">R</td>
+		</tr>
+		<tr>
+            <td style="padding-left:10px"><a href="https://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-89.html">Update DocumentReference [ITI-89]</a></td>
+            <td style="text-align:center">O</td>
+		</tr>
+    </tbody>
+</table>
+</div>
+<br>
+
 ### 1:47.1.1 Actor Descriptions and Actor Profile Requirements
 
 Most requirements are documented in transactions (Volume 2) and Content
