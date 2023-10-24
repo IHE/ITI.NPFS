@@ -84,7 +84,7 @@ The Bundle Resource:
   element and the mime-type of the file in the contentType element.
 
 - shall contain one FHIR DocumentReference Resource
-  (<https://www.hl7.org/fhir/R4/documentreference.html)> with the file’s
+  (<https://www.hl7.org/fhir/R4/documentreference.html>) with the file’s
   metadata. Constraints on the DocumentReference Resource are listed in [Resource Profile: NPFS DocumentReference](StructureDefinition-IHE.NPFS.DocumentReference.html).
 
 - may contain other resources that are referenced by the
@@ -353,12 +353,9 @@ returning the following status code:
 
 - 422 – Unprocessable Entity:
 
-- When the FHIR Resource DocumentReference.type is not supported by the
-  > File Manager.
+- When the FHIR Resource DocumentReference.type is not supported by the File Manager.
 
-- If the Bundle Resource contains resources other than Binary,
-  > DocumentReference Resources and the resources referenced by the
-  > DocumentReference Resource.
+- If the Bundle Resource contains resources other than Binary, DocumentReference Resources and the resources referenced by the DocumentReference Resource.
 
 The File Manager can return other status codes 4xx or 5xx in accordance
 to internal business rules that are out of scope for this transaction.
