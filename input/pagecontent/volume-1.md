@@ -45,7 +45,7 @@ mandatory grouping are shown in conjoined boxes.
 </div>
 
 Table 1:47.1-1 lists the transactions for each actor directly involved in the NPFS Profile. To claim
-310 compliance with this profile, an actor shall support all required transactions (labeled “R”) and
+compliance with this profile, an actor shall support all required transactions (labeled “R”) and
 may support the optional transactions (labeled “O”). 
 
 <div>
