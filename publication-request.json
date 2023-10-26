@@ -9,9 +9,5 @@
     "descmd" : "2.2.0 Trial-Implementation 
 - Trial-Implementation release with resolved public comment (bug fixed)",
     "changes" : "issues.html",
-    "first" : true,
-    "title" : "Non-patient File Sharing (NPFS)",
-    "ci-build" : "http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/index.html",
-    "category" : "Administration",
-    "introduction" : "This profile defines how to enable the sharing of non-patient files. Those files can be created, consumed and updated by many different systems involved in a wide variety of data sharing workflows (clinical workflow definition, domain policies sharing, stylesheets management, etc.). This profile identifies three actors: File Manager, File Consumer, and File Source."
+    "first" : true
   }
