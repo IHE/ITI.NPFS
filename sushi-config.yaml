@@ -7,11 +7,11 @@ canonical: https://profiles.ihe.net/ITI/NPFS
 version: 2.2.0
 name: IHE_ITI_NPFS
 title: "Non-patient File Sharing (NPFS)"
-description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Non-patient File Sharing (NPFS)
+description: The Non-Patient File Sharing (NPFS) Profile defines how to share non-patient files such as clinical workflow definitions, domain policies, and stylesheets. Those files can be created and consumed by many different systems involved in a wide variety of data sharing workflows.
 #releaseLabel: ci-build
 releaseLabel: Trial-Implementation
 #releaseLabel: ballot
-date: 2023-10-26
+date: 2023-11-17
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page

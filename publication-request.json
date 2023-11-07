@@ -6,8 +6,9 @@
     "status" : "trial-use",
     "sequence" : "Publication",
     "desc" : "Trial-Implementation release with resolved public comment",
-    "descmd" : "2.2.0 Trial-Implementation 
-- Trial-Implementation release with resolved public comment (bug fixed)",
-    "changes" : "issues.html",
-    "first" : true
+    "descmd" : "Version 2.2.0 
+    
+- Trial-Implementation
+- resolved public comment (bug fixed)",
+    "changes" : "issues.html"
   }
