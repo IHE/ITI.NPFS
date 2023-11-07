@@ -72,7 +72,7 @@ creator.
 ##### 2:3.87.4.1.2 Message Semantics
 
 The File Source shall issue an HTTP request according to requirements
-defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard for “create”
+defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard for "create"
 interaction (<http://hl7.org/fhir/R4/http.html#create> ). The message
 uses an HTTP POST method to submit a FHIR Bundle Resource.
 
@@ -113,7 +113,7 @@ review), an alternate code may be used instead.
 ###### 2:3.87.4.1.2.2 type element
 
 This section identifies specific guidelines for the type element which
-depends on the “class” of the file:
+depends on the "class" of the file:
 
 - If the file submitted is a Workflow Definition template, the type
   element could be valued with the workflow definition reference of the
@@ -122,14 +122,14 @@ depends on the “class” of the file:
 
 - If the file submitted is a Patient Privacy Policy (see ITI TF-1:
   19.2.1 Basic Patient Privacy Consent), the type element should be
-  valued with the LOINC code 57017-6 “Privacy policy Organization
-  Document” as shown in [ValueSet: NPFS DocumentReference category](ValueSet-DocumentReferenceCategory.html).
+  valued with the LOINC code 57017-6 "Privacy policy Organization
+  Document" as shown in [ValueSet: NPFS DocumentReference category](ValueSet-DocumentReferenceCategory.html).
 
 - If the file submitted is a Stylesheet, the type element will be valued
   with a codeable concept defined by local policy that classifies the
   type of the stylesheet. The codeable concept of the type element shall
-  be defined by both a code and a system (e.g., code= “laboratory”
-  system=”http://localdomain.org/stylesheetstype”).
+  be defined by both a code and a system (e.g., code= "laboratory"
+  system="http://localdomain.org/stylesheetstype").
 
 ###### 2:3.87.4.1.2.3 File relationships 
 
@@ -199,7 +199,7 @@ to be updated.
 ##### 2:3.87.4.2.2 Message Semantics
 
 The File Source shall issue an HTTP request according to requirements
-defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard for “update”
+defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard for "update"
 interaction (<http://hl7.org/fhir/R4/http.html#update>).
 
 The message uses an HTTP POST to submit a FHIR Bundle that contains the
@@ -285,15 +285,15 @@ The Bundle Resource shall contain:
   to POST
 
 - one DocumentReference Resource with metadata for the new file, where
-  the DocumentReference.status shall be set to “current”, the
-  relatesTo.code shall be set to “replaces”, and the relatesTo.target to
+  the DocumentReference.status shall be set to "current", the
+  relatesTo.code shall be set to "replaces", and the relatesTo.target to
   the URL of the previous DocumentReference Resource, and the
   bundle.entry.request.method element set to POST
 
 - one DocumentReference Resource with metadata of the previous file,
   valued as specified in [Section 3.89.4.1.1](ITI-89.html#2389411-trigger-events) with the
   bundle.entry.request.method element set to PUT and the
-  DocumentReference.status to “superseded”.
+  DocumentReference.status to "superseded".
 
 ##### 2:3.87.4.3.3 Expected Actions
 

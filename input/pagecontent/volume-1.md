@@ -14,10 +14,10 @@ file type can be shared using this profile; however, specific guidance
 is given for three types of files:
 
 - Workflow Definitions: files which define the processing rules for a
-  specific clinical/administrative workflow (see [ITI TF-1: 30.4.1.1 “XDW Workflow Architecture”](https://profiles.ihe.net/ITI/TF/Volume1/ch-30.html#30.4.1.1))
+  specific clinical/administrative workflow (see [ITI TF-1: 30.4.1.1 "XDW Workflow Architecture"](https://profiles.ihe.net/ITI/TF/Volume1/ch-30.html#30.4.1.1))
 
 - Privacy Domain Policies: files which describe a specific privacy
-  policy that applies to, or may be agreed to, by a patient (see [ITI TF-1: 19.2 “Creating Patient Privacy Policies”](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19.2))
+  policy that applies to, or may be agreed to, by a patient (see [ITI TF-1: 19.2 "Creating Patient Privacy Policies"](https://profiles.ihe.net/ITI/TF/Volume1/ch-19.html#19.2))
 
 - Stylesheets: structured documents that can be used by user-agents
   (e.g., Web Browsers) to render the content of an XML document
@@ -45,8 +45,8 @@ mandatory grouping are shown in conjoined boxes.
 </div>
 
 Table 1:47.1-1 lists the transactions for each actor directly involved in the NPFS Profile. To claim
-compliance with this profile, an actor shall support all required transactions (labeled “R”) and
-may support the optional transactions (labeled “O”). 
+compliance with this profile, an actor shall support all required transactions (labeled "R") and
+may support the optional transactions (labeled "O"). 
 
 <div>
 <table width="70%" border="1" borderspacing="0"
@@ -191,17 +191,17 @@ This profile does not mandate the grouping with other actors.
 
 ### 1:47.4.1 Concepts – distinguishing files from documents
 
-The NPFS Profile uses the term “**file**” to mark a clear distinction
+The NPFS Profile uses the term "**file**" to mark a clear distinction
 from the IHE Document Sharing profiles.
 
-A “**file**” represents a collection of information stored on a computer
+A "**file**" represents a collection of information stored on a computer
 as one unit. For the purposes of this profile, a file is not
 patient-related, as it does not contain patient health identifying
 information. It may contain other sensitive information.
 
 Other IHE profiles are used to share (using different sharing paradigms)
 information related to patients. In IHE terminology, such
-patient-specific content is a “**document**.”
+patient-specific content is a "**document**."
 
 ### 1:47.4.2 Use Cases
 
@@ -289,7 +289,7 @@ ids). He thus needs to replace the Privacy Policy file and uses an HIS
 to perform the Submit File \[ITI-87\] to replace the Privacy Policy by
 submitting a new one (linked to the original file via a replacement
 association, using the relatesTo parameter) and updating metadata for
-the previous Privacy Policy, changing its status to “superseded”.
+the previous Privacy Policy, changing its status to "superseded".
 
 This use case is different than Use Case \#3 because here the original
 Privacy Policy file needs to be preserved (i.e., it is not overwritten).
@@ -311,7 +311,7 @@ Privacy Policy file needs to be preserved (i.e., it is not overwritten).
 - The HIS, acting as a File Source, issues a Submit File \[ITI-87\]
   (replace) transaction to the File Manager to submit the new Privacy
   Policy file and metadata, and update the metadata of the replaced file
-  to “superseded” (deprecated). (The new DocumentReference Resource is
+  to "superseded" (deprecated). (The new DocumentReference Resource is
   linked to the previous one via a replacement relationship, using the
   relatesTo parameter; see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/ITI-87.html#2387432-message-semantics">ITI TF-2: 3.87.4.3.2)
 

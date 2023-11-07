@@ -73,7 +73,7 @@ the existing DocumentReference Resource.
 ##### 2:3.89.4.1.2 Message Semantics
 
 The File Source shall issue an HTTP request according to requirements
-defined in HL7<sup>®</sup> FHIR<sup>®</sup> standard for “update”
+defined in HL7<sup>®</sup> FHIR<sup>®</sup> standard for "update"
 interaction (<http://hl7.org/fhir/R4/http.html#update>).
 
 The File Source shall use an HTTP PUT method to submit to the File
