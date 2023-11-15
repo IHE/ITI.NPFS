@@ -24,7 +24,7 @@ This section modifies other IHE profiles or the General Introduction appendices 
 
 | Transaction                    | Definition                                                                              |
 | ------------------------------ | --------------------------------------------------------------------------------------- |
-| none |  |
+| Retrieve File [ITI-109]        | Allows a File Consumer to retrieve a file |
 {:.grid .table-striped}
 
 ## IHE Technical Frameworks General Introduction Appendix D: Glossary

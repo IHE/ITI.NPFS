@@ -85,7 +85,7 @@ pages:
     title: "Test Plan"
     generation: markdown
   other.md:
-    title: Changes to Other Documents
+    title: Changes to Other IHE Specifications
     generation: markdown
   issues.md:
     title: Significant Changes & Issues
@@ -111,6 +111,6 @@ menu:
     "Retrieve File [ITI-109]": ITI-109.html
   Artifacts: artifacts.html
   Other:
-    Test Plan: testplan.html
     Changes to Other IHE Specifications: other.html
     Download and Analysis: download.html
+    Test Plan: testplan.html

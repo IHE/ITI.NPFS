@@ -92,7 +92,7 @@ Appendix Z on HL7 FHIR Trial Implementation Supplement).
 
 ###### 2:3.89.4.1.2.1 Update DocumentReference Request message example 
 
-For an example of a Update DocumentReference Request see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-12345.html">Example DocumentReference: DocumentReference for Update</a>
+For an example of a Update DocumentReference Request see <a href="http://build.fhir.org/ig/IHE/ITI.NPFS/branches/master/DocumentReference-12345.html">Example DocumentReference: DocumentReference for Update</a>.
 
 ##### 2:3.89.4.1.3 Expected Actions
 
@@ -138,7 +138,7 @@ File Managers implementing this transaction shall provide a CapabilityStatement 
 
 See [NPFS Security Considerations](volume-1.html#1475-npfs-security-considerations).
 
-The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus the use of Security may be applicable.
+The files are not Patient specific, but they may have other needs for security controls, such as business knowledge restrictions. Thus, the use of Security may be applicable.
 Actors involved in this transaction should be aware that even if the
 Resources exchanged do not contain PHI or other private information,
 updating those Resources could compromise patient care or have other

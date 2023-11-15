@@ -53,9 +53,9 @@ This guide is organized into the following sections:
   - [Update DocumentReference \[ITI-89\]](ITI-89.html)
   - [Retrieve File [ITI-109]](ITI-109.html)
 - Other
-  - [Test Plan](testplan.html)
   - [Changes to Other IHE Specifications](other.html)
-  - [Download and Analysis](download.html) 
+  - [Download and Analysis](download.html)
+  - [Test Plan](testplan.html)  
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 

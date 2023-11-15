@@ -51,7 +51,7 @@ may support the optional transactions (labeled "O").
 <div>
 <table width="70%" border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
-    <caption>
+    <caption style="text-align:left">
         <b> Table 1:47.1-1: NPFS Profile - Actors and transactions </b>
     </caption>
     <thead>
@@ -136,7 +136,7 @@ specified in notes.
 <div>
 <table width="50%" border="1" borderspacing="0"
     style="border: 1px solid black; border-collapse: collapse">
-    <caption>
+    <caption style="text-align:left">
         <b> Table 1:47.2-1: Not-patient File Sharing - Actors and Options </b>
     </caption>
     <thead>

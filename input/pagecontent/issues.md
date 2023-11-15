@@ -1,9 +1,9 @@
 ## Significant Changes
 
-### Significant changes from Revision 2.1 (PDF)
+### Significant Changes From Revision 2.1 (PDF)
 
 - Converted to an IG
-- Replaced reference to MHD [ITI-68] Retrieve Document transaction width [ITI-109] Retrieve File transaction 
+- Replaced reference to MHD Retrieve Document [ITI-68] transaction with Retrieve File [ITI-109] transaction 
 - Include CapabilityStatements for the actors
 - Add defined AuditEvent requirements leveraging BALP when grouped with ATNA
 - Integrated CP 1139
@@ -20,22 +20,22 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
 
 ### Open Issues
 
-***[NPFS_010](https://github.com/IHE/ITI.NPFS/issues/5): This document begins the definition of a value set for the
+- [NPFS_010](https://github.com/IHE/ITI.NPFS/issues/5): This document begins the definition of a value set for the
 class element. How do we complete the value set for this profile?
 Suggestions are requested. How do we coordinate this value set with
-other Document Sharing profiles? Suggestions are requested. ***
+other Document Sharing profiles? Suggestions are requested.
 
-***[NPFS_012](https://github.com/IHE/ITI.NPFS/issues/6): This document does not require the use of profile tags to
+- [NPFS_012](https://github.com/IHE/ITI.NPFS/issues/6): This document does not require the use of profile tags to
 identify compliant resources. Use of profile tags will also allow the
 File Consumer to search just for resources that matches this profile in
 a FHIR Server that store different types of resources. Readers are
-required to provide feedback on this topic.***
+required to provide feedback on this topic.
 
-***[NPFS_013](https://github.com/IHE/ITI.NPFS/issues/8): DocumentReference.subject is set to 0..0; the .subject element may still be useful for subjects that are not patient. Practitioner -- this is individual, so I wonder if we really want NPFS to also be (non practitioner)?
+- [NPFS_013](https://github.com/IHE/ITI.NPFS/issues/8): DocumentReference.subject is set to 0..0; the .subject element may still be useful for subjects that are not patient. Practitioner -- this is individual, so I wonder if we really want NPFS to also be (non practitioner)?
 Group -- groups can be made up of Patients. So it is not clear how we would allow Group, but not allow Groups of Patients.
 Device -- often a Device is associated with a Patient, although many Devices are just Devices. Allowing Device might be the most clear use-case.
 Seems we should have a positive use-case to drive deviation from 0..0. Suggestions are requested.
-Note that in the future, using FHIR R5, subject can be a reference to ANY kind of Resource. This is just mentioned as foreshadowing, it should not be part of the current profile.***
+Note that in the future, using FHIR R5, subject can be a reference to ANY kind of Resource. This is just mentioned as foreshadowing, it should not be part of the current profile.
 
 ### Closed Issues
 
