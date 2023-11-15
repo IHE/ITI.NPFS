@@ -93,7 +93,7 @@ The Bundle Resource:
 The File Source shall submit FHIR resources in either XML format or JSON
 format. Values for media-type of the request message are defined in the
 [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
-Implementation Supplement)*.*
+Implementation Supplement).
 
 See [ITI TF-2: Appendix W](https://profiles.ihe.net/ITI/TF/Volume2/ch-W.html#Appendix%20W) for informative implementation material for
 this transaction.
@@ -101,7 +101,7 @@ this transaction.
 Sections below provide specific guidance about how handle metadata for
 stylesheets, workflow definitions, and privacy policies. If other files
 types will be managed, local policy should establish values for type,
-category, format, mime-type and masterIdentifier elements
+category, format, mime-type and masterIdentifier elements.
 
 ###### 2:3.87.4.1.2.1 category element
 
@@ -155,7 +155,7 @@ file’s revision, update or replacement.
 
 ###### 2:3.87.4.1.2.5 Create File request message example
 
-For an example of a Create File Request Bundle see <a href="Bundle-ex-CreateDocumentBundle.html">Example Bundle: Create Document Bundle</a>
+For an example of a Create File Request Bundle see <a href="Bundle-ex-CreateDocumentBundle.html">Example Bundle: Create Document Bundle</a>.
 
 ##### 2:3.87.4.1.3 Expected Actions
 
@@ -186,7 +186,7 @@ This message is used when there is a prior file that does not need to be
 preserved.
 
 The File Manager is not required to support FHIR resource versioning
-(<https://www.hl7.org/fhir/R4/versions.html>.)
+(<https://www.hl7.org/fhir/R4/versions.html>).
 
 ##### 2:3.87.4.2.1 Trigger Events
 
@@ -223,11 +223,11 @@ The Bundle Resource shall contain:
 The File Source shall submit FHIR resources in either XML format or JSON
 format. Values for media-type of the request message are defined in the
 [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) (currently in the Appendix Z on HL7 FHIR Trial
-Implementation Supplement)*.*
+Implementation Supplement).
 
 ###### 2:3.87.4.2.2.1 Update File Request message example
 
-For an example of a Update File Request Bundle see <a href="Bundle-ex-UpdateDocumentBundle.html">Example Bundle: Update Document Bundle</a>
+For an example of a Update File Request Bundle see <a href="Bundle-ex-UpdateDocumentBundle.html">Example Bundle: Update Document Bundle</a>.
 
 ##### 2:3.87.4.2.3 Expected Actions
 
@@ -243,7 +243,7 @@ The File Manager shall support Update File Request messages that contain
 one Binary Resource and one DocumentReference Resource. The File Manager
 shall store these resources and make them available for further
 processing, e.g., file update or replacement \[ITI-87\], file metadata
-update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\]
+update \[ITI-89\], search \[ITI-88\], and retrieve \[ITI-109\].
 
 The previous content in the updated Binary and DocumentReference
 Resources will be no longer accessible, and the new file will be
@@ -263,7 +263,7 @@ preserved, so the existing Binary and Document Reference Resources will
 be superseded (i.e., deprecated).
 
 The File Manager is not required to support FHIR resource versioning
-(<https://www.hl7.org/fhir/R4/versions.html>.)
+(<https://www.hl7.org/fhir/R4/versions.html>).
 
 ##### 2:3.87.4.3.1 Trigger Events
 
@@ -293,7 +293,7 @@ The Bundle Resource shall contain:
 - one DocumentReference Resource with metadata of the previous file,
   valued as specified in [Section 3.89.4.1.1](ITI-89.html#2389411-trigger-events) with the
   bundle.entry.request.method element set to PUT and the
-  DocumentReference.status to "superseded".
+  DocumentReference.status to "superseded"
 
 ##### 2:3.87.4.3.3 Expected Actions
 
@@ -353,9 +353,9 @@ returning the following status code:
 
 - 422 – Unprocessable Entity:
 
-- When the FHIR Resource DocumentReference.type is not supported by the File Manager.
+- When the FHIR Resource DocumentReference.type is not supported by the File Manager
 
-- If the Bundle Resource contains resources other than Binary, DocumentReference Resources and the resources referenced by the DocumentReference Resource.
+- If the Bundle Resource contains resources other than Binary, DocumentReference Resources and the resources referenced by the DocumentReference Resource
 
 The File Manager can return other status codes 4xx or 5xx in accordance
 to internal business rules that are out of scope for this transaction.
