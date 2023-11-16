@@ -21,11 +21,11 @@ Usage: #example
 * content.attachment.hash = "07ae8b27c7596b3314601736f32d5f0ed17fc8c0e27a0475e8ea2d8b2c788436"
 * content.format = urn:oid:2.16.840.1.113883.2.9.3.3.6.1.6#PDF
 
-Instance:   ex-DocumentReferenceComprehensive
+Instance:   cccccccc-4444-0000-0000-000000000001
 InstanceOf: NPFSDocumentReference
 Title: "DocumentReference for Comprehensive fully filled metadata"
 Description:      "Example of a Comprehensive DocumentReference resource. This is fully filled for all mandatory elements and all optional elements."
-Usage: #example
+Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
@@ -59,11 +59,11 @@ Usage: #example
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
-Instance:   ex-DocumentReferenceReplaceOld
+Instance:   cccccccc-4444-0000-0000-000000000003
 InstanceOf: NPFSDocumentReference
 Title: "Old DocumentReference for Replace"
 Description:      "Example of a Old DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
-Usage: #example
+Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
@@ -97,11 +97,11 @@ Usage: #example
 * relatesTo.target = Reference(ex-DocumentReferenceMinimal)
 
 
-Instance:   ex-DocumentReferenceReplaceNew
+Instance:   cccccccc-4444-0000-0000-000000000004
 InstanceOf: NPFSDocumentReference
 Title: "New DocumentReference for Replace"
 Description:      "Example of a New DocumentReference resource for Replace. This is fully filled for all mandatory elements and all optional elements."
-Usage: #example
+Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
